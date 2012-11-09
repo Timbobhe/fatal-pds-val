@@ -1,0 +1,11 @@
+window_sizes 1600 838 150 628 600 82
+diagrams
+  active  usecasediagram_ref 128089 // VAL
+    1444 680 100 4 0 0
+end
+show_stereotypes
+selected usecasediagram_ref 128089 // VAL
+open
+  usecaseview_ref 128089 // FATAL Team
+end
+end
