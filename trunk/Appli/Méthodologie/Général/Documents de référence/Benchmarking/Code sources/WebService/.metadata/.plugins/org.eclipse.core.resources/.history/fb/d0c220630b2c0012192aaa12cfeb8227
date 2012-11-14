@@ -1,0 +1,23 @@
+package com.esiag.webservice;
+
+import javax.jws.WebService;
+
+@WebService(endpointInterface="com.esiag.webservice.IWebService")
+public class Service implements IWebService {
+
+	
+	@Override
+	public Boolean ajouter(Produit p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Produit Get(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+}

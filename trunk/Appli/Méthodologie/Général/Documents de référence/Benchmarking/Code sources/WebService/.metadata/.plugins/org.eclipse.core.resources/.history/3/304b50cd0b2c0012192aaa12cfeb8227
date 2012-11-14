@@ -1,0 +1,30 @@
+package com.esiag.webservice;
+
+import javax.jws.WebService;
+
+@WebService(endpointInterface="com.esiag.webservice.IWebService")
+public class Service implements IWebService {
+
+	private Database db;
+	
+	
+	public Service() {
+		super();
+		db=new Database(new DataSource("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/stock", "root", ""));
+		
+	}
+
+	@Override
+	public Boolean ajouter(Produit p) {
+		db.insert(p);
+		return true;
+	}
+
+	@Override
+	public Produit Get(int i) {
+		Produit p=db.select(object)
+	}
+
+	
+
+}

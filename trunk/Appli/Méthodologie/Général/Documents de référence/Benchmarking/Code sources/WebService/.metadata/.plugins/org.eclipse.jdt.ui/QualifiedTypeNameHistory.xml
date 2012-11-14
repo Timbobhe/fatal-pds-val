@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.jws.soap.SOAPBinding"/>
+<fullyQualifiedTypeName name="javax.jws.soap.SOAPBinding.Style"/>
+<fullyQualifiedTypeName name="com.esiag.webservice.IWebService"/>
+<fullyQualifiedTypeName name="javax.jws.WebService"/>
+<fullyQualifiedTypeName name="java.lang.Boolean"/>
+<fullyQualifiedTypeName name="javax.xml.ws.Endpoint"/>
+<fullyQualifiedTypeName name="javax.xml.ws.Service"/>
+<fullyQualifiedTypeName name="javax.xml.namespace.QName"/>
+<fullyQualifiedTypeName name="com.esiag.webservice.Main"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="WebServiceClient.IWebService"/>
+<fullyQualifiedTypeName name="com.esiag.webservice.Service"/>
+<fullyQualifiedTypeName name="com.esiag.webservice.Database"/>
+<fullyQualifiedTypeName name="com.esiag.webservice.DataSource"/>
+<fullyQualifiedTypeName name="com.esiag.webservice.Produit"/>
+<fullyQualifiedTypeName name="client.IWebService"/>
+<fullyQualifiedTypeName name="java.util.Timer"/>
+<fullyQualifiedTypeName name="client.Produit"/>
+<fullyQualifiedTypeName name="com.mysql.jdbc.ResultSetMetaData"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="client.StringArray"/>
+<fullyQualifiedTypeName name="org.basex.core.Context"/>
+<fullyQualifiedTypeName name="org.basex.core.cmd.Set"/>
+<fullyQualifiedTypeName name="org.basex.core.cmd.CreateDB"/>
+<fullyQualifiedTypeName name="org.basex.core.cmd.DropDB"/>
+<fullyQualifiedTypeName name="org.basex.core.cmd.Add"/>
+<fullyQualifiedTypeName name="org.basex.core.cmd.Optimize"/>
+<fullyQualifiedTypeName name="org.basex.core.cmd.Delete"/>
+<fullyQualifiedTypeName name="org.basex.core.cmd.InfoDB"/>
+<fullyQualifiedTypeName name="org.postgresql.Driver"/>
+</qualifiedTypeNameHistroy>

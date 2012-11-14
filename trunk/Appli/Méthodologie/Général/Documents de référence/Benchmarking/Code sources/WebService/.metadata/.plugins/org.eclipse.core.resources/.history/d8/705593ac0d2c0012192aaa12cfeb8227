@@ -1,0 +1,33 @@
+package com.esiag.webservice;
+
+import java.net.URL;
+
+import javax.xml.namespace.QName;
+import javax.xml.ws.Service;
+
+import client.IWebService;
+
+
+
+public class Main {
+
+	
+	public Main()
+	{
+		try {
+			 URL url=new URL("http://localhost:8888/WebServiceServeur?wsdl");
+				QName qname=new QName("http://webservice.esiag.com/","ServiceService");
+				Service service=Service.create(url, qname);
+				IWebService proxy=service.getPort(IWebService.class);
+				System.out.println(proxy.get("C01"));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+	public static void main(String[] args) {
+		new Main();
+
+	}
+
+}
