@@ -1,0 +1,16 @@
+package com.esiag.webservice;
+
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+
+
+//               Annotation    
+@WebService
+@SOAPBinding(style = SOAPBinding.Style.RPC)
+
+
+//
+public interface IWebService {
+	public Boolean ajouter(Produit p)throws RemoteException;
+	public Produit Get(int i)throws RemoteException;
+}

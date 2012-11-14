@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="postgresql-1352658583879--1579469165" provider="generic" driver="postgresql" name="PostgreSQL - localhost" create-date="1352658583880" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="localhost" port="5432" server="" database="" url="jdbc:postgresql://localhost:5432/" user=""/>
+	</data-source>
+</data-sources>
