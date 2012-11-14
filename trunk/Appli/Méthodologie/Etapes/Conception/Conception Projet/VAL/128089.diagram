@@ -1,85 +1,63 @@
 format 76
 
-classcanvas 128089 class_ref 128089 // Agent_Domaine_Exploitation
+classcanvas 128089 class_ref 128089 // EHQMR
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 334 4 2000
+  xyz 589 73 2000
 end
-usecasecanvas 128217 usecase_ref 128089 // Arrêter les rames
-  xyzwh 203 138 3005 103 45 label_xy 212 153
-end
-usecasecanvas 128345 usecase_ref 128217 // Démarrer les rames
-  xyzwh 136 67 3005 111 49 label_xy 143 84
-end
-usecasecanvas 128473 usecase_ref 128345 // Résoudre incidents
-  xyzwh 322 144 3005 115 49 label_xy 331 159
-end
-usecasecanvas 128601 usecase_ref 128473 // Emettre alertes dans un train
-  xyzwh 544 69 3005 159 47 label_xy 552 84
-end
-usecasecanvas 128729 usecase_ref 128601 // Emettre messages dans une station
-  xyzwh 477 138 3005 195 47 label_xy 486 153
-end
-classcanvas 129497 class_ref 128217 // Métro
+classcanvas 129497 class_ref 128217 // EFIC
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 79 271 2000
+  xyz 71 226 2000
 end
-usecasecanvas 129625 usecase_ref 128729 // Ouvrir/Fermer portes
-  xyzwh 369 334 3005 127 39 label_xy 380 345
-end
-usecasecanvas 129753 usecase_ref 128857 // Controler température freins
-  xyzwh 284 230 3005 159 37 label_xy 294 241
-end
-usecasecanvas 129881 usecase_ref 128985 // Contrôler la pression des pneus
-  xyzwh 168 349 3005 179 49 label_xy 181 364
-end
-usecasecanvas 130009 usecase_ref 129113 // Détecter capteur de quai
-  xyzwh 328 276 3005 147 33 label_xy 342 284
-end
-usecasecanvas 130137 usecase_ref 129241 // Contrôler la tension de la motrice
-  xyzwh 154 409 3005 187 37 label_xy 167 420
-end
-classcanvas 130265 class_ref 128345 // Station
+classcanvas 130265 class_ref 128345 // RTDG
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 439 570 2000
+  xyz 446 401 2000
 end
-usecasecanvas 130393 usecase_ref 129369 // Gestion des portes
-  xyzwh 423 476 3005 105 41 label_xy 428 488
+usecasecanvas 132441 usecase_ref 136153 // Sauvegarder informations
+  xyzwh 620 340 3005 139 43 label_xy 625 354
 end
-usecasecanvas 130521 usecase_ref 129497 // Diffusion de messages dans la station
-  xyzwh 162 563 3005 215 35 label_xy 177 571
+usecasecanvas 132697 usecase_ref 136281 // Repliquer instance
+  xyzwh 592 257 3005 105 35 label_xy 599 265
 end
-usecasecanvas 130649 usecase_ref 129625 // Gestion du planning électronique
-  xyzwh 537 553 3005 187 35 label_xy 550 562
+usecasecanvas 132953 usecase_ref 136409 // Prioriser informations
+  xyzwh 158 348 3005 135 39 label_xy 171 359
 end
-line 128857 ----
-  from ref 128089 z 3006 to ref 128217
-line 128985 ----
-  from ref 128089 z 3006 to ref 128345
-line 129113 ----
-  from ref 128089 z 3006 to ref 128473
-line 129241 ----
-  from ref 128089 z 3006 to ref 128601
-line 129369 ----
-  from ref 128089 z 3006 to ref 128729
-line 130777 ----
-  from ref 130393 z 3006 to ref 130265
-line 130905 ----
-  from ref 130649 z 3006 to ref 130265
-line 131033 ----
-  from ref 130521 z 3006 to ref 130265
-line 131161 ----
-  from ref 129625 z 3006 to ref 129497
-line 131289 ----
-  from ref 130009 z 3006 to ref 129497
-line 131801 ----
-  from ref 129753 z 3006 to ref 129497
-line 131929 ----
-  from ref 129881 z 3006 to ref 129497
-line 132057 ---- decenter_begin 48
-  from ref 130137 z 3006 to ref 129497
-simplerelationcanvas 132185 simplerelation_ref 128089
-  from ref 130393 z 3006 to ref 129625
+usecasecanvas 133209 usecase_ref 136537 // Recevoir les informations
+  xyzwh 475 207 3005 159 33 label_xy 489 215
 end
-line 132313 --->
-  from ref 128217 z 3006 to ref 129753
+usecasecanvas 133465 usecase_ref 136665 // Envoyer informations
+  xyzwh 274 217 3005 125 39 label_xy 282 227
+end
+usecasecanvas 133977 usecase_ref 136793 // Collecter les informations
+  xyzwh 91 132 3005 139 35 label_xy 98 142
+end
+classcanvas 134233 class_ref 134873 // RTDRS
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 320 72 2000
+end
+line 132569 ----
+  from ref 130265 z 3006 to ref 132441
+line 132825 ----
+  from ref 132697 z 3006 to ref 130265
+line 133081 ----
+  from ref 130265 z 3006 to ref 132953
+line 133337 ---- decenter_begin 300
+  from ref 133209 z 3006 to ref 130265
+line 133593 ---- decenter_end 142
+  from ref 133465 z 3006 to ref 130265
+line 133721 --->
+  from ref 132953 z 3006 to ref 133465
+line 134105 ----
+  from ref 129497 z 3006 to ref 133977
+line 134745 ----
+  from ref 134233 z 3006 to ref 133209
+line 134873 ----
+  from ref 134233 z 3006 to ref 133465
+line 135001 ----
+  from ref 128089 z 3006 to ref 133209
+simplerelationcanvas 135257 simplerelation_ref 134617
+  from ref 133977 z 3006 to ref 133465
+end
+simplerelationcanvas 135385 simplerelation_ref 134745
+  from ref 133465 z 3006 to ref 133209
+end
 end
