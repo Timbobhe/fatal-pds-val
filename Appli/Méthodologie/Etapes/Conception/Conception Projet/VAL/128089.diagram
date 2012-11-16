@@ -2,7 +2,7 @@ format 76
 
 classcanvas 128089 class_ref 128089 // EHQMR
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 589 73 2000
+  xyz 685 95 2000
 end
 classcanvas 129497 class_ref 128217 // Composant_embarqué
   class_drawing_mode default show_context_mode default show_stereotype_properties default
@@ -19,20 +19,23 @@ usecasecanvas 132953 usecase_ref 136409 // Prioriser informations
   xyzwh 158 348 3005 135 39 label_xy 171 359
 end
 usecasecanvas 133209 usecase_ref 136537 // Recevoir les informations
-  xyzwh 475 207 3005 159 33 label_xy 489 215
+  xyzwh 588 222 3005 159 33 label_xy 602 230
 end
 usecasecanvas 133465 usecase_ref 136665 // Envoyer informations
-  xyzwh 274 217 3005 125 39 label_xy 282 227
+  xyzwh 211 208 3005 125 39 label_xy 219 218
 end
 usecasecanvas 133977 usecase_ref 136793 // Collecter les informations
   xyzwh 91 132 3005 139 35 label_xy 98 142
 end
 classcanvas 134233 class_ref 134873 // RTDRS
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 320 72 2000
+  xyz 409 61 2000
 end
 usecasecanvas 135513 usecase_ref 143321 // Gérer RTDG
-  xyzwh 431 340 3005 77 37 label_xy 438 351
+  xyzwh 431 360 3005 77 37 label_xy 438 371
+end
+usecasecanvas 136409 usecase_ref 149849 // Traitement des informations
+  xyzwh 372 219 3005 155 33 label_xy 381 227
 end
 line 133721 --->
   from ref 132953 z 3006 to ref 133465
@@ -47,9 +50,6 @@ line 135001 ----
 simplerelationcanvas 135257 simplerelation_ref 134617
   from ref 133977 z 3006 to ref 133465
 end
-simplerelationcanvas 135385 simplerelation_ref 134745
-  from ref 133465 z 3006 to ref 133209
-end
 line 135641 ----
   from ref 130265 z 3006 to ref 135513
 line 135897 ----
@@ -60,4 +60,10 @@ line 136153 ----
   from ref 133465 z 3006 to ref 135513
 line 136281 ----
   from ref 132953 z 3006 to ref 135513
+line 136537 ----
+  from ref 135513 z 3006 to ref 136409
+line 137049 ----
+  from ref 133465 z 3006 to ref 136409
+line 137305 ----
+  from ref 136409 z 3006 to ref 133209
 end
