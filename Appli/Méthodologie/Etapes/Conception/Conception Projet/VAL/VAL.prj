@@ -1,6 +1,6 @@
 format 76
 "VAL"
-  revision 4
+  revision 5
   modified_by 89 "Nidal"
 
 
@@ -513,6 +513,99 @@ format 76
       //activity diagram settings
       package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
       show_infonote default drawing_language default show_stereotype_properties default
+    end
+  end
+
+  componentview 128089 "composants"
+    //component diagram settings
+    package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+    componentdiagram 134617 "composants"
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+      draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+      size A4
+    end
+
+    component 128089 "Tomcat"
+      stereotype "WebServer"
+    end
+
+    component 128217 "my-sql.jar"
+      simplerelation 141273
+	-_->
+	  on component_ref 128345 // MySQL 5.5
+      end
+    end
+
+    component 128345 "MySQL 5.5"
+      stereotype "DBServer"
+    end
+
+    component 128473 "Struts 2.0"
+    end
+
+    component 128601 "Hibernate"
+    end
+
+    component 128729 "JDK 1.6.19"
+      stereotype "JVM"
+    end
+
+    component 128857 "RTDG-log.jar"
+      stereotype "librairie"
+    end
+
+    component 128985 "RTDG-client.jar"
+      stereotype "librairie"
+      simplerelation 141785
+	-_->
+	  on component_ref 129625 // RTDG.jar
+      end
+    end
+
+    component 129113 "RTDG-common.jar"
+      stereotype "librairie"
+    end
+
+    component 129241 "RTDG-admin.war"
+      stereotype "WebApplication"
+      simplerelation 141401
+	-_->
+	  on component_ref 128473 // Struts 2.0
+      end
+
+      simplerelation 141529
+	-_->
+	  on component_ref 128089 // Tomcat
+      end
+    end
+
+    component 129369 "RTDG-replication.jar"
+      simplerelation 141657
+	-_->
+	  on component_ref 129497 // RTDG-server-config.xml
+      end
+    end
+
+    component 129497 "RTDG-server-config.xml"
+      stereotype "fichier de config"
+    end
+
+    component 129625 "RTDG.jar"
+      simplerelation 141913
+	-_->
+	  on component_ref 129625 // RTDG.jar
+      end
+
+      simplerelation 142041
+	-_->
+	  on component_ref 128729 // JDK 1.6.19
+      end
+
+      simplerelation 142169
+	-_->
+	  on component_ref 129369 // RTDG-replication.jar
+      end
     end
   end
 end
