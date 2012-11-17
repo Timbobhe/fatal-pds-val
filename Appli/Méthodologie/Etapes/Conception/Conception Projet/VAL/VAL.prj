@@ -1,6 +1,6 @@
 format 76
 "VAL"
-  revision 5
+  revision 6
   modified_by 89 "Nidal"
 
 
@@ -521,7 +521,7 @@ format 76
     package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
     draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
     componentdiagram 134617 "composants"
-      package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations no shadow default
       draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
       size A4
     end
@@ -547,7 +547,7 @@ format 76
     component 128601 "Hibernate"
     end
 
-    component 128729 "JDK 1.6.19"
+    component 128729 "JDK 1.7"
       stereotype "JVM"
     end
 
@@ -599,7 +599,7 @@ format 76
 
       simplerelation 142041
 	-_->
-	  on component_ref 128729 // JDK 1.6.19
+	  on component_ref 128729 // JDK 1.7
       end
 
       simplerelation 142169
