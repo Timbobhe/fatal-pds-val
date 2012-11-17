@@ -1,11 +1,13 @@
 window_sizes 1500 787 150 628 600 82
 diagrams
-  active  usecasediagram_ref 128089 // VAL
+  usecasediagram_ref 128089 // VAL
     1444 682 100 4 0 0
+  active  componentdiagram_ref 134617 // composants
+    1344 631 100 4 0 0
 end
 show_stereotypes
-selected usecasediagram_ref 128089 // VAL
+selected componentdiagram_ref 134617 // composants
 open
-  usecaseview_ref 128089 // FATAL Team
+  componentview_ref 128089 // composants
 end
 end
