@@ -1,5 +1,7 @@
 commit du : 18/11/2012
 
-Adoption du template standard
+- Adoption du template standard
+- changement de structure
+- travail sur le contenu
 
 à venir : tables des matieres + travailler contenu + schéma
