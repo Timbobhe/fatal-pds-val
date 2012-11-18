@@ -52,18 +52,18 @@ simplerelationcanvas 135257 simplerelation_ref 134617
 end
 line 135641 ----
   from ref 130265 z 3006 to ref 135513
-line 135897 ----
-  from ref 133209 z 3006 to ref 135513
-line 136025 ----
-  from ref 132441 z 3006 to ref 135513
-line 136153 ----
-  from ref 133465 z 3006 to ref 135513
-line 136281 ----
-  from ref 132953 z 3006 to ref 135513
-line 136537 ----
-  from ref 135513 z 3006 to ref 136409
 line 137049 ----
   from ref 133465 z 3006 to ref 136409
 line 137305 ----
   from ref 136409 z 3006 to ref 133209
+line 137433 --->
+  from ref 135513 z 3006 to ref 132441
+line 137561 --->
+  from ref 135513 z 3006 to ref 133209
+line 137817 --->
+  from ref 135513 z 3006 to ref 136409
+line 137945 --->
+  from ref 135513 z 3006 to ref 133465
+line 138201 --->
+  from ref 135513 z 3006 to ref 132953
 end

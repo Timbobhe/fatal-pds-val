@@ -1,6 +1,6 @@
 format 76
 "VAL"
-  revision 6
+  revision 8
   modified_by 89 "Nidal"
 
 
@@ -606,6 +606,14 @@ format 76
 	-_->
 	  on component_ref 129369 // RTDG-replication.jar
       end
+
+      simplerelation 148697
+	-_->
+	  on component_ref 136153 // RTDG-loadBalancing
+      end
+    end
+
+    component 136153 "RTDG-loadBalancing"
     end
   end
 end
