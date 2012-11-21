@@ -1,0 +1,24 @@
+package com.esiag.isidis;
+
+public class Main {
+
+	public Main()
+	{
+		ListeProduit tab=new ListeProduit();
+		
+		
+		long start=System.currentTimeMillis();
+		
+		for (int i = 0; i <100000; i++) {
+			tab.insert(new Produit("C0"+i, "Clavier", 100, 10));
+		}
+		long start=System.currentTimeMillis();
+		System.out.println("Temps d'insertion de 100000 element ");
+		
+		
+	}
+	public static void main(String[] args) {
+		new Main();
+	}
+
+}
