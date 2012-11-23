@@ -9,6 +9,5 @@ show_stereotypes
 selected usecasediagram_ref 128089 // VAL
 open
   usecaseview_ref 128089 // FATAL Team
-  componentview_ref 128089 // composants
 end
 end
