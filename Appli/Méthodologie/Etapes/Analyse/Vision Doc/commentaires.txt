@@ -1,7 +1,12 @@
-commit du : 18/11/2012
+Changes :
 
 - Adoption du template standard
 - changement de structure
 - travail sur le contenu
+- schéma
 
-à venir : tables des matieres + travailler contenu + schéma
+à venir : vers 18h00
+
+tables des matieres
+FURPS
+relecture du document
