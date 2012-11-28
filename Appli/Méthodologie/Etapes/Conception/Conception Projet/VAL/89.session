@@ -1,16 +1,16 @@
 window_sizes 1600 838 226 1368 729 35
 diagrams
-  usecasediagram_ref 128089 // VAL
+  active  usecasediagram_ref 128089 // VAL
     1444 729 100 4 0 0
   componentdiagram_ref 134617 // composants
     1444 729 100 4 0 0
-  active  deploymentdiagram_ref 141145 // déploiement
-    1368 729 100 4 21 0
+  deploymentdiagram_ref 141145 // déploiement
+    1368 729 100 4 0 0
 end
 show_stereotypes
-selected deploymentdiagram_ref 141145 // déploiement
+selected usecasediagram_ref 128089 // VAL
 open
-  componentview_ref 128089 // composants
+  usecaseview_ref 128089 // FATAL Team
   deploymentview_ref 128089 // Deploiement
 end
 end
