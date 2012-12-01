@@ -1,12 +1,13 @@
 Changes :
-
+- tables des matieres
 - Adoption du template standard
 - changement de structure
 - travail sur le contenu
 - schéma
+- FURPS
+- relecture du document
 
-à venir : vers 18h00
-
-tables des matieres
-FURPS
-relecture du document
+à venir :
+ 
+- retravailler document suite a réunion méthodo
+- Schéma 
