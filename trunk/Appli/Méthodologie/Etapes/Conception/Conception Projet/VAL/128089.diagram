@@ -1,69 +1,112 @@
 format 76
 
-classcanvas 128089 class_ref 128089 // EHQMR
+usecasecanvas 138585 usecase_ref 162905 // Demarrer RTDG
+  xyzwh 124 85 3005 93 43 label_xy 132 97
+end
+usecasecanvas 138713 usecase_ref 163033 // Arreter RTDG
+  xyzwh 99 198 3005 97 35 label_xy 113 207
+end
+usecasecanvas 138841 usecase_ref 163161 // Prioriser messages
+  xyzwh 112 471 3005 121 41 label_xy 124 482
+end
+usecasecanvas 138969 usecase_ref 163289 // Interpreter messages recus
+  xyzwh 114 350 3005 157 33 label_xy 127 357
+end
+usecasecanvas 139097 usecase_ref 163417 // Router messages
+  xyzwh 305 473 3005 107 33 label_xy 319 481
+end
+usecasecanvas 139225 usecase_ref 163545 // Recevoir message
+  xyzwh 248 197 3005 111 35 label_xy 256 205
+end
+usecasecanvas 139353 usecase_ref 163673 // Envoyer ordres
+  xyzwh 313 358 3005 101 35 label_xy 325 368
+end
+usecasecanvas 139481 usecase_ref 163801 // Recevoir ordres
+  xyzwh 492 492 3005 107 33 label_xy 506 500
+end
+usecasecanvas 139609 usecase_ref 163929 // Envoyer messages en RT
+  xyzwh 467 352 3005 151 33 label_xy 479 359
+end
+usecasecanvas 139737 usecase_ref 164057 // Recevoir messages RTDG
+  xyzwh 420 176 3005 157 35 label_xy 434 184
+end
+usecasecanvas 139865 usecase_ref 164185 // Envoyer ordres RTDG
+  xyzwh 433 82 3005 121 43 label_xy 440 95
+end
+classcanvas 140121 class_ref 134873 // RTDRS
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 685 95 2000
+  xyz 629 71 2000
 end
-classcanvas 129497 class_ref 128217 // Composant_embarqué
+classcanvas 141401 class_ref 128217 // Composant_embarqué
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 71 226 2000
+  xyz 668 398 3010
 end
-classcanvas 130265 class_ref 128345 // admin_RTDG
+classcanvas 141785 class_ref 128345 // admin_RTDG
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 441 438 2000
+  xyz 10 75 3010
 end
-usecasecanvas 132441 usecase_ref 136153 // Sauvegarder informations
-  xyzwh 620 340 3005 139 43 label_xy 625 354
+subject 144857 ""
+  xyzwh 404 68 3013 184 156
+subject 145113 "S.U.D."
+  xyzwh 90 17 2000 531 515
+line 140761 ----
+  from ref 139865 z 3006 to ref 140121
+line 140889 ----
+  from ref 140121 z 3006 to point 648 189
+  line 141145 z 3006 to ref 139737
+line 141529 ----
+  from ref 141401 z 3011 to point 724 505
+  line 146009 z 3011 to ref 139481
+line 141657 ----
+  from ref 139609 z 3011 to point 723 366
+  line 145881 z 3011 to ref 141401
+line 141913 ----
+  from ref 141785 z 3011 to ref 138585
+line 142297 ----
+  from ref 141785 z 3011 to point 42 212
+  line 142425 z 3011 to ref 138713
+simplerelationcanvas 142553 simplerelation_ref 162137
+  decenter_end 135
+  from ref 138585 z 3006 to point 165 145
+  line 145369 z 3006 to point 260 145
+  line 145497 z 3006 stereotype "<<extend>>" xyz 214 158 3000 to ref 139225
 end
-usecasecanvas 132953 usecase_ref 136409 // Prioriser informations
-  xyzwh 158 348 3005 135 39 label_xy 171 359
+simplerelationcanvas 142681 simplerelation_ref 162265
+  decenter_begin 233
+  from ref 139225 z 3006 to point 271 258
+  line 145241 z 3006 to point 190 258
+  line 144985 z 3006 stereotype "<<extend>>" xyz 178 284 3000 to ref 138969
 end
-usecasecanvas 133209 usecase_ref 136537 // Recevoir les informations
-  xyzwh 588 222 3005 159 33 label_xy 602 230
+simplerelationcanvas 142809 simplerelation_ref 162393
+  decenter_begin 595
+  decenter_end 451
+  from ref 138841 z 3006 stereotype "<<extend>>" xyz 155 426 3000 to ref 138969
 end
-usecasecanvas 133465 usecase_ref 136665 // Envoyer informations
-  xyzwh 211 208 3005 125 39 label_xy 219 218
+simplerelationcanvas 142937 simplerelation_ref 162521
+  from ref 139097 z 3006 stereotype "<<extend>>" xyz 239.5 489.5 3000 to ref 138841
 end
-usecasecanvas 133977 usecase_ref 136793 // Collecter les informations
-  xyzwh 91 132 3005 139 35 label_xy 98 142
+simplerelationcanvas 143065 simplerelation_ref 162649
+  decenter_begin 550
+  from ref 139097 z 3006 stereotype "<<extend>>" xyz 334.5 432 3000 to ref 139353
 end
-classcanvas 134233 class_ref 134873 // RTDRS
-  class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 409 61 2000
+simplerelationcanvas 143321 simplerelation_ref 162777
+  decenter_end 910
+  from ref 139481 z 3006 stereotype "<<extend>>" xyz 517 453 3000 to point 543 414
+  line 145753 z 3006 to point 402 414
+  line 145625 z 3006 to ref 139353
 end
-usecasecanvas 135513 usecase_ref 143321 // Gérer RTDG
-  xyzwh 431 360 3005 77 37 label_xy 438 371
+simplerelationcanvas 143449 simplerelation_ref 162905
+  from ref 139609 z 3006 to point 540 272
+  line 144601 z 3006 stereotype "<<extend>>" xyz 399 276.5 3000 to point 301 271
+  line 144729 z 3006 to ref 139225
 end
-usecasecanvas 136409 usecase_ref 149849 // Traitement des informations
-  xyzwh 372 219 3005 155 33 label_xy 381 227
+simplerelationcanvas 143961 simplerelation_ref 163033
+  from ref 139225 z 3006 to point 300 100
+  line 144089 z 3006 stereotype "<<extend>>" xyz 308.5 114.5 3000 to ref 139865
 end
-line 133721 --->
-  from ref 132953 z 3006 to ref 133465
-line 134105 ----
-  from ref 129497 z 3006 to ref 133977
-line 134745 ----
-  from ref 134233 z 3006 to ref 133209
-line 134873 ----
-  from ref 134233 z 3006 to ref 133465
-line 135001 ----
-  from ref 128089 z 3006 to ref 133209
-simplerelationcanvas 135257 simplerelation_ref 134617
-  from ref 133977 z 3006 to ref 133465
+simplerelationcanvas 144217 simplerelation_ref 163161
+  from ref 139737 z 3006 to point 496 301
+  line 144473 z 3006 stereotype "<<extend>>" xyz 420.5 288.5 3000 to point 360 301
+  line 144345 z 3006 to ref 139353
 end
-line 135641 ----
-  from ref 130265 z 3006 to ref 135513
-line 137049 ----
-  from ref 133465 z 3006 to ref 136409
-line 137305 ----
-  from ref 136409 z 3006 to ref 133209
-line 137433 --->
-  from ref 135513 z 3006 to ref 132441
-line 137561 --->
-  from ref 135513 z 3006 to ref 133209
-line 137817 --->
-  from ref 135513 z 3006 to ref 136409
-line 137945 --->
-  from ref 135513 z 3006 to ref 133465
-line 138201 --->
-  from ref 135513 z 3006 to ref 132953
 end

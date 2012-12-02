@@ -1,6 +1,6 @@
 format 76
 "Déploiement" // Déploiement
-  revision 1
+  revision 2
   modified_by 89 "Nidal"
   // class settings
   //class diagram settings
@@ -46,6 +46,9 @@ format 76
     end
 
     deploymentnode 128601 "equipement embarqué"
+    end
+
+    deploymentnode 135129 "Admin"
     end
   end
 end
