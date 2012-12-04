@@ -13,7 +13,19 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
+  <distributionManagement>
+  	<repository>
+  		<id>nexus</id>
+  		<name>nexus releases</name>
+  		<url>http://127.0.0.1:8081/nexus-2.2-01/content/repositories/releases</url>
+  	</repository>
+  	<snapshotRepository>
+  		<id>nexus</id>
+  		<name>nexus snapshots</name>
+  		<url>http://127.0.0.1:8081/nexus-2.2-01/content/repositories/snapshots</url>
+  	</snapshotRepository>
+  </distributionManagement>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
