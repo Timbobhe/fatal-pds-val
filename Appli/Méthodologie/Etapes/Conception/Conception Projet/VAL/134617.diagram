@@ -12,9 +12,9 @@ componentcanvas 128985 component_ref 128985 // RTDG-client.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
   xyzwh 44 55 2000 143 51
 end
-componentcanvas 129113 component_ref 129113 // RTDG-common.jar
+componentcanvas 129113 component_ref 129113 // Priorisation
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 239 138 2000 143 51
+  xyzwh 242 111 2000 143 51
 end
 componentcanvas 129369 component_ref 129369 // RTDG-replication.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
@@ -34,11 +34,11 @@ componentcanvas 134105 component_ref 136153 // RTDG-loadBalancing
 end
 componentcanvas 134489 component_ref 128345 // MySQL 5.5
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 338 287 2000 131 51
+  xyzwh 179 459 2000 131 51
 end
 componentcanvas 134617 component_ref 128217 // my-sql.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 333 381 2000 143 51
+  xyzwh 220 373 2000 143 51
 end
 componentcanvas 135257 component_ref 142681 // Javalotion
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
@@ -47,6 +47,14 @@ end
 componentcanvas 136153 component_ref 142809 // RTDG-admin.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
   xyzwh 473 179 2000 143 51
+end
+componentcanvas 137561 component_ref 149337 // RTDG-server.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 517 362 2000 143 51
+end
+componentcanvas 137689 component_ref 149465 // RTDG-server-Order.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 341 313 2000 143 51
 end
 simplerelationcanvas 131289 simplerelation_ref 141657
   decenter_end 485
@@ -71,6 +79,8 @@ simplerelationcanvas 133721 simplerelation_ref 142169
   line 133977 z 2001 to ref 129369
 end
 simplerelationcanvas 134745 simplerelation_ref 155225
+  decenter_begin 104
+  decenter_end 426
   from ref 134617 z 2001 to ref 134489
 end
 simplerelationcanvas 135129 simplerelation_ref 155353
@@ -78,24 +88,40 @@ simplerelationcanvas 135129 simplerelation_ref 155353
   from ref 131801 z 2001 to point 595 251
   line 136281 z 2001 to ref 134105
 end
-simplerelationcanvas 135769 simplerelation_ref 162009
-  from ref 129113 z 2001 to point 431 159
-  line 135897 z 2001 to point 430 118
-  line 136025 z 2001 to ref 135257
-end
 simplerelationcanvas 136409 simplerelation_ref 163289
   decenter_end 430
   from ref 136153 z 2001 to point 419 202
   line 136537 z 2001 to point 419 231
   line 136665 z 2001 to ref 131801
 end
-line 131417 -_-_ decenter_end 237
-  from ref 128985 z 2001 to point 269 78
-  line 131545 z 2001 to ref 129113
+simplerelationcanvas 136793 simplerelation_ref 169817
+  decenter_begin 804
+  decenter_end 704
+  from ref 131801 z 2001 to point 355 197
+  line 137177 z 2001 to point 395 197
+  line 137305 z 2001 to point 395 131
+  line 137433 z 2001 to ref 135257
+end
+simplerelationcanvas 137817 simplerelation_ref 169945
+  decenter_begin 131
+  decenter_end 902
+  from ref 137561 z 2001 to point 533 336
+  line 138457 z 2001 to point 496 336
+  line 138329 z 2001 to point 496 286
+  line 138585 z 2001 to point 369 286
+  line 138841 z 2001 to ref 131801
+end
+simplerelationcanvas 137945 simplerelation_ref 170073
+  from ref 137689 z 2001 to point 312 334
+  line 139097 z 2001 to ref 131801
+end
+simplerelationcanvas 139225 simplerelation_ref 170201
+  decenter_begin 503
+  from ref 129113 z 2001 to ref 131801
+end
 line 132441 -_-_ decenter_end 215
   from ref 128985 z 2001 to point 113 41
   line 132569 z 2001 to ref 128857
-line 134873 -_-_
-  from ref 131801 z 2001 to point 310 402
-  line 135001 z 2001 to ref 134617
+line 134873 -_-_ decenter_begin 342
+  from ref 131801 z 2001 to ref 134617
 end

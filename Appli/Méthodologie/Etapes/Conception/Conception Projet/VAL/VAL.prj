@@ -1,6 +1,6 @@
 format 76
 "VAL"
-  revision 11
+  revision 12
   modified_by 89 "Nidal"
 
 
@@ -843,16 +843,21 @@ format 76
       end
     end
 
-    component 129113 "RTDG-common.jar"
-      stereotype "librairie"
+    component 129113 "Priorisation"
+      stereotype "subsystem"
       simplerelation 161881
 	-_->
-	  on component_ref 129113 // RTDG-common.jar
+	  on component_ref 129113 // Priorisation
       end
 
       simplerelation 162009
 	-_->
 	  on component_ref 142681 // Javalotion
+      end
+
+      simplerelation 170201
+	-_->
+	  on component_ref 129625 // RTDG.jar
       end
     end
 
@@ -905,6 +910,11 @@ format 76
 	-_->
 	  on component_ref 136153 // RTDG-loadBalancing
       end
+
+      simplerelation 169817
+	-_->
+	  on component_ref 142681 // Javalotion
+      end
     end
 
     component 136153 "RTDG-loadBalancing"
@@ -915,6 +925,20 @@ format 76
 
     component 142809 "RTDG-admin.jar"
       simplerelation 163289
+	-_->
+	  on component_ref 129625 // RTDG.jar
+      end
+    end
+
+    component 149337 "RTDG-server.jar"
+      simplerelation 169945
+	-_->
+	  on component_ref 129625 // RTDG.jar
+      end
+    end
+
+    component 149465 "RTDG-server-Order.jar"
+      simplerelation 170073
 	-_->
 	  on component_ref 129625 // RTDG.jar
       end
