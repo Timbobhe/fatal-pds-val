@@ -1,112 +1,75 @@
 format 76
 
-usecasecanvas 138585 usecase_ref 162905 // Demarrer RTDG
-  xyzwh 124 85 3005 93 43 label_xy 132 97
-end
-usecasecanvas 138713 usecase_ref 163033 // Arreter RTDG
-  xyzwh 99 198 3005 97 35 label_xy 113 207
+usecasecanvas 138585 usecase_ref 162905 // Collecter les informations terrain
+  xyzwh 125 163 3005 185 43 label_xy 138 176
 end
 usecasecanvas 138841 usecase_ref 163161 // Prioriser messages
-  xyzwh 112 471 3005 121 41 label_xy 124 482
+  xyzwh 150 273 3005 121 41 label_xy 163 284
 end
-usecasecanvas 138969 usecase_ref 163289 // Interpreter messages recus
-  xyzwh 114 350 3005 157 33 label_xy 127 357
+usecasecanvas 138969 usecase_ref 163289 // Effectuer les interventions automatiques
+  xyzwh 184 423 3005 227 39 label_xy 198 434
 end
-usecasecanvas 139097 usecase_ref 163417 // Router messages
-  xyzwh 305 473 3005 107 33 label_xy 319 481
+usecasecanvas 139225 usecase_ref 163545 // Orchestrer les messages
+  xyzwh 365 244 3005 137 41 label_xy 372 256
 end
-usecasecanvas 139225 usecase_ref 163545 // Recevoir message
-  xyzwh 248 197 3005 111 35 label_xy 256 205
+usecasecanvas 139609 usecase_ref 163929 // Configurer le démarrage des services
+  xyzwh 481 154 3005 217 51 label_xy 497 171
 end
-usecasecanvas 139353 usecase_ref 163673 // Envoyer ordres
-  xyzwh 313 358 3005 101 35 label_xy 325 368
+usecasecanvas 139737 usecase_ref 164057 // Transmettre les messages au terrain
+  xyzwh 516 368 3005 195 45 label_xy 522 383
 end
-usecasecanvas 139481 usecase_ref 163801 // Recevoir ordres
-  xyzwh 492 492 3005 107 33 label_xy 506 500
-end
-usecasecanvas 139609 usecase_ref 163929 // Envoyer messages en RT
-  xyzwh 467 352 3005 151 33 label_xy 479 359
-end
-usecasecanvas 139737 usecase_ref 164057 // Recevoir messages RTDG
-  xyzwh 420 176 3005 157 35 label_xy 434 184
-end
-usecasecanvas 139865 usecase_ref 164185 // Envoyer ordres RTDG
-  xyzwh 433 82 3005 121 43 label_xy 440 95
+usecasecanvas 139865 usecase_ref 164185 // Expand messages
+  xyzwh 555 263 3005 121 43 label_xy 570 276
 end
 classcanvas 140121 class_ref 134873 // RTDRS
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 629 71 2000
+  xyz 411 29 2000
 end
-classcanvas 141401 class_ref 128217 // Composant_embarqué
+classcanvas 141401 class_ref 128217 // Admin_RTDG
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 668 398 3010
+  xyz 754 150 3010
 end
-classcanvas 141785 class_ref 128345 // admin_RTDG
+classcanvas 141785 class_ref 128345 // Composant_Embarque
   class_drawing_mode default show_context_mode default show_stereotype_properties default
-  xyz 10 75 3010
+  xyz 1 237 3010
 end
-subject 144857 ""
-  xyzwh 404 68 3013 184 156
-subject 145113 "S.U.D."
-  xyzwh 90 17 2000 531 515
-line 140761 ----
-  from ref 139865 z 3006 to ref 140121
-line 140889 ----
-  from ref 140121 z 3006 to point 648 189
-  line 141145 z 3006 to ref 139737
-line 141529 ----
-  from ref 141401 z 3011 to point 724 505
-  line 146009 z 3011 to ref 139481
-line 141657 ----
-  from ref 139609 z 3011 to point 723 366
-  line 145881 z 3011 to ref 141401
-line 141913 ----
-  from ref 141785 z 3011 to ref 138585
-line 142297 ----
-  from ref 141785 z 3011 to point 42 212
-  line 142425 z 3011 to ref 138713
-simplerelationcanvas 142553 simplerelation_ref 162137
-  decenter_end 135
-  from ref 138585 z 3006 to point 165 145
-  line 145369 z 3006 to point 260 145
-  line 145497 z 3006 stereotype "<<extend>>" xyz 214 158 3000 to ref 139225
+subject 149593 "Priorisation"
+  xyzwh 122 140 3010 189 176
+subject 149849 "Traitement des messages directs"
+  xyzwh 167 362 2000 554 119
+subject 149977 "Traitement des messages en passant par RTDRS"
+  xyzwh 357 217 3011 362 198
+subject 150105 "Configuration"
+  xyzwh 465 131 3010 249 82
+subject 150617 "S.U.D."
+  xyzwh 117 104 3018 613 385
+line 141913 ---- decenter_begin 615
+  from ref 141785 z 3011 to point 70 180
+  line 150489 z 3011 to ref 138585
+line 146137 ----
+  from ref 141401 z 3011 to ref 139609
+line 146265 ----
+  from ref 140121 z 3006 to ref 139225
+simplerelationcanvas 147417 simplerelation_ref 177497
+  from ref 139225 z 3006 stereotype "<<extend>>" xyz 276.5 256.5 3000 to ref 138841
 end
-simplerelationcanvas 142681 simplerelation_ref 162265
-  decenter_begin 233
-  from ref 139225 z 3006 to point 271 258
-  line 145241 z 3006 to point 190 258
-  line 144985 z 3006 stereotype "<<extend>>" xyz 178 284 3000 to ref 138969
+simplerelationcanvas 147545 simplerelation_ref 177625
+  from ref 138969 z 3006 stereotype "<<include>>" xyz 191.5 368.5 3000 to ref 138841
 end
-simplerelationcanvas 142809 simplerelation_ref 162393
-  decenter_begin 595
-  decenter_end 451
-  from ref 138841 z 3006 stereotype "<<extend>>" xyz 155 426 3000 to ref 138969
+simplerelationcanvas 147801 simplerelation_ref 177753
+  from ref 139737 z 3006 stereotype "<<extend>>" xyz 432.5 413 3000 to ref 138969
 end
-simplerelationcanvas 142937 simplerelation_ref 162521
-  from ref 139097 z 3006 stereotype "<<extend>>" xyz 239.5 489.5 3000 to ref 138841
+simplerelationcanvas 147929 simplerelation_ref 177881
+  from ref 139737 z 3006 stereotype "<<extend>>" xyz 588 317.5 3000 to ref 139865
 end
-simplerelationcanvas 143065 simplerelation_ref 162649
-  decenter_begin 550
-  from ref 139097 z 3006 stereotype "<<extend>>" xyz 334.5 432 3000 to ref 139353
+simplerelationcanvas 148825 simplerelation_ref 178009
+  decenter_end 625
+  from ref 139225 z 3006 stereotype "<<extend>>" xyz 373 301 3000 to ref 138969
 end
-simplerelationcanvas 143321 simplerelation_ref 162777
-  decenter_end 910
-  from ref 139481 z 3006 stereotype "<<extend>>" xyz 517 453 3000 to point 543 414
-  line 145753 z 3006 to point 402 414
-  line 145625 z 3006 to ref 139353
+simplerelationcanvas 148953 simplerelation_ref 178137
+  from ref 138841 z 3006 stereotype "<<include>>" xyz 183 238 3000 to ref 138585
 end
-simplerelationcanvas 143449 simplerelation_ref 162905
-  from ref 139609 z 3006 to point 540 272
-  line 144601 z 3006 stereotype "<<extend>>" xyz 399 276.5 3000 to point 301 271
-  line 144729 z 3006 to ref 139225
-end
-simplerelationcanvas 143961 simplerelation_ref 163033
-  from ref 139225 z 3006 to point 300 100
-  line 144089 z 3006 stereotype "<<extend>>" xyz 308.5 114.5 3000 to ref 139865
-end
-simplerelationcanvas 144217 simplerelation_ref 163161
-  from ref 139737 z 3006 to point 496 301
-  line 144473 z 3006 stereotype "<<extend>>" xyz 420.5 288.5 3000 to point 360 301
-  line 144345 z 3006 to ref 139353
+simplerelationcanvas 149337 simplerelation_ref 178265
+  from ref 139865 z 3006 stereotype "<<include>>" xyz 498 273 3000 to ref 139225
 end
 end

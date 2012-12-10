@@ -1,9 +1,11 @@
-window_sizes 1600 838 104 674 600 82
+window_sizes 1600 838 247 1347 600 82
 diagrams
-  active  componentdiagram_ref 134617 // composants
+  componentdiagram_ref 134617 // composants
     1490 682 100 4 0 0
   deploymentdiagram_ref 141145 // déploiement
     1219 682 100 4 0 0
+  active  usecasediagram_ref 128089 // VAL
+    1347 682 100 4 0 0
 end
 show_stereotypes
 selected componentdiagram_ref 134617 // composants
