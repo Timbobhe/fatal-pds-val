@@ -51,7 +51,7 @@ reflexivemsg 129292 asynchronous
   to durationcanvas_ref 129164
   yz 180 2025 explicitmsg "Traitement"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 606 167
+  label_xy 648 169
 msg 129676 return
   from durationcanvas_ref 129420
   to durationcanvas_ref 129548

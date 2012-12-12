@@ -10,13 +10,19 @@ diagrams
     775 465 100 4 0 0
   sequencediagram_ref 134924 // Transmettre les messages au terrain
     970 582 100 4 0 0
-  active  sequencediagram_ref 134796 // Orchestrer les messages
+  sequencediagram_ref 134796 // Orchestrer les messages
     970 582 100 4 0 0
+  sequencediagram_ref 135052 // Expand message
+    775 465 100 4 0 0
+  sequencediagram_ref 135180 // Configurer le démarrage des services 
+    775 465 100 4 0 0
+  active  classdiagram_ref 141708 // collecter les informations terrain
+    974 582 100 4 0 0
 end
 show_stereotypes
-selected class_ref 134873 // RTDRS
+selected classdiagram_ref 141708 // collecter les informations terrain
 open
-  usecase_ref 136665 // Envoyer informations
   usecaseview_ref 128012 // diagrammes sequences metier
+  usecaseview_ref 134668 // diagramme classe metier
 end
 end
