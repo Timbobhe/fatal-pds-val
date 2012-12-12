@@ -1,0 +1,22 @@
+window_sizes 1280 738 300 900 533 82
+diagrams
+  usecasediagram_ref 128089 // VAL
+    974 582 100 4 0 0
+  sequencediagram_ref 128012 // collecter les informations terrains
+    974 582 100 4 0 0
+  sequencediagram_ref 134540 // Prioriser messages
+    775 465 100 4 0 0
+  sequencediagram_ref 134668 // Effectuer les interventions automatiques
+    775 465 100 4 0 0
+  sequencediagram_ref 134924 // Transmettre les messages au terrain
+    970 582 100 4 0 0
+  active  sequencediagram_ref 134796 // Orchestrer les messages
+    970 582 100 4 0 0
+end
+show_stereotypes
+selected class_ref 134873 // RTDRS
+open
+  usecase_ref 136665 // Envoyer informations
+  usecaseview_ref 128012 // diagrammes sequences metier
+end
+end
