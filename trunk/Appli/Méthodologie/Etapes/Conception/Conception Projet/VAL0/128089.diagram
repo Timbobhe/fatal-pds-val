@@ -1,0 +1,75 @@
+format 76
+
+usecasecanvas 138585 usecase_ref 162905 // Collecter les informations terrain
+  xyzwh 125 163 3005 185 43 label_xy 138 176
+end
+usecasecanvas 138841 usecase_ref 163161 // Prioriser messages
+  xyzwh 150 273 3005 121 41 label_xy 163 284
+end
+usecasecanvas 138969 usecase_ref 163289 // Effectuer les interventions automatiques
+  xyzwh 184 423 3005 227 39 label_xy 198 434
+end
+usecasecanvas 139225 usecase_ref 163545 // Orchestrer les messages
+  xyzwh 365 244 3005 137 41 label_xy 372 256
+end
+usecasecanvas 139609 usecase_ref 163929 // Configurer le démarrage des services
+  xyzwh 481 154 3005 217 51 label_xy 497 171
+end
+usecasecanvas 139737 usecase_ref 164057 // Transmettre les messages au terrain
+  xyzwh 516 368 3005 195 45 label_xy 522 383
+end
+usecasecanvas 139865 usecase_ref 164185 // Expand messages
+  xyzwh 555 263 3005 121 43 label_xy 570 276
+end
+classcanvas 140121 class_ref 134873 // RTDRS
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 411 29 2000
+end
+classcanvas 141401 class_ref 128217 // Admin_RTDG
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 754 150 3010
+end
+classcanvas 141785 class_ref 128345 // Composant_Embarque
+  class_drawing_mode default show_context_mode default show_stereotype_properties default
+  xyz 1 237 3010
+end
+subject 149593 "Priorisation"
+  xyzwh 122 140 3010 189 176
+subject 149849 "Traitement des messages directs"
+  xyzwh 167 362 2000 554 119
+subject 149977 "Traitement des messages en passant par RTDRS"
+  xyzwh 357 217 3011 362 198
+subject 150105 "Configuration"
+  xyzwh 465 131 3010 249 82
+subject 150617 "S.U.D."
+  xyzwh 117 104 3018 613 385
+line 141913 ---- decenter_begin 615
+  from ref 141785 z 3011 to point 70 180
+  line 150489 z 3011 to ref 138585
+line 146137 ----
+  from ref 141401 z 3011 to ref 139609
+line 146265 ----
+  from ref 140121 z 3006 to ref 139225
+simplerelationcanvas 147417 simplerelation_ref 177497
+  from ref 139225 z 3006 stereotype "<<extend>>" xyz 276.5 256.5 3000 to ref 138841
+end
+simplerelationcanvas 147545 simplerelation_ref 177625
+  from ref 138969 z 3006 stereotype "<<include>>" xyz 191.5 368.5 3000 to ref 138841
+end
+simplerelationcanvas 147801 simplerelation_ref 177753
+  from ref 139737 z 3006 stereotype "<<extend>>" xyz 432.5 413 3000 to ref 138969
+end
+simplerelationcanvas 147929 simplerelation_ref 177881
+  from ref 139737 z 3006 stereotype "<<extend>>" xyz 588 317.5 3000 to ref 139865
+end
+simplerelationcanvas 148825 simplerelation_ref 178009
+  decenter_end 625
+  from ref 139225 z 3006 stereotype "<<extend>>" xyz 373 301 3000 to ref 138969
+end
+simplerelationcanvas 148953 simplerelation_ref 178137
+  from ref 138841 z 3006 stereotype "<<include>>" xyz 183 238 3000 to ref 138585
+end
+simplerelationcanvas 149337 simplerelation_ref 178265
+  from ref 139865 z 3006 stereotype "<<include>>" xyz 498 273 3000 to ref 139225
+end
+end
