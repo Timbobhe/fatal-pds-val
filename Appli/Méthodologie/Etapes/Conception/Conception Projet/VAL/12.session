@@ -16,11 +16,13 @@ diagrams
     775 465 100 4 0 0
   sequencediagram_ref 135180 // Configurer le démarrage des services 
     775 465 100 4 0 0
-  active  classdiagram_ref 141708 // collecter les informations terrain
+  classdiagram_ref 141708 // collecter les informations terrain
     974 582 100 4 0 0
+  active  classdiagram_ref 141836 // prioriser message
+    974 582 100 4 358 0
 end
 show_stereotypes
-selected classdiagram_ref 141708 // collecter les informations terrain
+selected class_ref 135436 // RTDGSaveMessage
 open
   usecaseview_ref 128012 // diagrammes sequences metier
   usecaseview_ref 134668 // diagramme classe metier
