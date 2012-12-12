@@ -1,7 +1,7 @@
 format 76
 "VAL"
-  revision 14
-  modified_by 89 "Nidal"
+  revision 15
+  modified_by 12 "Hamza"
 
 
   
@@ -1040,4 +1040,6 @@ format 76
   end
 
   package_ref 128089 // Configuration
+
+  package_ref 128012 // diagramme Metier
 end
