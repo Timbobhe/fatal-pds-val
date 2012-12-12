@@ -1,13 +1,5 @@
-Changes :
-- tables des matieres
-- Adoption du template standard
-- changement de structure
-- travail sur le contenu
-- schéma
-- FURPS
-- relecture du document
+- Version non définitive avant réunion du 13/12/2012
 
-à venir :
- 
-- retravailler document suite a réunion méthodo
-- Schéma 
+a venir : 
+
+définir volumetrie ( messages / s , temps de reponse ] + contrainte Functionnality
