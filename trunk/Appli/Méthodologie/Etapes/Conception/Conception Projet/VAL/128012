@@ -1,6 +1,6 @@
 format 76
 "diagramme Metier" // diagramme Metier
-  revision 5
+  revision 6
   modified_by 12 "Hamza"
   // class settings
   //class diagram settings
@@ -169,7 +169,7 @@ format 76
     end
 
     classdiagram 141836 "prioriser message"
-      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
       size A4
     end
 
@@ -256,6 +256,13 @@ format 76
 	    classrelation_ref 128524 // <dependency>
 	  b parent class_ref 134924 // RTDGInterpretationService
       end
+
+      classrelation 136716 // <dependency>
+	relation 136076 -_->
+	  a default
+	    classrelation_ref 136716 // <dependency>
+	  b parent class_ref 142092 // RTDGPriorisationService
+      end
     end
 
     class 134924 "RTDGInterpretationService"
@@ -327,6 +334,138 @@ format 76
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 135308 // <dependency>
+	relation 135180 -_->
+	  a default
+	    classrelation_ref 135308 // <dependency>
+	  b parent class_ref 141964 // RTDGGestionaireBuffer
+      end
+
+      classrelation 135436 // <association>
+	relation 135308 ----
+	  a role_name "" private
+	    classrelation_ref 135436 // <association>
+	  b role_name "" private
+	    classrelation_ref 135564 // <association>
+      end
+
+      classrelation 135692 // <association>
+	relation 135436 ----
+	  a role_name "" private
+	    classrelation_ref 135692 // <association>
+	  b role_name "" private
+	    classrelation_ref 135820 // <association>
+      end
+    end
+
+    class 141964 "RTDGGestionaireBuffer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135564 // <association>
+	relation_ref 135308 // <association>
+      end
+
+      classrelation 136076 // <association>
+	relation 135692 ----
+	  a role_name "" private
+	    classrelation_ref 136076 // <association>
+	  b role_name "" private
+	    classrelation_ref 136204 // <association>
+      end
+
+      classrelation 137228 // <association>
+	relation_ref 136332 // <association>
+      end
+    end
+
+    class 142092 "RTDGPriorisationService"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135820 // <association>
+	relation_ref 135436 // <association>
+      end
+
+      classrelation 136460 // <association>
+	relation_ref 135820 // <association>
+      end
+
+      classrelation 137100 // <association>
+	relation 136332 ----
+	  a role_name "" private
+	    classrelation_ref 137100 // <association>
+	  b role_name "" private
+	    classrelation_ref 137228 // <association>
+      end
+    end
+
+    class 142220 "Structurebuffer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135948 // <dependency>
+	relation 135564 -_->
+	  a default
+	    classrelation_ref 135948 // <dependency>
+	  b parent class_ref 141964 // RTDGGestionaireBuffer
+      end
+    end
+
+    class 142348 "RTDGSaveBufferService"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 136204 // <association>
+	relation_ref 135692 // <association>
+      end
+
+      classrelation 136332 // <association>
+	relation 135820 ----
+	  a role_name "" private
+	    classrelation_ref 136332 // <association>
+	  b role_name "" private
+	    classrelation_ref 136460 // <association>
+      end
+
+      classrelation 136588 // <dependency>
+	relation 135948 -_->
+	  a default
+	    classrelation_ref 136588 // <dependency>
+	  b parent class_ref 142348 // RTDGSaveBufferService
+      end
+
+      classrelation 136844 // <association>
+	relation 136204 ----
+	  a role_name "" private
+	    classrelation_ref 136844 // <association>
+	  b role_name "" private
+	    classrelation_ref 136972 // <association>
+      end
+
+      classrelation 136972 // <association>
+	relation_ref 136204 // <association>
+      end
     end
   end
 end
