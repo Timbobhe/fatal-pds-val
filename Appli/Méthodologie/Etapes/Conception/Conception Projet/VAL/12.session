@@ -1,4 +1,4 @@
-window_sizes 1280 738 300 900 533 82
+window_sizes 1280 738 324 950 533 82
 diagrams
   usecasediagram_ref 128089 // VAL
     974 582 100 4 0 0
@@ -18,13 +18,22 @@ diagrams
     775 465 100 4 0 0
   classdiagram_ref 141708 // collecter les informations terrain
     974 582 100 4 0 0
-  active  classdiagram_ref 141836 // prioriser message
-    974 582 100 4 358 0
+  classdiagram_ref 141836 // prioriser message
+    974 582 100 4 410 0
+  componentdiagram_ref 134617 // composants
+    974 582 100 4 32 0
+  sequencediagram_ref 149004 // scenario nominal 1 : Interpréter un message reçu depuis un composant embarqué
+    974 582 100 4 0 0
+  sequencediagram_ref 149132 // Scénario nominal : affecter un message non critique dans un buffer
+    775 465 100 4 0 0
+  active  sequencediagram_ref 149260 // Scénario alternatif : affecter un message critique dans un buffer par ordre de priorité
+    950 582 100 4 0 0
+  classdiagram_ref 141964 // Effectuer les interventions automatiques
+    743 452 100 4 0 0
 end
 show_stereotypes
-selected class_ref 135436 // RTDGSaveMessage
+selected sequencediagram_ref 149260 // Scénario alternatif : affecter un message critique dans un buffer par ordre de priorité
 open
-  usecaseview_ref 128012 // diagrammes sequences metier
-  usecaseview_ref 134668 // diagramme classe metier
+  classview_ref 128396 // Prioriser message
 end
 end
