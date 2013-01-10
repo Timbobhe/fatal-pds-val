@@ -1,7 +1,7 @@
 format 76
 
 classinstancecanvas 128268 classinstance_ref 134668 // ServicePriorisation
-  xyz 271 17 2005 life_line_z 2000
+  xyz 262 17 2005 life_line_z 2000
 end
 classinstancecanvas 128396 classinstance_ref 134796 // ServiceTraitement
   xyz 511 18 2000 life_line_z 2000
@@ -12,7 +12,7 @@ end
 durationcanvas 128652 classinstance_ref 128524 // ServiceCollectionInfo:RTDG
   xyzwh 98 98 2010 11 40
 end
-durationcanvas 128780 classinstance_ref 128268 // ServicePriorisation:RTDG
+durationcanvas 128780 classinstance_ref 128268 // ServicePriorisation:priorisation
   xyzwh 332 98 2010 11 71
 end
 durationcanvas 129676 classinstance_ref 128524 // ServiceCollectionInfo:RTDG
@@ -21,7 +21,7 @@ end
 durationcanvas 129932 classinstance_ref 128524 // ServiceCollectionInfo:RTDG
   xyzwh 98 194 2010 11 40
 end
-durationcanvas 130060 classinstance_ref 128268 // ServicePriorisation:RTDG
+durationcanvas 130060 classinstance_ref 128268 // ServicePriorisation:priorisation
   xyzwh 332 194 2010 11 73
   overlappingdurationcanvas 130316
     xyzwh 338 208 2020 11 53
@@ -30,7 +30,7 @@ durationcanvas 130060 classinstance_ref 128268 // ServicePriorisation:RTDG
     end
   end
 end
-durationcanvas 130828 classinstance_ref 128268 // ServicePriorisation:RTDG
+durationcanvas 130828 classinstance_ref 128268 // ServicePriorisation:priorisation
   xyzwh 332 292 2010 11 40
 end
 durationcanvas 130956 classinstance_ref 128396 // ServiceTraitement:RTDG
