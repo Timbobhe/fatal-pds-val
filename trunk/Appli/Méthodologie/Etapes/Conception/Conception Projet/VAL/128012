@@ -1,6 +1,6 @@
 format 76
 "diagramme Metier" // diagramme Metier
-  revision 9
+  revision 10
   modified_by 12 "Hamza"
   // class settings
   //class diagram settings
@@ -614,6 +614,13 @@ format 76
       classrelation 145420 // <aggregation>
 	relation_ref 143628 // <aggregation>
       end
+
+      classrelation 156812 // <dependency>
+	relation 153484 -_->
+	  a default
+	    classrelation_ref 156812 // <dependency>
+	  b parent class_ref 171788 // RefInitializer
+      end
     end
 
     classinstance 167948 "Referentiel"
@@ -709,6 +716,28 @@ format 76
 	    classrelation_ref 146828 // <realization>
 	  b parent class_ref 162828 // ServiceCriticiteMessage
       end
+
+      classrelation 153996 // <association>
+	relation 151564 ----
+	  a role_name "" private
+	    classrelation_ref 153996 // <association>
+	  b role_name "" private
+	    classrelation_ref 154124 // <association>
+      end
+
+      classrelation 154764 // <dependency>
+	relation 151948 -_->
+	  a default
+	    classrelation_ref 154764 // <dependency>
+	  b parent class_ref 162828 // ServiceCriticiteMessage
+      end
+
+      classrelation 155660 // <dependency>
+	relation 152588 -_->
+	  a default
+	    classrelation_ref 155660 // <dependency>
+	  b parent class_ref 171020 // AnalyserMessagePrio
+      end
     end
 
     class 162700 "Message"
@@ -754,6 +783,18 @@ format 76
 
       classrelation 147340 // <aggregation>
 	relation_ref 144908 // <aggregation>
+      end
+
+      classrelation 155276 // <aggregation>
+	relation_ref 152332 // <aggregation>
+      end
+
+      classrelation 155404 // <aggregation>
+	relation 152460 o---
+	  a role_name "" private
+	    classrelation_ref 155404 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 155532 // <aggregation>
       end
     end
 
@@ -894,7 +935,7 @@ format 76
 	relation 144780 -_-|>
 	  a public
 	    classrelation_ref 147084 // <realization>
-	  b parent class_ref 164236 // Buffer
+	  b parent class_ref 164236 // GestionnaireBuffer
       end
 
       classrelation 147468 // <realization>
@@ -902,6 +943,40 @@ format 76
 	  a public
 	    classrelation_ref 147468 // <realization>
 	  b parent class_ref 164364 // ReferentielPriorisation
+      end
+
+      classrelation 154124 // <association>
+	relation_ref 151564 // <association>
+      end
+
+      classrelation 154252 // <association>
+	relation 151692 ----
+	  a role_name "" private
+	    classrelation_ref 154252 // <association>
+	  b role_name "" private
+	    classrelation_ref 154380 // <association>
+      end
+
+      classrelation 154508 // <association>
+	relation 151820 ----
+	  a role_name "" private
+	    classrelation_ref 154508 // <association>
+	  b role_name "" private
+	    classrelation_ref 154636 // <association>
+      end
+
+      classrelation 154892 // <dependency>
+	relation 152076 -_->
+	  a default
+	    classrelation_ref 154892 // <dependency>
+	  b parent class_ref 164236 // GestionnaireBuffer
+      end
+
+      classrelation 155020 // <dependency>
+	relation 152204 -_->
+	  a default
+	    classrelation_ref 155020 // <dependency>
+	  b parent class_ref 164108 // ReferentielCriticite
       end
     end
 
@@ -1006,9 +1081,19 @@ format 76
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 154380 // <association>
+	relation_ref 151692 // <association>
+      end
+
+      classrelation 157452 // <dependency>
+	relation 154124 -_->
+	  a default
+	    classrelation_ref 157452 // <dependency>
+	  b parent class_ref 171788 // RefInitializer
+      end
     end
 
-    class 164236 "Buffer"
+    class 164236 "GestionnaireBuffer"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -1017,6 +1102,9 @@ format 76
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 154636 // <association>
+	relation_ref 151820 // <association>
+      end
     end
 
     classdiagram 156044 "class metier affecter message critique"

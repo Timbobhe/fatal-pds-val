@@ -14,8 +14,6 @@ diagrams
     970 582 100 4 0 0
   sequencediagram_ref 135052 // Expand message
     775 465 100 4 0 0
-  sequencediagram_ref 135180 // Configurer le démarrage des services 
-    775 465 100 4 0 0
   classdiagram_ref 141708 // collecter les informations terrain
     894 520 100 4 0 0
   classdiagram_ref 141836 // prioriser message
@@ -28,18 +26,17 @@ diagrams
     775 465 100 4 0 0
   sequencediagram_ref 149260 // Scénario alternatif : affecter un message critique dans un buffer par ordre de priorité
     950 582 100 4 0 0
-  classdiagram_ref 141964 // Effectuer les interventions automatiques
-    743 452 100 4 0 0
-  classdiagram_ref 155788 // diagramme de classe metier Interpréter un message
-    756 446 100 4 0 0
   classdiagram_ref 155916 // class metier affecter message non Critique
-    756 465 100 4 57 0
-  active  classdiagram_ref 156044 // class metier affecter message critique
+    756 465 100 4 0 0
+  classdiagram_ref 156044 // class metier affecter message critique
+    950 582 100 4 0 0
+  active  classdiagram_ref 162572 // Diagramme class metier Projet
     950 582 100 4 0 0
 end
 show_stereotypes
-selected classdiagram_ref 156044 // class metier affecter message critique
+selected classdiagram_ref 162572 // Diagramme class metier Projet
 open
+  usecaseview_ref 128089 // FATAL Team
   usecaseview_ref 128012 // diagrammes sequences metier
   usecaseview_ref 134668 // diagramme classe metier
   classview_ref 128268 // Collecter information terrain

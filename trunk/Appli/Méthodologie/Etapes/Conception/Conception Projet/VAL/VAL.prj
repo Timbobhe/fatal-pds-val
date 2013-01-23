@@ -1,6 +1,6 @@
 format 76
 "VAL"
-  revision 15
+  revision 16
   modified_by 12 "Hamza"
 
 
@@ -860,6 +860,186 @@ format 76
 	  stereotype "include"
 	  on usecase_ref 163545 // Orchestrer les messages
       end
+    end
+
+    classdiagram 162572 "Diagramme class metier Projet"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 170892 "TransmissionService"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 155148 // <aggregation>
+	relation 152332 o---
+	  a role_name "" private
+	    classrelation_ref 155148 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 155276 // <aggregation>
+      end
+
+      classrelation 155532 // <aggregation>
+	relation_ref 152460 // <aggregation>
+      end
+
+      classrelation 155916 // <association>
+	relation 152844 ----
+	  a role_name "" private
+	    classrelation_ref 155916 // <association>
+	  b role_name "" private
+	    classrelation_ref 156044 // <association>
+      end
+    end
+
+    class 171020 "AnalyserMessagePrio"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 155788 // <dependency>
+	relation 152716 -_->
+	  a default
+	    classrelation_ref 155788 // <dependency>
+	  b parent class_ref 171148 // ReferentielMesure
+      end
+
+      classrelation 156172 // <realization>
+	relation 152972 -_-|>
+	  a public
+	    classrelation_ref 156172 // <realization>
+	  b parent class_ref 171276 // TerrainServer
+      end
+
+      classrelation 156300 // <dependency>
+	relation 153100 -_->
+	  a default
+	    classrelation_ref 156300 // <dependency>
+	  b parent class_ref 171276 // TerrainServer
+      end
+
+      classrelation 156684 // <association>
+	relation_ref 153356 // <association>
+      end
+    end
+
+    class 171148 "ReferentielMesure"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 156044 // <association>
+	relation_ref 152844 // <association>
+      end
+
+      classrelation 156940 // <dependency>
+	relation 153612 -_->
+	  a default
+	    classrelation_ref 156940 // <dependency>
+	  b parent class_ref 171788 // RefInitializer
+      end
+    end
+
+    class 171276 "TerrainServer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 171404 "ParserFoncTchnique"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 156428 // <dependency>
+	relation 153228 -_->
+	  a default
+	    classrelation_ref 156428 // <dependency>
+	  b parent class_ref 171276 // TerrainServer
+      end
+
+      classrelation 156556 // <association>
+	relation 153356 ----
+	  a role_name "" private
+	    classrelation_ref 156556 // <association>
+	  b role_name "" private
+	    classrelation_ref 156684 // <association>
+      end
+    end
+
+    class 171532 "RTDRSServer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 171660 "Ochestrer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 157068 // <dependency>
+	relation 153740 -_->
+	  a default
+	    classrelation_ref 157068 // <dependency>
+	  b parent class_ref 162572 // ServicePriorisation
+      end
+
+      classrelation 157196 // <dependency>
+	relation 153868 -_->
+	  a default
+	    classrelation_ref 157196 // <dependency>
+	  b parent class_ref 171532 // RTDRSServer
+      end
+
+      classrelation 157324 // <dependency>
+	relation 153996 -_->
+	  a default
+	    classrelation_ref 157324 // <dependency>
+	  b parent class_ref 171404 // ParserFoncTchnique
+      end
+    end
+
+    class 171788 "RefInitializer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
     end
   end
 
