@@ -1,6 +1,6 @@
 format 76
 "Affecter les messages non critiques" // Uses Cases::Prioriser messages::Affecter les messages non critiques
-  revision 1
+  revision 2
   modified_by 89 "Nidal"
   // class settings
   //class diagram settings
