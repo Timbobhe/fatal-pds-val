@@ -1,0 +1,48 @@
+window_sizes 1280 738 324 950 533 82
+diagrams
+  usecasediagram_ref 128089 // VAL
+    974 582 100 4 0 0
+  sequencediagram_ref 128012 // collecter les informations terrains
+    974 582 100 4 0 0
+  sequencediagram_ref 134540 // Prioriser messages
+    775 465 100 4 0 0
+  sequencediagram_ref 134668 // Effectuer les interventions automatiques
+    775 465 100 4 0 0
+  sequencediagram_ref 134924 // Transmettre les messages au terrain
+    970 582 100 4 0 0
+  sequencediagram_ref 134796 // Orchestrer les messages
+    970 582 100 4 0 0
+  sequencediagram_ref 135052 // Expand message
+    775 465 100 4 0 0
+  sequencediagram_ref 135180 // Configurer le démarrage des services 
+    775 465 100 4 0 0
+  classdiagram_ref 141708 // collecter les informations terrain
+    894 520 100 4 0 0
+  classdiagram_ref 141836 // prioriser message
+    974 582 100 4 410 0
+  componentdiagram_ref 134617 // composants
+    974 582 100 4 32 0
+  sequencediagram_ref 149004 // scenario nominal 1 : Interpréter un message reçu depuis un composant embarqué
+    974 582 100 4 0 0
+  sequencediagram_ref 149132 // Scénario nominal : affecter un message non critique dans un buffer
+    775 465 100 4 0 0
+  sequencediagram_ref 149260 // Scénario alternatif : affecter un message critique dans un buffer par ordre de priorité
+    950 582 100 4 0 0
+  classdiagram_ref 141964 // Effectuer les interventions automatiques
+    743 452 100 4 0 0
+  classdiagram_ref 155788 // diagramme de classe metier Interpréter un message
+    756 446 100 4 0 0
+  classdiagram_ref 155916 // class metier affecter message non Critique
+    756 465 100 4 57 0
+  active  classdiagram_ref 156044 // class metier affecter message critique
+    950 582 100 4 0 0
+end
+show_stereotypes
+selected classdiagram_ref 156044 // class metier affecter message critique
+open
+  usecaseview_ref 128012 // diagrammes sequences metier
+  usecaseview_ref 134668 // diagramme classe metier
+  classview_ref 128268 // Collecter information terrain
+  classview_ref 128396 // Prioriser message
+end
+end

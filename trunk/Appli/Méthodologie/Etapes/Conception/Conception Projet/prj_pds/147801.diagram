@@ -1,0 +1,55 @@
+format 76
+
+classinstancecanvas 128089 classinstance_ref 128089 // cl
+  xyz 79 4 2000 life_line_z 2000
+end
+classinstancecanvas 128217 classinstance_ref 128217 // mp
+  xyz 186 4 2000 life_line_z 2000
+end
+classinstancecanvas 128345 classinstance_ref 128345 // fact
+  xyz 342 6 2000 life_line_z 2000
+end
+classinstancecanvas 128473 classinstance_ref 128473 // Par
+  xyz 522 8 2005 life_line_z 2000
+end
+durationcanvas 128601 classinstance_ref 128089 // cl:client
+  xyzwh 98 86 2010 11 88
+end
+durationcanvas 128729 classinstance_ref 128217 // mp:MessageParser
+  xyzwh 233 86 2010 11 82
+end
+durationcanvas 128985 classinstance_ref 128345 // fact:ParsedMessageFactory
+  xyzwh 411 93 2010 11 56
+end
+durationcanvas 129241 classinstance_ref 128473 // Par:ParsedMessage
+  xyzwh 571 105 2010 11 25
+end
+msg 128857 asynchronous
+  from durationcanvas_ref 128601
+  to durationcanvas_ref 128729
+  yz 87 2015 explicitmsg "parse(message)"
+  show_full_operations_definition yes drawing_language default show_context_mode default
+  label_xy 132 74
+msg 129113 asynchronous
+  from durationcanvas_ref 128729
+  to durationcanvas_ref 128985
+  yz 102 2015 msg operation_ref 128729 // "createParsedMessage() : ParsedMessage"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 270 88
+msg 129369 asynchronous
+  from durationcanvas_ref 128985
+  to durationcanvas_ref 129241
+  yz 114 2020 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 490 100
+msg 129753 return
+  from durationcanvas_ref 128985
+  to durationcanvas_ref 128729
+  yz 138 2020 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 129881 return
+  from durationcanvas_ref 128729
+  to durationcanvas_ref 128601
+  yz 157 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+end
