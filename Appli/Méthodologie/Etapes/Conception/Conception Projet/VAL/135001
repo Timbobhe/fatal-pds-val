@@ -1,6 +1,6 @@
 format 76
 "Définir structure du message" // Uses Cases::Collecter les infos terrain::Définir structure du message
-  revision 1
+  revision 2
   modified_by 89 "Nidal"
   // class settings
   //class diagram settings
