@@ -1,0 +1,51 @@
+format 76
+
+classinstancecanvas 128089 classinstance_ref 128089 // cl
+  xyz 60 4 2000 life_line_z 2000
+end
+classinstancecanvas 128217 classinstance_ref 128601 // mr
+  xyz 142 4 2005 life_line_z 2000
+end
+classinstancecanvas 128345 classinstance_ref 128729 // Bm
+  xyz 259 4 2000 life_line_z 2000
+end
+classinstancecanvas 128473 classinstance_ref 128857 // oos
+  xyz 383 4 2000 life_line_z 2000
+end
+fragment 129241 "while(char!='F')"
+  xyzwh 206 46 3005 149 84
+end
+durationcanvas 128601 classinstance_ref 128089 // cl:client
+  xyzwh 79 65 2010 11 40
+end
+durationcanvas 128729 classinstance_ref 128217 // mr:MessageReader
+  xyzwh 189 65 2010 11 45
+end
+durationcanvas 128985 classinstance_ref 128345 // Bm:BinaryMessage
+  xyzwh 306 85 2010 11 25
+end
+durationcanvas 129369 classinstance_ref 128089 // cl:client
+  xyzwh 79 157 2010 11 40
+end
+durationcanvas 129497 classinstance_ref 128473 // oos:ObjectOutputStream
+  xyzwh 442 157 2010 11 25
+end
+msg 128857 asynchronous
+  from durationcanvas_ref 128601
+  to durationcanvas_ref 128729
+  yz 65 2015 explicitmsg "read(bm)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 117 51
+msg 129113 asynchronous
+  from durationcanvas_ref 128729
+  to durationcanvas_ref 128985
+  yz 96 2015 explicitmsg "add(value)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 227 82
+msg 129625 asynchronous
+  from durationcanvas_ref 129369
+  to durationcanvas_ref 129497
+  yz 157 2015 explicitmsg "WriteObject(bm)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 227 143
+end
