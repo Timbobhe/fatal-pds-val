@@ -1,0 +1,1061 @@
+format 76
+"diagramme Metier" // diagramme Metier
+  revision 11
+  modified_by 89 "Nidal"
+  // class settings
+  //class diagram settings
+  draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+  //use case diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+  //sequence diagram settings
+  show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+  //collaboration diagram settings
+  show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+  //object diagram settings
+   write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+  //component diagram settings
+  package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //deployment diagram settings
+  package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  //state diagram settings
+  package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+  show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+  //activity diagram settings
+  package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+  show_infonote default drawing_language default show_stereotype_properties default
+  
+  usecaseview 128012 "diagrammes sequences metier"
+    //use case diagram settings
+    package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    sequencediagram 128012 "collecter les informations terrains"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    class 128012 "RTDG"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classinstance 128012 "RTDG"
+      type class_ref 128012 // RTDG
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128140 "RTDRS"
+      type class_ref 134873 // RTDRS
+      attributes
+        end
+      relations
+        end
+    end
+
+    sequencediagram 134540 "Prioriser messages"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    classinstance 134668 "ServicePriorisation"
+      type class_ref 163340 // priorisation
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 134796 "ServiceTraitement"
+      type class_ref 128012 // RTDG
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 134924 "ServiceCollectionInfo"
+      type class_ref 128012 // RTDG
+      attributes
+        end
+      relations
+        end
+    end
+
+    sequencediagram 134668 "Effectuer les interventions automatiques"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 134796 "Orchestrer les messages"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 134924 "Transmettre les messages au terrain"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 135052 "Expand message"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 135180 "Configurer le démarrage des services "
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    classinstance 141452 "ServiceCommunicationRTDG"
+      type class_ref 128012 // RTDG
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 147980 "ExpandServiceRTDG"
+      type class_ref 128012 // RTDG
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 163340 "priorisation"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+  end
+
+  usecaseview 134668 "diagramme classe metier"
+    //use case diagram settings
+    package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    classdiagram 141708 "collecter les informations terrain"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 141836 "prioriser message"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 141964 "Effectuer les interventions automatiques"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 142092 "Orchestrer les messages"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 142220 "Transmettre les messages au terrain"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 142348 "Expand message"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    classdiagram 142476 "Configurer le démarage des services"
+      draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 134540 "RTDGClient"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128652 // <composition>
+	relation 128652 *---
+	  a role_name "" private
+	    classrelation_ref 128652 // <composition>
+	  b role_name "" private
+	    classrelation_ref 128780 // <composition>
+      end
+
+      classrelation 144396 // <aggregation>
+	relation_ref 143116 // <aggregation>
+      end
+
+      classrelation 144652 // <aggregation>
+	relation_ref 143244 // <aggregation>
+      end
+
+      classrelation 144780 // <aggregation>
+	relation 143372 o---
+	  a role_name "" private
+	    classrelation_ref 144780 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 144908 // <aggregation>
+      end
+
+      classrelation 145548 // <realization>
+	relation 143756 -_-|>
+	  a public
+	    classrelation_ref 145548 // <realization>
+	  b parent class_ref 162572 // ServicePriorisation
+      end
+
+      classrelation 145676 // <association>
+	relation 143884 ----
+	  a role_name "" private
+	    classrelation_ref 145676 // <association>
+	  b role_name "" private
+	    classrelation_ref 145804 // <association>
+      end
+
+      classrelation 145932 // <association>
+	relation 144012 ----
+	  a role_name "" private
+	    classrelation_ref 145932 // <association>
+	  b role_name "" private
+	    classrelation_ref 146060 // <association>
+      end
+
+      classrelation 146316 // <aggregation>
+	relation_ref 144140 // <aggregation>
+      end
+
+      classrelation 146444 // <aggregation>
+	relation 144268 o---
+	  a role_name "" private
+	    classrelation_ref 146444 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 146572 // <aggregation>
+      end
+
+      classrelation 147212 // <aggregation>
+	relation 144908 o---
+	  a role_name "" private
+	    classrelation_ref 147212 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 147340 // <aggregation>
+      end
+    end
+
+    class 134668 "RTDGServer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 134796 "RTDGMessage"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128268 // <dependency>
+	relation 128268 -_->
+	  a default
+	    classrelation_ref 128268 // <dependency>
+	  b parent class_ref 135308 // RTDGCommunicationService
+      end
+
+      classrelation 128396 // <dependency>
+	relation 128396 -_->
+	  a default
+	    classrelation_ref 128396 // <dependency>
+	  b parent class_ref 135436 // RTDGSaveMessage
+      end
+
+      classrelation 128524 // <dependency>
+	relation 128524 -_->
+	  a default
+	    classrelation_ref 128524 // <dependency>
+	  b parent class_ref 134924 // RTDGInterpretationService
+      end
+
+      classrelation 136716 // <dependency>
+	relation 136076 -_->
+	  a default
+	    classrelation_ref 136716 // <dependency>
+	  b parent class_ref 142092 // RTDGPriorisationService
+      end
+    end
+
+    class 134924 "RTDGInterpretationService"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128012 // <dependency>
+	relation 128012 -_->
+	  a default
+	    classrelation_ref 128012 // <dependency>
+	  b parent class_ref 135052 // RTDGRequeste
+      end
+
+      classrelation 128140 // <dependency>
+	relation 128140 -_->
+	  a default
+	    classrelation_ref 128140 // <dependency>
+	  b parent class_ref 135180 // RTDGResponse
+      end
+    end
+
+    class 135052 "RTDGRequeste"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 135180 "RTDGResponse"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 135308 "RTDGCommunicationService"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128780 // <composition>
+	relation_ref 128652 // <composition>
+      end
+    end
+
+    class 135436 "RTDGSaveMessage"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135308 // <dependency>
+	relation 135180 -_->
+	  a default
+	    classrelation_ref 135308 // <dependency>
+	  b parent class_ref 141964 // RTDGGestionaireBuffer
+      end
+
+      classrelation 135436 // <association>
+	relation 135308 ----
+	  a role_name "" private
+	    classrelation_ref 135436 // <association>
+	  b role_name "" private
+	    classrelation_ref 135564 // <association>
+      end
+
+      classrelation 135692 // <association>
+	relation 135436 ----
+	  a role_name "" private
+	    classrelation_ref 135692 // <association>
+	  b role_name "" private
+	    classrelation_ref 135820 // <association>
+      end
+    end
+
+    class 141964 "RTDGGestionaireBuffer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135564 // <association>
+	relation_ref 135308 // <association>
+      end
+
+      classrelation 136076 // <association>
+	relation 135692 ----
+	  a role_name "" private
+	    classrelation_ref 136076 // <association>
+	  b role_name "" private
+	    classrelation_ref 136204 // <association>
+      end
+
+      classrelation 137228 // <association>
+	relation_ref 136332 // <association>
+      end
+    end
+
+    class 142092 "RTDGPriorisationService"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135820 // <association>
+	relation_ref 135436 // <association>
+      end
+
+      classrelation 136460 // <association>
+	relation_ref 135820 // <association>
+      end
+
+      classrelation 137100 // <association>
+	relation 136332 ----
+	  a role_name "" private
+	    classrelation_ref 137100 // <association>
+	  b role_name "" private
+	    classrelation_ref 137228 // <association>
+      end
+    end
+
+    class 142220 "Structurebuffer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 135948 // <dependency>
+	relation 135564 -_->
+	  a default
+	    classrelation_ref 135948 // <dependency>
+	  b parent class_ref 141964 // RTDGGestionaireBuffer
+      end
+    end
+
+    class 142348 "RTDGSaveBufferService"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 136204 // <association>
+	relation_ref 135692 // <association>
+      end
+
+      classrelation 136332 // <association>
+	relation 135820 ----
+	  a role_name "" private
+	    classrelation_ref 136332 // <association>
+	  b role_name "" private
+	    classrelation_ref 136460 // <association>
+      end
+
+      classrelation 136588 // <dependency>
+	relation 135948 -_->
+	  a default
+	    classrelation_ref 136588 // <dependency>
+	  b parent class_ref 142348 // RTDGSaveBufferService
+      end
+
+      classrelation 136844 // <association>
+	relation 136204 ----
+	  a role_name "" private
+	    classrelation_ref 136844 // <association>
+	  b role_name "" private
+	    classrelation_ref 136972 // <association>
+      end
+
+      classrelation 136972 // <association>
+	relation_ref 136204 // <association>
+      end
+    end
+  end
+
+  classview 128268 "Collecter information terrain"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    sequencediagram 149004 "scenario nominal 1 : Interpréter un message reçu depuis un composant embarqué"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    class 148876 "RTDRS"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classinstance 154508 "RTDG-Client"
+      type class_ref 162956 // client
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 149004 ":"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classinstance 154636 "Parser"
+      type class_ref 163084 // parser
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 162316 "Referentiel"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 145164 // <aggregation>
+	relation_ref 143500 // <aggregation>
+      end
+
+      classrelation 145420 // <aggregation>
+	relation_ref 143628 // <aggregation>
+      end
+    end
+
+    classinstance 167948 "Referentiel"
+      type class_ref 163212 // ref
+      attributes
+        end
+      relations
+        end
+    end
+
+    classdiagram 155788 "diagramme de classe metier Interpréter un message"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 162444 "Parser"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 143884 // <aggregation>
+	relation_ref 142860 // <aggregation>
+      end
+
+      classrelation 144012 // <aggregation>
+	relation 142988 o---
+	  a role_name "" private
+	    classrelation_ref 144012 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 144140 // <aggregation>
+      end
+
+      classrelation 144268 // <aggregation>
+	relation 143116 o---
+	  a role_name "" private
+	    classrelation_ref 144268 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 144396 // <aggregation>
+      end
+
+      classrelation 144524 // <aggregation>
+	relation 143244 o---
+	  a role_name "" private
+	    classrelation_ref 144524 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 144652 // <aggregation>
+      end
+
+      classrelation 144908 // <aggregation>
+	relation_ref 143372 // <aggregation>
+      end
+
+      classrelation 145292 // <aggregation>
+	relation 143628 o---
+	  a role_name "" private
+	    classrelation_ref 145292 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 145420 // <aggregation>
+      end
+    end
+
+    class 162572 "ServicePriorisation"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 145804 // <association>
+	relation_ref 143884 // <association>
+      end
+
+      classrelation 146060 // <association>
+	relation_ref 144012 // <association>
+      end
+
+      classrelation 146700 // <realization>
+	relation 144396 -_-|>
+	  a public
+	    classrelation_ref 146700 // <realization>
+	  b parent class_ref 164108 // ReferentielCriticite
+      end
+
+      classrelation 146828 // <realization>
+	relation 144524 -_-|>
+	  a public
+	    classrelation_ref 146828 // <realization>
+	  b parent class_ref 162828 // ServiceCriticiteMessage
+      end
+    end
+
+    class 162700 "Message"
+      visibility package stereotype "interface"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}interface ${name}${extends} {
+${members}}
+"
+      php_decl "${comment}interface ${name} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      
+      classrelation 143756 // <aggregation>
+	relation 142860 o---
+	  a role_name "" private
+	    classrelation_ref 143756 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 143884 // <aggregation>
+      end
+
+      classrelation 144140 // <aggregation>
+	relation_ref 142988 // <aggregation>
+      end
+
+      classrelation 145036 // <aggregation>
+	relation 143500 o---
+	  a role_name "" private
+	    classrelation_ref 145036 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 145164 // <aggregation>
+      end
+
+      classrelation 146188 // <aggregation>
+	relation 144140 o---
+	  a role_name "" private
+	    classrelation_ref 146188 // <aggregation>
+	  b role_name "" private
+	    classrelation_ref 146316 // <aggregation>
+      end
+
+      classrelation 146572 // <aggregation>
+	relation_ref 144268 // <aggregation>
+      end
+
+      classrelation 147340 // <aggregation>
+	relation_ref 144908 // <aggregation>
+      end
+    end
+
+    class 162956 "client"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 128601 // <unidirectional association>
+	relation 128601 --->
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128601 // <unidirectional association>
+	  b parent class_ref 141401 // MessageParser
+      end
+
+      classrelation 128729 // <unidirectional association>
+	relation 128729 --->
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128729 // <unidirectional association>
+	  b parent class_ref 142041 // MessageReader
+      end
+    end
+
+    class 163084 "parser"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 163212 "ref"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+  end
+
+  classview 128396 "Prioriser message"
+    //class diagram settings
+    draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+    //collaboration diagram settings
+    show_full_operations_definition default show_hierarchical_rank default write_horizontally default class_drawing_mode default drawing_language default package_name_in_tab default show_context default show_msg_context default draw_all_relations default shadow default show_stereotype_properties default
+    //object diagram settings
+     write_horizontally default package_name_in_tab default show_context default auto_label_position default draw_all_relations default shadow default show_stereotype_properties default
+    //sequence diagram settings
+    show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+    //state diagram settings
+    package_name_in_tab default show_context default auto_label_position default write_trans_label_horizontally default show_trans_definition default draw_all_relations default shadow default
+    show_activities default region_horizontally default drawing_language default show_stereotype_properties default
+    //class settings
+    //activity diagram settings
+    package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
+    show_infonote default drawing_language default show_stereotype_properties default
+    sequencediagram 149132 "Scénario nominal : affecter un message non critique dans un buffer"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    sequencediagram 149260 "Scénario alternatif : affecter un message critique dans un buffer par ordre de priorité"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    class 155532 "GestMessageCritiqueService"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classinstance 161164 ""
+      type class_ref 155532 // GestMessageCritiqueService
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 155660 "StockerMessage"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classinstance 161292 "Buffer"
+      type class_ref 163852 // buf
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 155788 "GestMessageNonCritiqueService"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classinstance 161420 ""
+      type class_ref 155788 // GestMessageNonCritiqueService
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 162828 "ServiceCriticiteMessage"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 146956 // <realization>
+	relation 144652 -_-|>
+	  a public
+	    classrelation_ref 146956 // <realization>
+	  b parent class_ref 164108 // ReferentielCriticite
+      end
+
+      classrelation 147084 // <realization>
+	relation 144780 -_-|>
+	  a public
+	    classrelation_ref 147084 // <realization>
+	  b parent class_ref 164236 // Buffer
+      end
+
+      classrelation 147468 // <realization>
+	relation 145036 -_-|>
+	  a public
+	    classrelation_ref 147468 // <realization>
+	  b parent class_ref 164364 // ReferentielPriorisation
+      end
+    end
+
+    classinstance 168076 "ServiceCriticiteMessage "
+      type class_ref 162828 // ServiceCriticiteMessage
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 168204 "ServiceCriticiteMessage"
+      type class_ref 163468 // criticité
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 163468 "criticité"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 163596 "Stocker"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classinstance 168332 "ReferentielPriorisation"
+      type class_ref 163724 // refpriorisation
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 163724 "refpriorisation"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 163852 "buf"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 163980 "Refcriticité"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classinstance 168460 "ReferentielCriticite"
+      type class_ref 163980 // Refcriticité
+      attributes
+        end
+      relations
+        end
+    end
+
+    classdiagram 155916 "class metier affecter message non Critique"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 164108 "ReferentielCriticite"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 164236 "Buffer"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classdiagram 156044 "class metier affecter message critique"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 164364 "ReferentielPriorisation"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+  end
+end
