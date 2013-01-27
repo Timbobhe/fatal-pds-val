@@ -1,10 +1,15 @@
-window_sizes 1600 837 406 1188 600 82
+window_sizes 1600 838 325 1269 600 82
+diagrams
+  componentdiagram_ref 134617 // composants
+    1011 545 100 4 0 0
+  active  componentdiagram_ref 161497 // diag de composants
+    1269 682 100 4 0 0
+end
 show_stereotypes
-selected classdiagram_ref 154969 // Classes de la conception détaillée
+selected component_ref 129625 // RTDG
 open
+  component_ref 129369 // RTDG-replication
   
-  package_ref 134745 // Collecter les infos terrain
-  classview_ref 128345 // Conception détaillée
-  classview_ref 128473 // Conception détaillée
+  package_ref 134617 // Uses Cases
 end
 end

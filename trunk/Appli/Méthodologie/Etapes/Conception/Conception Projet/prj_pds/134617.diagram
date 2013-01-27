@@ -6,17 +6,17 @@ componentcanvas 128729 component_ref 128729 // JDK 1.7
 end
 componentcanvas 128985 component_ref 128985 // RTDG-client.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 67 356 2000 143 51
+  xyzwh 63 356 2000 143 51
 end
 componentcanvas 129113 component_ref 129113 // Priorisation
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
   xyzwh 279 440 2000 145 51
 end
-componentcanvas 129369 component_ref 129369 // RTDG-replication.jar
+componentcanvas 129369 component_ref 129369 // RTDG-replication
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
   xyzwh 104 47 2000 143 51
 end
-componentcanvas 131801 component_ref 129625 // RTDG.jar
+componentcanvas 131801 component_ref 129625 // RTDG
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
   xyzwh 379 146 2000 143 51
 end
@@ -61,12 +61,12 @@ componentcanvas 144857 component_ref 156377 // Orchestrateur
   xyzwh 464 432 2012 143 51
 end
 simplerelationcanvas 133081 simplerelation_ref 142041
-  decenter_begin 783
+  decenter_begin 782
   from ref 131801 z 2001 to ref 128729
 end
 simplerelationcanvas 133721 simplerelation_ref 142169
   decenter_begin 75
-  decenter_end 894
+  decenter_end 893
   from ref 131801 z 2001 to point 229 147
   line 145241 z 2001 to ref 129369
 end
@@ -76,18 +76,18 @@ simplerelationcanvas 134745 simplerelation_ref 155225
   from ref 134617 z 2001 to ref 134489
 end
 simplerelationcanvas 135129 simplerelation_ref 155353
-  decenter_begin 936
+  decenter_begin 935
   decenter_end 215
   from ref 131801 z 2001 to point 628 191
   line 142297 z 2001 to point 629 260
   line 142425 z 2001 to ref 134105
 end
 simplerelationcanvas 136793 simplerelation_ref 169817
-  decenter_begin 138
+  decenter_begin 137
   decenter_end 703
   from ref 131801 z 2001 to ref 135257
 end
-line 143449 -_-_ decenter_begin 894
+line 143449 -_-_ decenter_begin 893
   from ref 131801 z 2001 to point 504 355
   line 143577 z 2001 to ref 137561
 line 143705 -_-_ decenter_begin 685 decenter_end 481
