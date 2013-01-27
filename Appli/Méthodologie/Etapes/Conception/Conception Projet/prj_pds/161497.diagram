@@ -1,0 +1,118 @@
+format 76
+
+componentcanvas 128089 component_ref 162905 // Message Generator
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 29 37 2000 143 51
+end
+componentcanvas 128217 component_ref 163033 // Message Generator Client
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 248 37 2000 157 51
+end
+componentcanvas 128345 component_ref 163161 // RTDG Server
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 21 197 2000 143 51
+end
+componentcanvas 128473 component_ref 163289 // RTDG Parser
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 215 200 2000 143 51
+end
+componentcanvas 128601 component_ref 163417 // RTDG Criticity
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 400 202 2000 143 51
+end
+componentcanvas 128729 component_ref 163545 // RTDG Priorisator
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 507 312 2000 143 51
+end
+componentcanvas 129753 component_ref 128345 // MySQL 5.5
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 474.5 102 2000 131 51
+end
+componentcanvas 129881 component_ref 142809 // RTDG-admin.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 654.5 209 2000 143 51
+end
+componentcanvas 130009 component_ref 128217 // my-sql.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 656.5 105 2000 143 51
+end
+componentcanvas 130649 component_ref 136153 // RTDG-loadBalancing
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 240 405 2000 143 51
+end
+componentcanvas 130777 component_ref 128729 // JDK 1.7
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 22 305 2000 105 51
+end
+componentcanvas 130905 component_ref 142681 // Javalotion
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 303 125 2000 143 51
+end
+componentcanvas 131161 component_ref 156377 // Orchestrateur
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 506 415 2000 143 51
+end
+componentcanvas 133337 component_ref 129369 // RTDG-replication
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 60 406 2000 143 51
+end
+componentcanvas 133721 component_ref 129625 // RTDG
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 282 312 2000 143 51
+end
+simplerelationcanvas 128985 simplerelation_ref 191449
+  decenter_begin 453
+  decenter_end 151
+  from ref 128345 z 2001 to point 83 120
+  line 129241 z 2001 to point 269 120
+  line 129113 z 2001 to ref 128217
+end
+simplerelationcanvas 129497 simplerelation_ref 191577
+  decenter_begin 411
+  from ref 128601 z 2001 to ref 128473
+end
+simplerelationcanvas 130137 simplerelation_ref 155225
+  decenter_begin 370
+  decenter_end 425
+  from ref 130009 z 2001 to ref 129753
+end
+simplerelationcanvas 131289 simplerelation_ref 191705
+  from ref 131161 z 2001 to ref 128729
+end
+simplerelationcanvas 133849 simplerelation_ref 192217
+  from ref 128729 z 2001 to ref 133721
+end
+simplerelationcanvas 133977 simplerelation_ref 192345
+  decenter_begin 250
+  decenter_end 748
+  from ref 128601 z 2001 to point 433 277
+  line 134745 z 2001 to point 386 277
+  line 134873 z 2001 to ref 133721
+end
+simplerelationcanvas 134105 simplerelation_ref 192473
+  decenter_begin 768
+  decenter_end 300
+  from ref 128473 z 2001 to ref 133721
+end
+line 128857 -_-_
+  from ref 128089 z 2001 to ref 128217
+line 129369 -_-_ decenter_end 449
+  from ref 128345 z 2001 to ref 128473
+line 129625 -_-_
+  from ref 128601 z 2001 to point 576 223
+  line 133209 z 2001 to ref 128729
+line 130265 -_-_ decenter_begin 488
+  from ref 130009 z 2001 to ref 129881
+line 131417 -_-_ decenter_begin 726 decenter_end 745
+  from ref 128345 z 2001 to point 122 160
+  line 131545 z 2001 to ref 130905
+line 131673 -_-_ decenter_begin 737 decenter_end 425
+  from ref 128217 z 2001 to ref 130905
+line 134233 -_-_ decenter_begin 430 decenter_end 293
+  from ref 130777 z 2001 to ref 133721
+line 134361 -_-_ decenter_end 699
+  from ref 133721 z 2001 to ref 130649
+line 134489 -_-_ decenter_begin 725 decenter_end 852
+  from ref 133721 z 2001 to point 179 346
+  line 134617 z 2001 to ref 133337
+end

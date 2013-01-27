@@ -1,6 +1,6 @@
 format 76
 "prj_pds"
-  revision 17
+  revision 18
   modified_by 89 "Nidal"
 
 
@@ -911,7 +911,7 @@ format 76
       stereotype "librairie"
       simplerelation 141785
 	-_->
-	  on component_ref 129625 // RTDG.jar
+	  on component_ref 129625 // RTDG
       end
     end
 
@@ -929,7 +929,7 @@ format 76
 
       simplerelation 170201
 	-_->
-	  on component_ref 129625 // RTDG.jar
+	  on component_ref 129625 // RTDG
       end
 
       simplerelation 184793
@@ -951,7 +951,7 @@ format 76
       end
     end
 
-    component 129369 "RTDG-replication.jar"
+    component 129369 "RTDG-replication"
       simplerelation 141657
 	-_->
 	  on component_ref 129497 // RTDG-server-config.xml
@@ -962,10 +962,10 @@ format 76
       stereotype "fichier de config"
     end
 
-    component 129625 "RTDG.jar"
+    component 129625 "RTDG"
       simplerelation 141913
 	-_->
-	  on component_ref 129625 // RTDG.jar
+	  on component_ref 129625 // RTDG
       end
 
       simplerelation 142041
@@ -975,7 +975,7 @@ format 76
 
       simplerelation 142169
 	-_->
-	  on component_ref 129369 // RTDG-replication.jar
+	  on component_ref 129369 // RTDG-replication
       end
 
       simplerelation 148697
@@ -1003,21 +1003,21 @@ format 76
     component 142809 "RTDG-admin.jar"
       simplerelation 163289
 	-_->
-	  on component_ref 129625 // RTDG.jar
+	  on component_ref 129625 // RTDG
       end
     end
 
     component 149337 "RTDG-server.jar"
       simplerelation 169945
 	-_->
-	  on component_ref 129625 // RTDG.jar
+	  on component_ref 129625 // RTDG
       end
     end
 
     component 149465 "RTDG-Producer"
       simplerelation 170073
 	-_->
-	  on component_ref 129625 // RTDG.jar
+	  on component_ref 129625 // RTDG
       end
     end
 
@@ -1027,7 +1027,7 @@ format 76
     component 156121 "RTDG-consumer"
       simplerelation 184921
 	-_->
-	  on component_ref 129625 // RTDG.jar
+	  on component_ref 129625 // RTDG
       end
     end
 
@@ -1036,7 +1036,57 @@ format 76
     end
 
     component 156377 "Orchestrateur"
+      simplerelation 191705
+	-_->
+	  on component_ref 163545 // RTDG Priorisator
+      end
     end
+
+    componentdiagram 161497 "diag de composants"
+      package_name_in_tab default show_context default auto_label_position default draw_all_relations no shadow default
+      draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+      size A4
+    end
+
+    component 162905 "Message Generator"
+    end
+
+    component 163033 "Message Generator Client"
+    end
+
+    component 163161 "RTDG Server"
+      simplerelation 191449
+	-_->
+	  on component_ref 163033 // Message Generator Client
+      end
+    end
+
+    component 163289 "RTDG Parser"
+      simplerelation 192473
+	---|>
+	  on component_ref 129625 // RTDG
+      end
+    end
+
+    component 163417 "RTDG Criticity"
+      simplerelation 191577
+	-_->
+	  on component_ref 163289 // RTDG Parser
+      end
+
+      simplerelation 192345
+	---|>
+	  on component_ref 129625 // RTDG
+      end
+    end
+
+    component 163545 "RTDG Priorisator"
+      simplerelation 192217
+	---|>
+	  on component_ref 129625 // RTDG
+      end
+    end
+
   end
 
   package_ref 128089 // Configuration
