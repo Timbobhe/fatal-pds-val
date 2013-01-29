@@ -102,7 +102,7 @@ componentcanvas 138329 component_ref 128217 // my-sql.jar
   xyzwh 663 219.5 3005 143 51
 end
 line 131289 ---- decenter_begin 360 decenter_end 754
-  from ref 128601 z 2001 label "ActiveMQ" xyz 181.5 23.5 2001 to point 159 35
+  from ref 128601 z 2001 label "ActiveMQ" xyz 181 23 2001 to point 159 35
   line 134873 z 2001 to ref 131033
 line 132185 ---- decenter_begin 400
   from ref 128601 z 2001 label "WS" xyz 186 598 2001 to point 175 616
@@ -111,7 +111,7 @@ line 132569 ---- decenter_begin 236 decenter_end 611
   from ref 132313 z 2001 to point 257 517
   line 132697 z 2001 to ref 128601
 line 135513 ---- decenter_begin 773 decenter_end 307
-  from ref 131033 z 2001 label "ActiveMQ" xyz 554 21.5 2001 to point 554 41
+  from ref 131033 z 2001 label "ActiveMQ" xyz 554 21 2001 to point 554 41
   line 135641 z 2001 to ref 132825
 line 135897 ---- decenter_begin 229 decenter_end 256
   from ref 132825 z 2001 to point 522 518

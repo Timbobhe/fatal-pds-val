@@ -1,6 +1,6 @@
 format 76
 "prj_pds"
-  revision 25
+  revision 26
   modified_by 12 "Hamza"
 
 
@@ -1307,6 +1307,11 @@ ${members}}
       simplerelation 192217
 	---|>
 	  on component_ref 129625 // RTDG
+      end
+
+      simplerelation 141324
+	-_->
+	  on component_ref 163417 // RTDG Criticity
       end
     end
 
