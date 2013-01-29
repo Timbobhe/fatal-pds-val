@@ -14,15 +14,15 @@ componentcanvas 128473 component_ref 163289 // RTDG Parser
 end
 componentcanvas 128601 component_ref 163417 // RTDG Criticity
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 418 200 2000 143 51
+  xyzwh 418 202 2000 143 51
 end
 componentcanvas 128729 component_ref 163545 // RTDG Priorisator
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 511 310 2000 143 51
+  xyzwh 506 316 2000 143 51
 end
 componentcanvas 129753 component_ref 128345 // MySQL 5.5
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 474.5 102 2000 135 51
+  xyzwh 472.5 101 2000 135 51
 end
 componentcanvas 129881 component_ref 142809 // RTDG-admin.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
@@ -30,7 +30,7 @@ componentcanvas 129881 component_ref 142809 // RTDG-admin.jar
 end
 componentcanvas 130009 component_ref 128217 // my-sql.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 656.5 105 2000 143 51
+  xyzwh 656.5 104 2000 143 51
 end
 componentcanvas 130649 component_ref 136153 // RTDG-loadBalancing
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
