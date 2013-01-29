@@ -4,9 +4,13 @@ componentcanvas 128089 component_ref 162905 // Message Generator
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
   xyzwh 29 37 2000 143 51
 end
+componentcanvas 128140 component_ref 128012 // Composant Embarqué
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 463 421 2005 143 47
+end
 componentcanvas 128217 component_ref 163033 // Message Generator Client
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 248 37 2000 157 51
+  xyzwh 248 37 2000 159 51
 end
 componentcanvas 128345 component_ref 163161 // RTDG Server
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
@@ -18,15 +22,15 @@ componentcanvas 128473 component_ref 163289 // RTDG Parser
 end
 componentcanvas 128601 component_ref 163417 // RTDG Criticity
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 400 202 2000 143 51
+  xyzwh 418 200 2000 143 51
 end
 componentcanvas 128729 component_ref 163545 // RTDG Priorisator
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 507 312 2000 143 51
+  xyzwh 511 310 2000 143 51
 end
 componentcanvas 129753 component_ref 128345 // MySQL 5.5
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 474.5 102 2000 131 51
+  xyzwh 474.5 102 2000 135 51
 end
 componentcanvas 129881 component_ref 142809 // RTDG-admin.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
@@ -50,7 +54,7 @@ componentcanvas 130905 component_ref 142681 // Javalotion
 end
 componentcanvas 131161 component_ref 156377 // Orchestrateur
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 506 415 2000 143 51
+  xyzwh 676 309 2000 143 51
 end
 componentcanvas 133337 component_ref 129369 // RTDG-replication
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
@@ -60,9 +64,14 @@ componentcanvas 133721 component_ref 129625 // RTDG
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
   xyzwh 282 312 2000 143 51
 end
+simplerelationcanvas 128268 simplerelation_ref 128012
+  decenter_end 874
+  from ref 128140 z 2006 to point 404 440
+  line 128396 z 2006 to ref 133721
+end
 simplerelationcanvas 128985 simplerelation_ref 191449
   decenter_begin 453
-  decenter_end 151
+  decenter_end 150
   from ref 128345 z 2001 to point 83 120
   line 129241 z 2001 to point 269 120
   line 129113 z 2001 to ref 128217
@@ -83,7 +92,7 @@ simplerelationcanvas 133849 simplerelation_ref 192217
   from ref 128729 z 2001 to ref 133721
 end
 simplerelationcanvas 133977 simplerelation_ref 192345
-  decenter_begin 250
+  decenter_begin 125
   decenter_end 748
   from ref 128601 z 2001 to point 433 277
   line 134745 z 2001 to point 386 277
@@ -106,13 +115,13 @@ line 130265 -_-_ decenter_begin 488
 line 131417 -_-_ decenter_begin 726 decenter_end 745
   from ref 128345 z 2001 to point 122 160
   line 131545 z 2001 to ref 130905
-line 131673 -_-_ decenter_begin 737 decenter_end 425
+line 131673 -_-_ decenter_begin 736 decenter_end 425
   from ref 128217 z 2001 to ref 130905
 line 134233 -_-_ decenter_begin 430 decenter_end 293
   from ref 130777 z 2001 to ref 133721
 line 134361 -_-_ decenter_end 699
   from ref 133721 z 2001 to ref 130649
-line 134489 -_-_ decenter_begin 725 decenter_end 852
+line 134489 -_-_ decenter_begin 725 decenter_end 851
   from ref 133721 z 2001 to point 179 346
   line 134617 z 2001 to ref 133337
 end

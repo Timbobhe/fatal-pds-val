@@ -1,6 +1,6 @@
 format 76
 "prj_pds"
-  revision 21
+  revision 22
   modified_by 12 "Hamza"
 
 
@@ -1292,6 +1292,13 @@ ${members}}
 
     component 163545 "RTDG Priorisator"
       simplerelation 192217
+	---|>
+	  on component_ref 129625 // RTDG
+      end
+    end
+
+    component 128012 "Composant Embarqué"
+      simplerelation 128012
 	---|>
 	  on component_ref 129625 // RTDG
       end
