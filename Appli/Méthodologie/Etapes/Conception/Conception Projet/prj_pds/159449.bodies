@@ -1,0 +1,22 @@
+class Ligne
+!!!164057.java!!!	Ligne(in oldx : int, in oldy : int, in x : int, in y : int)
+	        this.oldx=oldx;
+	        this.oldy=oldy;
+	        this.x=x;
+	        this.y=y;
+!!!164185.java!!!	getOldx() : int
+	        return oldx;        
+!!!164313.java!!!	getOldy() : int
+	        return oldy;
+!!!164441.java!!!	getX() : int
+	        return x;
+!!!164569.java!!!	getY() : int
+	        return y;
+!!!164697.java!!!	setX(in x : int) : void
+	    	this.x=x;
+!!!164825.java!!!	setY(in y : int) : void
+	    	this.y=y;
+!!!164953.java!!!	setOldX(in x : int) : void
+	    	this.oldx=x;
+!!!165081.java!!!	setOldY(in y : int) : void
+	    	this.oldy=y;

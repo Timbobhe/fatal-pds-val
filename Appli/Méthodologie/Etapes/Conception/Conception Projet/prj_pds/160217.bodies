@@ -1,0 +1,6 @@
+class ThreadEffecteur
+!!!167129.java!!!	ThreadEffecteur(inout eff : EffecteurRame)
+		this.effRame=eff;
+		
+!!!167257.java!!!	run() : void
+			effRame.execute();

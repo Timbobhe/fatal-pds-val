@@ -1,0 +1,68 @@
+class Simulateur
+!!!157273.java!!!	Simulateur()
+		dataSource = new DataSource();
+!!!157401.java!!!	getSourceDonne() : String
+		return sourceDonne;
+!!!157529.java!!!	setSourceDonne(in sourceDonne : String) : void
+		this.sourceDonne = sourceDonne;
+!!!157657.java!!!	getPosXRam() : int
+		return posXRam;
+!!!157785.java!!!	setPosXRam(in posXRam : int) : void
+		this.posXRam = posXRam;
+!!!157913.java!!!	getPosYRam() : int
+		return posYRam;
+!!!158041.java!!!	setPosYRam(in posYRam : int) : void
+		this.posYRam = posYRam;
+!!!158169.java!!!	getDataSource() : DataSource
+		return dataSource;
+!!!158297.java!!!	setDataSource(inout dataSource : DataSource) : void
+		this.dataSource = dataSource;
+!!!158425.java!!!	Simulateur(in sourceDonne : String, in posXRam : int, in posYRam : int)
+		super();
+		this.sourceDonne = sourceDonne;
+		this.posXRam = posXRam;
+		this.posYRam = posYRam;
+		dataSource = new DataSource();
+!!!158553.java!!!	transformeMessageToByte(inout message : MessageModel) : byte
+		// TODO Auto-generated method stub
+		return null;
+!!!158681.java!!!	transformeByteToMessage(inout data : byte) : MessageModel
+		// TODO Auto-generated method stub
+		return null;
+!!!158809.java!!!	validateLenght(in s : String, in lenght : int) : String
+		int j = lenght - s.length();
+		String add = "";
+		for(int i = 0; i < j; i++){
+			add = add + "0";
+		}
+		return add + s;
+!!!158937.java!!!	generateData() : String
+		String posX = Integer.toBinaryString(posXRam);
+		String posY = Integer.toBinaryString(posYRam);
+		return validateLenght(posX, 5) + validateLenght(posY, 5);
+!!!159065.java!!!	generateStream() : MessageModel
+		MessageModel messageModel = new MessageModel();
+		//recover source
+		String source = dataSource.getSourcesEquipements().get(sourceDonne);
+		messageModel.setSource(source);
+		//recover idSource
+		String idSource = dataSource.initializeIdSourceEquipement();
+		messageModel.setIdSource(idSource);
+		//recover capteur source
+		String capteurSource = dataSource.getCapteursSouces().get("CapteurPositionTrain");
+		messageModel.setCapteurSource(capteurSource);
+		//recover iCapteurSource
+		String idCapteurSource = dataSource.initializeIdCapteurSource();
+		messageModel.setIdCapteurSource(idCapteurSource);
+		//recover type
+		String type = dataSource.getTypes().get("Position");
+		messageModel.setType(type);
+		//recover capteurIntelligent
+		String capteurIntelligent = dataSource.getCapteurIntelligence().get("NonIntelligent");
+		messageModel.setCapteurIntelligent(capteurIntelligent);
+		
+		messageModel.setData(generateData());
+		return messageModel;
+!!!159193.java!!!	transformeMessageToByte(inout messageModel : Transformer) : byte
+		// TODO Auto-generated method stub
+		return null;

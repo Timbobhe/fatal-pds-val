@@ -1,0 +1,64 @@
+class DataSource
+!!!144601.java!!!	DataSource()
+		sourcesEquipements = new HashMap<String, String>(5);
+		idSoucesEquipements = new HashMap<String, String>(20);
+		capteursSouces = new HashMap<String, String>(20);
+		idCapteursSources = new HashMap<String, String>(20);
+		types = new HashMap<String, String>(20);
+		capteurIntelligence = new HashMap<String, String>(20);
+		initializeSoucesEquipements();
+		initializeIdSoucesEquipements();
+		initializeCapteursSouces();
+		initializeIdCapteursSources();
+		initializeTypes();
+		initializeCapteurIntelligence();
+!!!144729.java!!!	getSourcesEquipements() : HashMap<String, String>
+		return sourcesEquipements;
+!!!144857.java!!!	setSoucesEquipements(inout soucesEquipements : HashMap<String, String>) : void
+		this.sourcesEquipements = soucesEquipements;
+!!!144985.java!!!	getIdSoucesEquipements() : HashMap<String, String>
+		return idSoucesEquipements;
+!!!145113.java!!!	setIdSoucesEquipements(inout idSoucesEquipements : HashMap<String, String>) : void
+		this.idSoucesEquipements = idSoucesEquipements;
+!!!145241.java!!!	getCapteursSouces() : HashMap<String, String>
+		return capteursSouces;
+!!!145369.java!!!	setCapteursSouces(inout capteursSouces : HashMap<String, String>) : void
+		this.capteursSouces = capteursSouces;
+!!!145497.java!!!	getIdCapteursSources() : HashMap<String, String>
+		return idCapteursSources;
+!!!145625.java!!!	setIdCapteursSources(inout idCapteursSources : HashMap<String, String>) : void
+		this.idCapteursSources = idCapteursSources;
+!!!145753.java!!!	getTypes() : HashMap<String, String>
+		return types;
+!!!145881.java!!!	setTypes(inout types : HashMap<String, String>) : void
+		this.types = types;
+!!!146009.java!!!	getCapteurIntelligence() : HashMap<String, String>
+		return capteurIntelligence;
+!!!146137.java!!!	setCapteurIntelligence(inout capteurIntelligence : HashMap<String, String>) : void
+		this.capteurIntelligence = capteurIntelligence;
+!!!146265.java!!!	initializeSoucesEquipements() : void
+		sourcesEquipements.put("Train", "00");
+		sourcesEquipements.put("Tunnel", "01");
+		sourcesEquipements.put("Rail", "10");
+		sourcesEquipements.put("Station", "11");
+!!!146393.java!!!	initializeIdSoucesEquipements() : void
+		
+!!!146521.java!!!	initializeIdSourceEquipement() : String
+		return "00000000";
+!!!146649.java!!!	initializeCapteursSouces() : void
+		capteursSouces.put("CapteurTemperature", "0000");
+		capteursSouces.put("CapteurInfraRougePorte", "0001");
+		capteursSouces.put("CapteurPoids", "0010");
+		capteursSouces.put("CapteurQuai", "0011");
+		capteursSouces.put("CapteurPositionTrain", "0100");
+!!!146777.java!!!	initializeIdCapteursSources() : void
+	
+!!!146905.java!!!	initializeIdCapteurSource() : String
+		return "000000";
+!!!147033.java!!!	initializeTypes() : void
+		types.put("Boolean", "00");
+		types.put("Numerique", "01");
+		types.put("Position", "10");
+!!!147161.java!!!	initializeCapteurIntelligence() : void
+		capteurIntelligence.put("NonIntelligent", "00");
+		capteurIntelligence.put("Intelligent", "01");

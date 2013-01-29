@@ -1,6 +1,6 @@
 format 76
 "prj_pds"
-  revision 18
+  revision 20
   modified_by 89 "Nidal"
 
 
@@ -38,7 +38,7 @@ format 76
 
   mark_for_import
   
-  usecaseview 128089 "FATAL Team"
+  usecaseview 128089 "Diagramme de uses cases"
     //use case diagram settings
     package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
     //sequence diagram settings
@@ -1086,12 +1086,17 @@ format 76
 	  on component_ref 129625 // RTDG
       end
     end
-
   end
 
-  package_ref 128089 // Configuration
+  package_ref 128089 // Déploiement
 
   package_ref 128012 // diagramme Metier
 
   package_ref 134617 // Uses Cases
+
+  package_ref 142297 // Hors périmètre
+
+  package_ref 148953 // Composant_Embarque
+
+  package_ref 152793 // unknown
 end

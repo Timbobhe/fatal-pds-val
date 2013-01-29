@@ -1,0 +1,15 @@
+class Controleur
+!!!168025.java!!!	Controleur(inout trajectoire : Trajectoire, inout rame : Rame)
+		super();
+		this.rame=rame;
+		this.trajectoire=trajectoire;	
+		
+!!!168153.java!!!	actionPerformed(inout e : ActionEvent) : void
+
+		if(e.getActionCommand().equals("start"))
+		{
+			ThreadEffecteur th=new  ThreadEffecteur(rame.getEffecteur());
+			th.start();
+			rame.setEtat(true);
+		}
+

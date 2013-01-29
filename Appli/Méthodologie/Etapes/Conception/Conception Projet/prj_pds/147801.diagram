@@ -22,7 +22,7 @@ durationcanvas 128985 classinstance_ref 128345 // fact:ParsedMessageFactory
   xyzwh 411 93 2010 11 56
 end
 durationcanvas 129241 classinstance_ref 128473 // Par:ParsedMessage
-  xyzwh 571 105 2010 11 25
+  xyzwh 571 105 2010 11 36
 end
 msg 128857 asynchronous
   from durationcanvas_ref 128601
@@ -51,5 +51,10 @@ msg 129881 return
   from durationcanvas_ref 128729
   to durationcanvas_ref 128601
   yz 157 2015 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+msg 130009 return
+  from durationcanvas_ref 129241
+  to durationcanvas_ref 128985
+  yz 130 3005 unspecifiedmsg
   show_full_operations_definition default drawing_language default show_context_mode default
 end

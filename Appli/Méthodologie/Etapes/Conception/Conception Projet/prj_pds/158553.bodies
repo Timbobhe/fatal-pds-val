@@ -1,0 +1,13 @@
+class Random
+!!!156761.java!!!	transformeMessageToByte(inout message : MessageModel) : byte
+		// TODO Auto-generated method stub
+		return null;
+!!!156889.java!!!	transformeByteToMessage(inout data : byte) : MessageModel
+		// TODO Auto-generated method stub
+		return null;
+!!!157017.java!!!	generateStream() : MessageModel
+		// TODO Auto-generated method stub
+		return null;
+!!!157145.java!!!	transformeMessageToByte(inout messageModel : Transformer) : byte
+		// TODO Auto-generated method stub
+		return null;

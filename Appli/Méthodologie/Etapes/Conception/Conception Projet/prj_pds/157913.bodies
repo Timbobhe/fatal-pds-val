@@ -1,0 +1,18 @@
+class Equipement
+!!!154841.java!!!	Equipement()
+		// TODO Auto-generated constructor stub
+!!!154969.java!!!	Equipement(in idEquipement : String, in nameEquipement : String)
+		super();
+		this.idEquipement = idEquipement;
+		this.nameEquipement = nameEquipement;
+!!!155097.java!!!	getIdEquipement() : String
+		return idEquipement;
+!!!155225.java!!!	setIdEquipement(in idEquipement : String) : void
+		this.idEquipement = idEquipement;
+!!!155353.java!!!	getNameEquipement() : String
+		return nameEquipement;
+!!!155481.java!!!	setNameEquipement(in nameEquipement : String) : void
+		this.nameEquipement = nameEquipement;
+!!!155609.java!!!	toString() : String
+		return "Equipement [idEquipement=" + idEquipement + ", nameEquipement="
+				+ nameEquipement + "]";

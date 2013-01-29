@@ -1,0 +1,16 @@
+class SourceEquippement
+!!!152409.java!!!	SourceEquippement(in idSourceEquipement : String, in value : String)
+		super();
+		this.idSourceEquipement = idSourceEquipement;
+		this.value = value;
+!!!152537.java!!!	getIdSourceEquipement() : String
+		return idSourceEquipement;
+!!!152665.java!!!	setIdSourceEquipement(in idSourceEquipement : String) : void
+		this.idSourceEquipement = idSourceEquipement;
+!!!152793.java!!!	getValue() : String
+		return value;
+!!!152921.java!!!	setValue(in value : String) : void
+		this.value = value;
+!!!153049.java!!!	toString() : String
+		return "[idSourceEquipement=" + idSourceEquipement
+				+ ", value=" + value + "]";
