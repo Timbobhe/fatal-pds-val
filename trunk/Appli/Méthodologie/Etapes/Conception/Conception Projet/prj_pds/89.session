@@ -1,15 +1,9 @@
-window_sizes 1600 838 325 1269 600 82
-diagrams
-  componentdiagram_ref 134617 // composants
-    1011 545 100 4 0 0
-  active  componentdiagram_ref 161497 // diag de composants
-    1269 682 100 4 0 0
-end
+window_sizes 1600 838 491 1103 600 82
 show_stereotypes
-selected component_ref 129625 // RTDG
+selected sequencediagram_ref 147801 // Séquences de la conception détaillée
 open
-  component_ref 129369 // RTDG-replication
+  classview_ref 128089 // Conception détaillée
   
-  package_ref 134617 // Uses Cases
+  package_ref 135769 // Affecter les messages critiques
 end
 end

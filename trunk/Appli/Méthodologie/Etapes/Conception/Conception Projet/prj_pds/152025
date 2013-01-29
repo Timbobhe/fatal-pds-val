@@ -1,6 +1,6 @@
 format 76
-"Déploiement" // Déploiement
-  revision 8
+"projet" // Composant_Embarque::src::main::java::org::esiag::isidis::fi::projet
+  revision 1
   modified_by 89 "Nidal"
   // class settings
   //class diagram settings
@@ -26,29 +26,7 @@ format 76
   package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
   show_infonote default drawing_language default show_stereotype_properties default
   
-  deploymentview 128089 "Deploiement"
-    //deployment diagram settings
-    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
-    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-    deploymentdiagram 141145 "déploiement"
-      package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations no shadow default
-      draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-      size A4
-    end
-
-    deploymentnode 128217 "RTDG"
-    end
-
-    deploymentnode 128345 "RTDRS"
-    end
-
-    deploymentnode 128473 "Simulation"
-    end
-
-    deploymentnode 128601 "equipement embarqué"
-    end
-
-    deploymentnode 135129 "Admin"
-    end
-  end
+  java_dir "d:/etudes/Workspace_PDS_2013/Integration_1.0/Composant_Embarque/src/main/java/org/esiag/isidis/fi/projet/"
+  java_package "org.esiag.isidis.fi.projet"
+  package_ref 152153 // generator
 end

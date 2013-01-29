@@ -1,0 +1,15 @@
+class Type
+!!!153177.java!!!	Type(in idType : String, in value : String)
+		super();
+		this.idType = idType;
+		this.value = value;
+!!!153305.java!!!	getIdType() : String
+		return idType;
+!!!153433.java!!!	setIdType(in idType : String) : void
+		this.idType = idType;
+!!!153561.java!!!	getValue() : String
+		return value;
+!!!153689.java!!!	setValue(in value : String) : void
+		this.value = value;
+!!!153817.java!!!	toString() : String
+		return "Type [idType=" + idType + ", value=" + value + "]";

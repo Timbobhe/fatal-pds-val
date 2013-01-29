@@ -1,0 +1,44 @@
+class MessageModel
+!!!159449.java!!!	MessageModel()
+		// TODO Auto-generated constructor stub
+!!!159577.java!!!	MessageModel(in source : String, in idSource : String, in capteurSource : String, in idCapteurSource : String, in type : String, in capteurIntelligent : String, in data : String)
+		super();
+		this.source = source;
+		this.idSource = idSource;
+		this.capteurSource = capteurSource;
+		this.idCapteurSource = idCapteurSource;
+		this.type = type;
+		this.capteurIntelligent = capteurIntelligent;
+		this.data = data;
+!!!159705.java!!!	getSource() : String
+		return source;
+!!!159833.java!!!	setSource(in source : String) : void
+		this.source = source;
+!!!159961.java!!!	getIdSource() : String
+		return idSource;
+!!!160089.java!!!	setIdSource(in idSource : String) : void
+		this.idSource = idSource;
+!!!160217.java!!!	getCapteurSource() : String
+		return capteurSource;
+!!!160345.java!!!	setCapteurSource(in capteurSource : String) : void
+		this.capteurSource = capteurSource;
+!!!160473.java!!!	getIdCapteurSource() : String
+		return idCapteurSource;
+!!!160601.java!!!	setIdCapteurSource(in idCapteurSource : String) : void
+		this.idCapteurSource = idCapteurSource;
+!!!160729.java!!!	getType() : String
+		return type;
+!!!160857.java!!!	setType(in type : String) : void
+		this.type = type;
+!!!160985.java!!!	getCapteurIntelligent() : String
+		return capteurIntelligent;
+!!!161113.java!!!	setCapteurIntelligent(in capteurIntelligent : String) : void
+		this.capteurIntelligent = capteurIntelligent;
+!!!161241.java!!!	getData() : String
+		return data;
+!!!161369.java!!!	setData(in data : String) : void
+		this.data = data;
+!!!161497.java!!!	generateData() : String
+		return "";
+!!!161625.java!!!	toString() : String
+		return source + idSource + capteurSource + idCapteurSource + type + capteurIntelligent+ data;

@@ -1,0 +1,13 @@
+class File
+!!!156249.java!!!	transformeMessageToByte(inout message : MessageModel) : byte
+		// TODO Auto-generated method stub
+		return null;
+!!!156377.java!!!	transformeByteToMessage(inout data : byte) : MessageModel
+		// TODO Auto-generated method stub
+		return null;
+!!!156505.java!!!	generateStream() : MessageModel
+		// TODO Auto-generated method stub
+		return null;
+!!!156633.java!!!	transformeMessageToByte(inout messageModel : Transformer) : byte
+		// TODO Auto-generated method stub
+		return null;

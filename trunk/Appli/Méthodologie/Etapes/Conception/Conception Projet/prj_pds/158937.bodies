@@ -1,0 +1,16 @@
+class Position
+!!!168409.java!!!	Position(in x : int, in y : int)
+        this.x=x;
+	this.y=y;
+!!!168537.java!!!	Position()
+		super();
+!!!168665.java!!!	getX() : int
+        return x;
+!!!168793.java!!!	getY() : int
+	return y;
+!!!168921.java!!!	setX(in x : int) : void
+        this.x=x;
+!!!169049.java!!!	setY(in y : int) : void
+        this.y=y;
+!!!169177.java!!!	toString() : String
+        return "("+x+", "+y+")";

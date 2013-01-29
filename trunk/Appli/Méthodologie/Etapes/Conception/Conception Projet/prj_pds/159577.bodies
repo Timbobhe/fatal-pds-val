@@ -1,0 +1,13 @@
+class Station
+!!!167385.java!!!	Station(in nom : String, inout position : Position)
+		super();
+		this.nom = nom;
+		this.position = position;
+!!!167513.java!!!	getPosition() : Position
+		return position;
+!!!167641.java!!!	setPosition(inout position : Position) : void
+		this.position = position;
+!!!167769.java!!!	getNom() : String
+		return nom;
+!!!167897.java!!!	setNom(in nom : String) : void
+		this.nom = nom;

@@ -1,0 +1,59 @@
+class EffecteurLigne
+!!!162393.java!!!	EffecteurLigne(in x : int, in y : int, in nombreStation : int)
+		position=new Position(x,y);
+		angle=0;
+		listLignes=new ArrayList<Ligne>();
+		listStations= new ArrayList<Station>();
+		this.nombreStation=nombreStation;
+		distance=150;
+		calcul();
+!!!162521.java!!!	calcul() : void
+		
+		for(int i=0;i<nombreStation;i++){
+				
+			posx=position.getX();
+			posy=position.getY();
+			position.setX((int)(posx+Math.cos(Math.toRadians(angle))*distance));
+			position.setY((int)(posy+Math.sin(Math.toRadians(angle))*distance));
+			posxf=position.getX();
+			posyf=position.getY();
+			
+		Ligne li =new Ligne(posx,posy,posxf,posyf);
+		listLignes.add(li);
+		listStations.add(new Station("station"+i,new Position(posxf,posyf)));
+		
+		//System.out.println(" posx="+posx+"; posy= "+posy+" posxf="+posxf+"; posyf= "+posyf+"; angle="+angle) ;
+
+
+	}
+		
+			
+		//this.changed() ;
+		
+!!!162649.java!!!	getListStations() : Station
+		return listStations;
+!!!162777.java!!!	setListStations(inout listStations : ArrayList<Station>) : void
+		this.listStations = listStations;
+!!!162905.java!!!	getNombreStation() : int
+		return nombreStation;
+!!!163033.java!!!	setNombreStation(in nombreStation : int) : void
+		this.nombreStation = nombreStation;
+!!!163161.java!!!	getPosx() : double
+		return posx;
+		
+!!!163289.java!!!	getPosy() : double
+		return posy;
+		
+!!!163417.java!!!	getPosxf() : double
+		return posxf;
+		
+!!!163545.java!!!	getPosyf() : double
+		return posyf;
+		
+!!!163673.java!!!	getAngle() : double
+		return angle;
+		
+!!!163801.java!!!	getPosition() : Position
+		return position;
+!!!163929.java!!!	getLignes() : Ligne
+		return listLignes;

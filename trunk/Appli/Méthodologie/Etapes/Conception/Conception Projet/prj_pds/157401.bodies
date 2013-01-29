@@ -1,0 +1,25 @@
+class CapteurSource
+!!!151129.java!!!	CapteurSource()
+		// TODO Auto-generated constructor stub
+!!!151257.java!!!	CapteurSource(in source : String, in capteurSource : String, in type : String, in capteurIntelligent : String)
+		super();
+		this.source = source;
+		this.capteurSourceId = capteurSource;
+		this.type = type;
+		this.capteurIntelligent = capteurIntelligent;
+!!!151385.java!!!	getSource() : String
+		return source;
+!!!151513.java!!!	setSource(in source : String) : void
+		this.source = source;
+!!!151641.java!!!	getCapteurSourceId() : String
+		return capteurSourceId;
+!!!151769.java!!!	setCapteurSourceId(in capteurSourceId : String) : void
+		this.capteurSourceId = capteurSourceId;
+!!!151897.java!!!	getType() : String
+		return type;
+!!!152025.java!!!	setType(in type : String) : void
+		this.type = type;
+!!!152153.java!!!	getCapteurIntelligent() : String
+		return capteurIntelligent;
+!!!152281.java!!!	setCapteurIntelligent(in capteurIntelligent : String) : void
+		this.capteurIntelligent = capteurIntelligent;

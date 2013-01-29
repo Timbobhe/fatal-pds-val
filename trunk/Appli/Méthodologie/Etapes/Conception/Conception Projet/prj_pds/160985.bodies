@@ -1,0 +1,13 @@
+class TableContent
+!!!169305.java!!!	TableContent()
+        super();
+ 
+       
+!!!169433.java!!!	getRowCount() : int
+        return data.length;
+!!!169561.java!!!	getColumnCount() : int
+        return entetes.length;
+!!!169689.java!!!	getColumnName(in columnIndex : int) : String
+        return entetes[columnIndex];
+!!!169817.java!!!	getValueAt(in rowIndex : int, in columnIndex : int) : Object
+        return data[rowIndex][columnIndex];

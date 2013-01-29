@@ -1,0 +1,258 @@
+format 76
+
+classinstance 128217 class_ref 158809 // Client
+  name ""   xyz 47 4 2000 life_line_z 2000
+classinstance 128345 class_ref 158681 // Simulateur
+  name ""   xyz 302 5 2005 life_line_z 2000
+classinstance 130265 class_ref 158425 // Transformer
+  name ""   xyz 147 4 2000 life_line_z 2000
+classinstance 131033 class_ref 158297 // MessageModel
+  name ""   xyz 541 10 2005 life_line_z 2000
+classinstance 131545 class_ref 156889 // DataSource
+  name ""   xyz 640 10 2000 life_line_z 2000
+durationcanvas 128473 classinstance_ref 128217 // :Client
+  xyzwh 66 101 2010 11 54
+end
+durationcanvas 128601 classinstance_ref 128345 // :Simulateur
+  xyzwh 329 102 2010 11 58
+end
+durationcanvas 129753 classinstance_ref 128217 // :Client
+  xyzwh 66 161 2010 11 583
+end
+durationcanvas 129881 classinstance_ref 128345 // :Simulateur
+  xyzwh 329 170 2010 11 526
+  overlappingdurationcanvas 135513
+    xyzwh 335 633 2020 11 25
+  end
+end
+durationcanvas 130393 classinstance_ref 130265 // :Transformer
+  xyzwh 179 700 2010 11 44
+end
+durationcanvas 131161 classinstance_ref 131033 // :MessageModel
+  xyzwh 579 166 2010 11 54
+end
+durationcanvas 131673 classinstance_ref 131545 // :DataSource
+  xyzwh 670 214 2010 11 50
+end
+durationcanvas 132057 classinstance_ref 131033 // :MessageModel
+  xyzwh 579 260 2010 11 28
+end
+durationcanvas 132313 classinstance_ref 131545 // :DataSource
+  xyzwh 670 282 2010 11 54
+end
+durationcanvas 132697 classinstance_ref 131033 // :MessageModel
+  xyzwh 579 323 2010 11 38
+end
+durationcanvas 132953 classinstance_ref 131545 // :DataSource
+  xyzwh 670 357 2010 11 51
+end
+durationcanvas 133337 classinstance_ref 131033 // :MessageModel
+  xyzwh 579 405 2010 11 28
+end
+durationcanvas 133593 classinstance_ref 131545 // :DataSource
+  xyzwh 670 433 2010 11 47
+end
+durationcanvas 133977 classinstance_ref 131033 // :MessageModel
+  xyzwh 579 475 2010 11 28
+end
+durationcanvas 134233 classinstance_ref 131545 // :DataSource
+  xyzwh 670 497 2010 11 46
+end
+durationcanvas 134617 classinstance_ref 131033 // :MessageModel
+  xyzwh 579 540 2010 11 28
+end
+durationcanvas 134873 classinstance_ref 131545 // :DataSource
+  xyzwh 670 559 2010 11 53
+end
+durationcanvas 135257 classinstance_ref 131033 // :MessageModel
+  xyzwh 579 603 2010 11 32
+end
+durationcanvas 136025 classinstance_ref 131033 // :MessageModel
+  xyzwh 579 655 2010 11 28
+end
+durationcanvas 136281 classinstance_ref 128217 // :Client
+  xyzwh 66 49 2010 11 40
+end
+durationcanvas 136409 classinstance_ref 130265 // :Transformer
+  xyzwh 179 49 2010 11 31
+end
+msg 128729 asynchronous
+  from durationcanvas_ref 128473
+  to durationcanvas_ref 128601
+  yz 102 2015 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 212 91
+msg 128857 return
+  from durationcanvas_ref 128601
+  to durationcanvas_ref 128473
+  yz 135 2020 explicitmsg "simulateur"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 209 127
+msg 130009 asynchronous
+  from durationcanvas_ref 129753
+  to durationcanvas_ref 129881
+  yz 171 2015 explicitmsg "generateStream(value)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 202 159
+msg 130137 return
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 129753
+  yz 685 2015 explicitmsg "stream"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 111 671
+msg 130521 asynchronous
+  from durationcanvas_ref 129753
+  to durationcanvas_ref 130393
+  yz 707 2020 msg operation_ref 159321 // "transformToBinary(in s : String) : byte"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 78 698
+msg 130905 return
+  from durationcanvas_ref 130393
+  to durationcanvas_ref 129753
+  yz 733 2015 explicitmsg "trame"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 121 724
+msg 131289 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 131161
+  yz 179 2020 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 445 165
+msg 131417 return
+  from durationcanvas_ref 131161
+  to durationcanvas_ref 129881
+  yz 201 2025 explicitmsg "messageModel"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 420 187
+msg 131801 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 131673
+  yz 225 2030 msg operation_ref 144729 // "getSourcesEquipements() : HashMap<String, String>"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 397 212
+msg 131929 return
+  from durationcanvas_ref 131673
+  to durationcanvas_ref 129881
+  yz 245 2035 explicitmsg "source"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 443 234
+msg 132185 synchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 132057
+  yz 269 2040 msg operation_ref 159833 // "setSource(in source : String) : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 427 255
+msg 132441 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 132313
+  yz 292 2015 msg operation_ref 146393 // "initializeIdSoucesEquipements() : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 388 280
+msg 132569 return
+  from durationcanvas_ref 132313
+  to durationcanvas_ref 129881
+  yz 317 2020 explicitmsg "idSource"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 442 305
+msg 132825 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 132697
+  yz 342 2015 msg operation_ref 160089 // "setIdSource(in idSource : String) : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 427 328
+msg 133081 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 132953
+  yz 367 2020 msg operation_ref 145241 // "getCapteursSouces() : HashMap<String, String>"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 406 355
+msg 133209 return
+  from durationcanvas_ref 132953
+  to durationcanvas_ref 129881
+  yz 389 2025 explicitmsg "capteurSource"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 431 377
+msg 133465 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 133337
+  yz 414 2015 msg operation_ref 160345 // "setCapteurSource(in capteurSource : String) : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 408 400
+msg 133721 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 133593
+  yz 442 2015 msg operation_ref 146777 // "initializeIdCapteursSources() : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 396 428
+msg 133849 return
+  from durationcanvas_ref 133593
+  to durationcanvas_ref 129881
+  yz 461 2015 explicitmsg "idCapteurSource"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 427 451
+msg 134105 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 133977
+  yz 484 2020 msg operation_ref 160601 // "setIdCapteurSource(in idCapteurSource : String) : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 404 470
+msg 134361 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 134233
+  yz 506 2025 msg operation_ref 145753 // "getTypes() : HashMap<String, String>"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 433 495
+msg 134489 return
+  from durationcanvas_ref 134233
+  to durationcanvas_ref 129881
+  yz 524 2030 explicitmsg "type"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 447 516
+msg 134745 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 134617
+  yz 549 3005 msg operation_ref 160857 // "setType(in type : String) : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 433 535
+msg 135001 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 134873
+  yz 571 3010 msg operation_ref 146009 // "getCapteurIntelligence() : HashMap<String, String>"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 447 557
+msg 135129 return
+  from durationcanvas_ref 134873
+  to durationcanvas_ref 129881
+  yz 593 3015 explicitmsg "capteurIntelligent"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 464 579
+msg 135385 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 135257
+  yz 616 3020 msg operation_ref 161113 // "setCapteurIntelligent(in capteurIntelligent : String) : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 404 602
+reflexivemsg 135641 asynchronous
+  to durationcanvas_ref 135513
+  yz 639 2025 msg operation_ref 148569 // "generateData(in type : String, in idCapteur : String) : String"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 367 634
+msg 136153 asynchronous
+  from durationcanvas_ref 129881
+  to durationcanvas_ref 136025
+  yz 664 3005 msg operation_ref 161369 // "setData(in data : String) : void"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 434 650
+msg 136537 asynchronous
+  from durationcanvas_ref 136281
+  to durationcanvas_ref 136409
+  yz 49 2015 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 117 35
+msg 136665 return
+  from durationcanvas_ref 136409
+  to durationcanvas_ref 136281
+  yz 69 2015 explicitmsg "transformer"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 99 55
+end

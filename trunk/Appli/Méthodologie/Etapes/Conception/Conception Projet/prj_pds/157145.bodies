@@ -1,0 +1,105 @@
+class RandomSource
+!!!147289.java!!!	RandomSource()
+		initializeSourcesEquipements(4);
+		initializeCapteursSources(8);
+		initializeTypes(3);
+		initializeCapteursIntelligents(2);
+		initializeRefCriticite(10);
+!!!147417.java!!!	initializeRefCriticite(in taille : int) : void
+		refCriticite = new HashMap<String, Value>(taille);
+		refCriticite.put("0000", new Value(60, 90));
+		refCriticite.put("0010", new Value(850, 900));
+		refCriticite.put("0100", new Value(0, 20));
+		refCriticite.put("0101", new Value(0, 20));
+!!!147545.java!!!	initializeSourcesEquipements(in taille : int) : void
+		sourcesEquipements = new HashMap<String, SourceEquippement>(taille);
+		sourcesEquipements.put("Train", new SourceEquippement("I01", "00"));
+		sourcesEquipements.put("Tunnel", new SourceEquippement("I02", "01"));
+		sourcesEquipements.put("Rail", new SourceEquippement("I03", "10"));
+		sourcesEquipements.put("Station", new SourceEquippement("I04", "11"));
+!!!147673.java!!!	initializeCapteursSources(in taille : int) : void
+		capteursSources = new HashMap<String, CapteurSource>(taille);
+		capteursSources.put("CapteurTemperature", new CapteurSource("00", "0000", "01", "00"));
+		capteursSources.put("CapteurInfraRougePorte", new CapteurSource("00", "0001", "00", "00"));
+		capteursSources.put("CapteurPoids", new CapteurSource("00", "0010", "01", "00"));
+		capteursSources.put("CapteurQuai", new CapteurSource("11", "0011", "00", "00"));
+		capteursSources.put("CapteurOxygene", new CapteurSource("00", "0100", "01", "00"));
+		capteursSources.put("CapteurCO2", new CapteurSource("00", "0101", "01", "00"));
+		keys = new String[]{"CapteurTemperature", "CapteurInfraRougePorte"
+				,"CapteurPoids", "CapteurQuai", "CapteurOxygene", "CapteurCO2"};
+!!!147801.java!!!	initializeTypes(in taille : int) : void
+		types = new HashMap<String, Type>(taille);
+		types.put("Boolean", new Type("I01", "00"));
+		types.put("Numerique", new Type("I02", "01"));
+		types.put("Position", new Type("I03", "10"));
+!!!147929.java!!!	initializeCapteursIntelligents(in taille : int) : void
+		capteursIntelligent = new HashMap<String, CapteurIntelligent>(taille);
+		capteursIntelligent.put("NonIntelligent", new CapteurIntelligent("I01", "00"));
+		capteursIntelligent.put("Intelligent", new CapteurIntelligent("I02", "01"));
+		
+!!!148057.java!!!	randomizeValueOfData(in lenght : int) : int
+		Random random = new Random();
+		int index = random.nextInt(lenght);
+		//System.out.println("index: " + index + " lenght: " + (tab.length-1));
+		return index;
+!!!148185.java!!!	generateStream(in index : int) : String
+		String key = keys[index];
+		CapteurSource capteurSource = capteursSources.get(key);
+		String source = capteurSource.getSource();
+		String idSource = "00000000";
+		String captSourceId = capteurSource.getCapteurSourceId();
+		String idCaptSourceId = "000000";
+		String type = capteurSource.getType();
+		String capIntel = capteurSource.getCapteurIntelligent();
+		String data = generateData(type, captSourceId);
+		return (source + idSource + captSourceId + idCaptSourceId 
+		+type + capIntel + data);
+!!!148313.java!!!	generateValueOfNumerique(in min : int, in max : int) : int
+		Random random = new Random();
+		int value = min + random.nextInt(max - min);
+		return value;
+!!!148441.java!!!	validateLenght(in s : String, in lenght : int) : String
+		int j = lenght - s.length();
+		String add = "";
+		for(int i = 0; i < j; i++){
+			add = add + "0";
+		}
+		return add + s;
+!!!148569.java!!!	generateData(in type : String, in idCapteur : String) : String
+		String data = "";
+		if(type.equals("00")){
+			return data = idCapteur + "000001";
+		}
+		else
+		if(type.equals("01")){
+			Value value = refCriticite.get(idCapteur);
+			int valueNumerique = generateValueOfNumerique(value.getMin(), value.getMax());
+			String s = Integer.toBinaryString(valueNumerique);
+			return validateLenght(s, 10);
+		}
+		
+		return data;
+!!!148697.java!!!	getRefCriticite() : Value
+		return refCriticite;
+!!!148825.java!!!	setRefCriticite(inout refCriticite : HashMap<String, Value>) : void
+		this.refCriticite = refCriticite;
+!!!148953.java!!!	getKeys() : String
+		return keys;
+!!!149081.java!!!	setKeys(inout keys : String) : void
+		this.keys = keys;
+!!!149209.java!!!	getSourcesEquipements() : SourceEquippement
+		return sourcesEquipements;
+!!!149337.java!!!	setSourcesEquipements(inout sourcesEquipements : HashMap<String, SourceEquippement>) : void
+		this.sourcesEquipements = sourcesEquipements;
+!!!149465.java!!!	getCapteursSources() : CapteurSource
+		return capteursSources;
+!!!149593.java!!!	setCapteursSources(inout capteursSources : HashMap<String, CapteurSource>) : void
+		this.capteursSources = capteursSources;
+!!!149721.java!!!	getTypes() : Type
+		return types;
+!!!149849.java!!!	setTypes(inout types : HashMap<String, Type>) : void
+		this.types = types;
+!!!149977.java!!!	getCapteursIntelligent() : CapteurIntelligent
+		return capteursIntelligent;
+!!!150105.java!!!	setCapteursIntelligent(inout capteursIntelligent : HashMap<String, CapteurIntelligent>) : void
+		this.capteursIntelligent = capteursIntelligent;
