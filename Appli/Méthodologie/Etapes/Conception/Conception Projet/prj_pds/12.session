@@ -12,8 +12,6 @@ diagrams
     894 520 100 4 0 0
   classdiagram_ref 141836 // prioriser message
     974 582 100 4 410 0
-  componentdiagram_ref 134617 // composants
-    974 582 100 4 25 0
   sequencediagram_ref 149004 // scenario nominal 1 : Interpréter un message reçu depuis un composant embarqué
     974 582 100 4 0 0
   sequencediagram_ref 149132 // Scénario nominal : affecter un message non critique dans un buffer
@@ -28,8 +26,8 @@ diagrams
     756 465 100 4 57 0
   classdiagram_ref 156044 // class metier affecter message critique
     950 582 100 4 0 0
-  componentdiagram_ref 161497 // diag de composants
-    916 582 100 4 0 0
+  active  componentdiagram_ref 161497 // diag de composants
+    916 582 100 4 1 0
   classdiagram_ref 142092 // Orchestrer les messages
     756 465 100 4 0 0
   classdiagram_ref 142220 // Transmettre les messages au terrain
@@ -45,7 +43,7 @@ diagrams
   classdiagram_ref 168281 // classes détaillé
     756 465 100 4 0 0
   sequencediagram_ref 168409 // séquences détaillé(rame)
-    756 465 100 4 637 0
+    756 465 100 4 0 0
   sequencediagram_ref 181465 // séquence détaillé (random)
     756 465 100 4 0 0
   classdiagram_ref 147673 // Classes de la conception détaillée
@@ -70,15 +68,24 @@ diagrams
     756 465 100 4 0 0
   classdiagram_ref 163212 // diagramme de classe metier
     927 582 100 4 0 0
-  active  classdiagram_ref 163340 // diagramme de classe metier
+  classdiagram_ref 163340 // diagramme de classe metier
     916 582 100 4 86 0
+  componentdiagram_ref 134617 // composants
+    728 465 100 4 0 0
+  sequencediagram_ref 147929 // Séquences de conception détaillée
+    728 465 100 4 0 0
+  componentdiagram_ref 169868 // diag composant R1
+    728 465 100 4 0 0
 end
 show_stereotypes
-selected classdiagram_ref 163340 // diagramme de classe metier
+selected componentdiagram_ref 161497 // diag de composants
 open
-  usecaseview_ref 128089 // Diagramme de uses cases
+  componentview_ref 128089 // composants
   
-  package_ref 149081 // src
+  package_ref 128089 // Déploiement
+  
+  package_ref 135129 // Création du protocole de communication
+  classview_ref 135257 // Conception détaillée
   
   package_ref 152793 // unknown
 end
