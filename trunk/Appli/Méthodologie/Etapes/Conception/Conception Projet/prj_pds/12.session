@@ -28,7 +28,7 @@ diagrams
     756 465 100 4 57 0
   classdiagram_ref 156044 // class metier affecter message critique
     950 582 100 4 0 0
-  active  componentdiagram_ref 161497 // diag de composants
+  componentdiagram_ref 161497 // diag de composants
     916 582 100 4 0 0
   classdiagram_ref 142092 // Orchestrer les messages
     756 465 100 4 0 0
@@ -70,13 +70,13 @@ diagrams
     756 465 100 4 0 0
   classdiagram_ref 163212 // diagramme de classe metier
     927 582 100 4 0 0
-  classdiagram_ref 163340 // diagramme de classe metier
-    756 465 100 4 86 0
+  active  classdiagram_ref 163340 // diagramme de classe metier
+    916 582 100 4 86 0
 end
 show_stereotypes
-selected classview_ref 143193 // unknown
+selected classdiagram_ref 163340 // diagramme de classe metier
 open
-  componentview_ref 128089 // composants
+  usecaseview_ref 128089 // Diagramme de uses cases
   
   package_ref 149081 // src
   

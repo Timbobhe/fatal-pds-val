@@ -1,0 +1,90 @@
+format 76
+
+classinstancecanvas 128012 classinstance_ref 168460 // ReferentielCriticite
+  xyz 504 86 2010 life_line_z 2000
+end
+classinstancecanvas 128140 classinstance_ref 154508 // RTDG-Client
+  xyz 82 22 2000 life_line_z 2000
+end
+classinstancecanvas 128268 classinstance_ref 174988 // Buffer
+  xyz 757 65 2000 life_line_z 2000
+end
+classinstancecanvas 128396 classinstance_ref 168204 // ServiceCriticiteMessage
+  xyz 365 62 2005 life_line_z 2000
+end
+classinstancecanvas 128524 classinstance_ref 134668 // ServicePriorisation
+  xyz 200 22 2000 life_line_z 2000
+end
+classinstancecanvas 130188 classinstance_ref 168332 // ReferentielPriorisation
+  xyz 564 51 2000 life_line_z 2000
+end
+durationcanvas 128652 classinstance_ref 128396 // ServiceCriticiteMessage:criticité
+  xyzwh 440 235 2010 11 214
+  overlappingdurationcanvas 128780
+    xyzwh 446 330 2020 11 25
+  end
+end
+durationcanvas 128908 classinstance_ref 128140 // RTDG-Client:client
+  xyzwh 126 195 2010 11 41
+end
+durationcanvas 129036 classinstance_ref 128012 // ReferentielCriticite:Refcriticité
+  xyzwh 573 259 2010 11 71
+end
+durationcanvas 129164 classinstance_ref 128524 // ServicePriorisation:priorisation
+  xyzwh 270 195 2010 11 64
+end
+durationcanvas 129292 classinstance_ref 128268 // Buffer:Buffer
+  xyzwh 787 372 2010 11 77
+end
+durationcanvas 130316 classinstance_ref 130188 // ReferentielPriorisation:refpriorisation
+  xyzwh 648 374 2010 11 33
+end
+msg 129420 synchronous
+  from durationcanvas_ref 128652
+  to durationcanvas_ref 129292
+  yz 438 2015 explicitmsg "stocker(msgC)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 548 422
+msg 129548 return
+  from durationcanvas_ref 129036
+  to durationcanvas_ref 128652
+  yz 307 2015 explicitmsg "message critique"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 491 292
+msg 129676 synchronous
+  from durationcanvas_ref 128652
+  to durationcanvas_ref 129036
+  yz 274 2015 explicitmsg "consult(msgInt,ref)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 469 259
+msg 129804 synchronous
+  from durationcanvas_ref 129164
+  to durationcanvas_ref 128652
+  yz 237 2015 explicitmsg "send(msgInt)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 330 222
+msg 129932 synchronous
+  from durationcanvas_ref 128908
+  to durationcanvas_ref 129164
+  yz 197 2015 explicitmsg "send(msgInt)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 173 182
+reflexivemsg 130060 synchronous
+  to durationcanvas_ref 128780
+  yz 330 2025 explicitmsg "testerCriticite(msgInt)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  args "criticit"
+  label_xy 344 337
+msg 130444 synchronous
+  from durationcanvas_ref 128652
+  to durationcanvas_ref 130316
+  yz 374 2015 explicitmsg "consult(msgC,refP)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 505 361
+msg 130572 return
+  from durationcanvas_ref 130316
+  to durationcanvas_ref 128652
+  yz 396 2020 explicitmsg "mesage priorisé"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 512 383
+end
