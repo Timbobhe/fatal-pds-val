@@ -1,7 +1,7 @@
 format 76
 "diagramme Metier" // diagramme Metier
-  revision 11
-  modified_by 89 "Nidal"
+  revision 12
+  modified_by 12 "Hamza"
   // class settings
   //class diagram settings
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
@@ -26,7 +26,7 @@ format 76
   package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
   show_infonote default drawing_language default show_stereotype_properties default
   
-  usecaseview 128012 "diagrammes sequences metier"
+  usecaseview 128012 "diagrammes sequences systeme"
     //use case diagram settings
     package_name_in_tab default show_context default auto_label_position default draw_all_relations default class_drawing_mode default shadow default show_stereotype_properties default
     //sequence diagram settings
@@ -105,26 +105,6 @@ format 76
     end
 
     sequencediagram 134668 "Effectuer les interventions automatiques"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 134796 "Orchestrer les messages"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 134924 "Transmettre les messages au terrain"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 135052 "Expand message"
-      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
-      overlapping_bars size A4
-    end
-
-    sequencediagram 135180 "Configurer le démarrage des services "
       show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
       overlapping_bars size A4
     end
@@ -249,14 +229,6 @@ format 76
 	  b parent class_ref 162572 // ServicePriorisation
       end
 
-      classrelation 145676 // <association>
-	relation 143884 ----
-	  a role_name "" private
-	    classrelation_ref 145676 // <association>
-	  b role_name "" private
-	    classrelation_ref 145804 // <association>
-      end
-
       classrelation 145932 // <association>
 	relation 144012 ----
 	  a role_name "" private
@@ -283,6 +255,61 @@ format 76
 	    classrelation_ref 147212 // <aggregation>
 	  b role_name "" private
 	    classrelation_ref 147340 // <aggregation>
+      end
+
+      classrelation 153996 // <association>
+	relation 151564 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 153996 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 154124 // <association>
+      end
+
+      classrelation 155020 // <dependency>
+	relation 152076 -_->
+	  a default
+	    classrelation_ref 155020 // <dependency>
+	  b parent class_ref 162572 // ServicePriorisation
+      end
+
+      classrelation 155276 // <aggregation>
+	relation_ref 152204 // <aggregation>
+      end
+
+      classrelation 155404 // <aggregation>
+	relation 152332 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 155404 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 155532 // <aggregation>
+      end
+
+      classrelation 157196 // <aggregation>
+	relation_ref 153740 // <aggregation>
+      end
+
+      classrelation 157452 // <aggregation>
+	relation_ref 153868 // <aggregation>
+      end
+
+      classrelation 158092 // <association>
+	relation 154380 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 158092 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 158220 // <association>
       end
     end
 
@@ -614,6 +641,24 @@ format 76
       classrelation 145420 // <aggregation>
 	relation_ref 143628 // <aggregation>
       end
+
+      classrelation 154892 // <aggregation>
+	relation_ref 151948 // <aggregation>
+      end
+
+      classrelation 155916 // <dependency>
+	relation 152716 -_->
+	  a default
+	    classrelation_ref 155916 // <dependency>
+	  b parent class_ref 162316 // Referentiel
+      end
+
+      classrelation 156044 // <dependency>
+	relation 152844 -_->
+	  a default
+	    classrelation_ref 156044 // <dependency>
+	  b parent class_ref 171020 // RefInitializer
+      end
     end
 
     classinstance 167948 "Referentiel"
@@ -677,6 +722,34 @@ format 76
 	  b role_name "" private
 	    classrelation_ref 145420 // <aggregation>
       end
+
+      classrelation 154380 // <aggregation>
+	relation_ref 151692 // <aggregation>
+      end
+
+      classrelation 154508 // <aggregation>
+	relation 151820 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 154508 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 154636 // <aggregation>
+      end
+
+      classrelation 154764 // <aggregation>
+	relation 151948 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 154764 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 154892 // <aggregation>
+      end
     end
 
     class 162572 "ServicePriorisation"
@@ -688,10 +761,6 @@ format 76
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 145804 // <association>
-	relation_ref 143884 // <association>
-      end
-
       classrelation 146060 // <association>
 	relation_ref 144012 // <association>
       end
@@ -708,6 +777,28 @@ format 76
 	  a public
 	    classrelation_ref 146828 // <realization>
 	  b parent class_ref 162828 // ServiceCriticiteMessage
+      end
+
+      classrelation 154124 // <association>
+	relation_ref 151564 // <association>
+      end
+
+      classrelation 158220 // <association>
+	relation_ref 154380 // <association>
+      end
+
+      classrelation 158348 // <dependency>
+	relation 154508 -_->
+	  a default
+	    classrelation_ref 158348 // <dependency>
+	  b parent class_ref 162828 // ServiceCriticiteMessage
+      end
+
+      classrelation 158860 // <dependency>
+	relation 155020 -_->
+	  a default
+	    classrelation_ref 158860 // <dependency>
+	  b parent class_ref 171660 // AnalyzerMessageprio
       end
     end
 
@@ -926,6 +1017,35 @@ ${members}};
 	    classrelation_ref 147468 // <realization>
 	  b parent class_ref 164364 // ReferentielPriorisation
       end
+
+      classrelation 155660 // <dependency>
+	relation 152460 -_->
+	  a default
+	    classrelation_ref 155660 // <dependency>
+	  b parent class_ref 164108 // ReferentielCriticite
+      end
+
+      classrelation 155788 // <realization>
+	relation 152588 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 155788 // <realization>
+	  b parent class_ref 163340 // priorisation
+      end
+
+      classrelation 156684 // <dependency>
+	relation 153356 -_->
+	  a default
+	    classrelation_ref 156684 // <dependency>
+	  b parent class_ref 171532 // GestionnaireBuffer
+      end
+
+      classrelation 156940 // <dependency>
+	relation 153612 -_->
+	  a default
+	    classrelation_ref 156940 // <dependency>
+	  b parent class_ref 164108 // ReferentielCriticite
+      end
     end
 
     classinstance 168076 "ServiceCriticiteMessage "
@@ -1029,6 +1149,12 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
+      classrelation 156172 // <dependency>
+	relation 152972 -_->
+	  a default
+	    classrelation_ref 156172 // <dependency>
+	  b parent class_ref 171020 // RefInitializer
+      end
     end
 
     class 164236 "Buffer"

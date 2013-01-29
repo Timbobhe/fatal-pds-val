@@ -1,4 +1,4 @@
-window_sizes 1280 738 324 950 533 82
+window_sizes 1280 738 347 927 533 82
 diagrams
   usecasediagram_ref 128089 // VAL
     974 582 100 4 0 0
@@ -7,14 +7,6 @@ diagrams
   sequencediagram_ref 134540 // Prioriser messages
     775 465 100 4 0 0
   sequencediagram_ref 134668 // Effectuer les interventions automatiques
-    775 465 100 4 0 0
-  sequencediagram_ref 134924 // Transmettre les messages au terrain
-    970 582 100 4 0 0
-  sequencediagram_ref 134796 // Orchestrer les messages
-    970 582 100 4 0 0
-  sequencediagram_ref 135052 // Expand message
-    775 465 100 4 0 0
-  sequencediagram_ref 135180 // Configurer le démarrage des services 
     775 465 100 4 0 0
   classdiagram_ref 141708 // collecter les informations terrain
     894 520 100 4 0 0
@@ -31,18 +23,64 @@ diagrams
   classdiagram_ref 141964 // Effectuer les interventions automatiques
     743 452 100 4 0 0
   classdiagram_ref 155788 // diagramme de classe metier Interpréter un message
-    756 446 100 4 0 0
+    785 446 100 4 0 0
   classdiagram_ref 155916 // class metier affecter message non Critique
     756 465 100 4 57 0
-  active  classdiagram_ref 156044 // class metier affecter message critique
+  classdiagram_ref 156044 // class metier affecter message critique
     950 582 100 4 0 0
+  componentdiagram_ref 161497 // diag de composants
+    756 465 100 4 0 0
+  classdiagram_ref 142092 // Orchestrer les messages
+    756 465 100 4 0 0
+  classdiagram_ref 142220 // Transmettre les messages au terrain
+    756 465 100 4 0 0
+  classdiagram_ref 142348 // Expand message
+    756 465 100 4 0 0
+  classdiagram_ref 142476 // Configurer le démarage des services
+    756 465 100 4 0 0
+  sequencediagram_ref 168153 // séquences systeme rame
+    756 465 100 4 0 0
+  classdiagram_ref 168025 // classes métier
+    756 465 100 4 0 0
+  classdiagram_ref 168281 // classes détaillé
+    756 465 100 4 0 0
+  sequencediagram_ref 168409 // séquences détaillé(rame)
+    756 465 100 4 0 0
+  sequencediagram_ref 181465 // séquence détaillé (random)
+    756 465 100 4 0 0
+  classdiagram_ref 147673 // Classes de la conception détaillée
+    756 465 100 4 0 0
+  sequencediagram_ref 147801 // Séquences de la conception détaillée
+    756 465 100 4 0 0
+  sequencediagram_ref 148185 // séquences de la conception détaillée
+    756 465 100 4 0 0
+  classdiagram_ref 148313 // classes de la conception détaillée
+    756 465 100 4 0 0
+  sequencediagram_ref 148441 // séquence de la conception détaillée
+    756 465 100 4 0 0
+  sequencediagram_ref 162572 // diagramme sequence systeme
+    756 465 100 4 0 0
+  classdiagram_ref 162700 // diagramme de classe metier
+    756 465 100 4 0 0
+  sequencediagram_ref 162828 // diagramme de suequence system
+    756 465 100 4 0 0
+  classdiagram_ref 162956 // diagramme de classe metier
+    756 465 100 4 0 0
+  sequencediagram_ref 163084 // diagramme de suequence systeme
+    756 465 100 4 0 0
+  active  classdiagram_ref 163212 // diagramme de classe metier
+    927 582 100 4 0 0
+  classdiagram_ref 163340 // diagramme de classe metier
+    756 465 100 4 86 0
 end
 show_stereotypes
-selected classdiagram_ref 156044 // class metier affecter message critique
+selected classdiagram_ref 163212 // diagramme de classe metier
 open
-  usecaseview_ref 128012 // diagrammes sequences metier
-  usecaseview_ref 134668 // diagramme classe metier
-  classview_ref 128268 // Collecter information terrain
-  classview_ref 128396 // Prioriser message
+  usecaseview_ref 128089 // Diagramme de uses cases
+  
+  package_ref 134745 // Collecter les infos terrain
+  
+  package_ref 135513 // Affecter les messages non critiques
+  classview_ref 135052 // Conception Préliminaire
 end
 end

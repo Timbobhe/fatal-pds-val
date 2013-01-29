@@ -1,7 +1,7 @@
 format 76
 "prj_pds"
-  revision 20
-  modified_by 89 "Nidal"
+  revision 21
+  modified_by 12 "Hamza"
 
 
   
@@ -860,6 +860,216 @@ format 76
 	  stereotype "include"
 	  on usecase_ref 163545 // Orchestrer les messages
       end
+    end
+
+    classdiagram 163340 "diagramme de classe metier"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
+
+    class 171020 "RefInitializer"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 171148 "Messaged"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 171276 "TransmissionService"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 156428 // <aggregation>
+	relation_ref 153100 // <aggregation>
+      end
+
+      classrelation 157068 // <aggregation>
+	relation 153740 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 157068 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 157196 // <aggregation>
+      end
+    end
+
+    class 171404 "ReferentielMesure"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 156556 // <dependency>
+	relation 153228 -_->
+	  a default
+	    classrelation_ref 156556 // <dependency>
+	  b parent class_ref 171020 // RefInitializer
+      end
+    end
+
+    class 171532 "GestionnaireBuffer"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 156812 // <dependency>
+	relation 153484 -_->
+	  a default
+	    classrelation_ref 156812 // <dependency>
+	  b parent class_ref 171532 // GestionnaireBuffer
+      end
+    end
+
+    class 171660 "AnalyzerMessageprio"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 157580 // <dependency>
+	relation 153996 -_->
+	  a default
+	    classrelation_ref 157580 // <dependency>
+	  b parent class_ref 171404 // ReferentielMesure
+      end
+
+      classrelation 157708 // <association>
+	relation 154124 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 157708 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 157836 // <association>
+      end
+
+      classrelation 157964 // <dependency>
+	relation 154252 -_->
+	  a default
+	    classrelation_ref 157964 // <dependency>
+	  b parent class_ref 171916 // TrainServer
+      end
+    end
+
+    class 171788 "ParserFocnTechnique"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 157836 // <association>
+	relation_ref 154124 // <association>
+      end
+    end
+
+    class 171916 "TrainServer"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    class 172044 "Orchestrer"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      classrelation 158476 // <dependency>
+	relation 154636 -_->
+	  a default
+	    classrelation_ref 158476 // <dependency>
+	  b parent class_ref 171788 // ParserFocnTechnique
+      end
+
+      classrelation 158604 // <dependency>
+	relation 154764 -_->
+	  a default
+	    classrelation_ref 158604 // <dependency>
+	  b parent class_ref 172172 // RTDRSServer
+      end
+
+      classrelation 158732 // <dependency>
+	relation 154892 -_->
+	  a default
+	    classrelation_ref 158732 // <dependency>
+	  b parent class_ref 162572 // ServicePriorisation
+      end
+    end
+
+    class 172172 "RTDRSServer"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
     end
   end
 
