@@ -21,16 +21,16 @@ durationcanvas 131545 classinstance_ref 130777 // :RandomSource
   xyzwh 193 123 2010 11 53
 end
 durationcanvas 131929 classinstance_ref 128217 // :Client
-  xyzwh 46 197 2010 11 100
+  xyzwh 46 196 2010 11 101
 end
 durationcanvas 132057 classinstance_ref 130777 // :RandomSource
-  xyzwh 193 197 2010 11 100
+  xyzwh 193 196 2010 11 100
 end
 durationcanvas 132569 classinstance_ref 132441 // :Random
-  xyzwh 332 210 2010 11 33
+  xyzwh 333 209 2010 11 34
 end
 durationcanvas 132953 classinstance_ref 132441 // :Random
-  xyzwh 332 249 2010 11 40
+  xyzwh 333 249 2010 11 40
 end
 durationcanvas 133337 classinstance_ref 128217 // :Client
   xyzwh 46 317 2010 11 40
@@ -42,7 +42,7 @@ durationcanvas 133977 classinstance_ref 128217 // :Client
   xyzwh 46 365 2010 11 40
 end
 durationcanvas 134105 classinstance_ref 133849 // :Transformer
-  xyzwh 439 365 2010 11 29
+  xyzwh 437 365 2010 11 29
 end
 msg 131161 asynchronous
   from durationcanvas_ref 130905
@@ -71,39 +71,39 @@ msg 131801 return
 msg 132185 asynchronous
   from durationcanvas_ref 131929
   to durationcanvas_ref 132057
-  yz 197 2015 msg operation_ref 148057 // "randomizeValueOfData(in lenght : int) : int"
+  yz 196 2015 msg operation_ref 148057 // "randomizeValueOfData(in lenght : int) : int"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 65 183
+  label_xy 65 182
 msg 132313 return
   from durationcanvas_ref 132057
   to durationcanvas_ref 131929
-  yz 286 2020 explicitmsg "value"
+  yz 285 2020 explicitmsg "value"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 112 272
+  label_xy 112 271
 msg 132697 asynchronous
   from durationcanvas_ref 132057
   to durationcanvas_ref 132569
-  yz 210 2025 explicitmsg "new"
+  yz 209 2025 explicitmsg "new"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 257 196
+  label_xy 257 195
 msg 132825 return
   from durationcanvas_ref 132569
   to durationcanvas_ref 132057
-  yz 232 2015 explicitmsg "random"
+  yz 231 2015 explicitmsg "random"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 250 221
+  label_xy 250 220
 msg 133081 asynchronous
   from durationcanvas_ref 132057
   to durationcanvas_ref 132953
-  yz 258 2025 explicitmsg "nextInt()"
+  yz 257 2025 explicitmsg "nextInt()"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 248 244
+  label_xy 248 243
 msg 133209 return
   from durationcanvas_ref 132953
   to durationcanvas_ref 132057
-  yz 278 3005 explicitmsg "index"
+  yz 277 3005 explicitmsg "index"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 255 264
+  label_xy 255 263
 msg 133593 asynchronous
   from durationcanvas_ref 133337
   to durationcanvas_ref 133465
