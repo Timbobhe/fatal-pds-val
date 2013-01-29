@@ -27,7 +27,7 @@ diagrams
   classdiagram_ref 156044 // class metier affecter message critique
     950 582 100 4 0 0
   active  componentdiagram_ref 161497 // diag de composants
-    916 582 100 4 1 0
+    916 582 100 4 0 0
   classdiagram_ref 142092 // Orchestrer les messages
     756 465 100 4 0 0
   classdiagram_ref 142220 // Transmettre les messages au terrain
@@ -76,16 +76,14 @@ diagrams
     728 465 100 4 0 0
   componentdiagram_ref 169868 // diag composant R1
     728 465 100 4 0 0
+  deploymentdiagram_ref 141145 // déploiement
+    728 465 100 4 0 0
 end
 show_stereotypes
 selected componentdiagram_ref 161497 // diag de composants
 open
   componentview_ref 128089 // composants
-  
-  package_ref 128089 // Déploiement
-  
-  package_ref 135129 // Création du protocole de communication
-  classview_ref 135257 // Conception détaillée
+  deploymentview_ref 128089 // Deploiement
   
   package_ref 152793 // unknown
 end
