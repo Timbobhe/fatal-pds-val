@@ -1,5 +1,5 @@
 format 76
-"gestionRame" // Composant_Embarque::src::main::java::org::esiag::isidis::gestionRame
+"criticite" // fatal-rtdg-analyser::src::main::java::org::fatal::rtdg::criticite
   revision 1
   modified_by 89 "Nidal"
   // class settings
@@ -26,9 +26,9 @@ format 76
   package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
   show_infonote default drawing_language default show_stereotype_properties default
   
-  java_dir "d:/etudes/Workspace_PDS_2013/Integration_1.0/Composant_Embarque/src/main/java/org/esiag/isidis/gestionRame/"
-  java_package "org.esiag.isidis.gestionRame"
-  classview 143065 "gestionRame"
+  java_dir "C:/Users/Nidal/Desktop/PDS/trunk/Appli/Code/fatal-rtdg-analyser/src/main/java/org/fatal/rtdg/criticite/"
+  java_package "org.fatal.rtdg.criticite"
+  classview 150105 "criticite"
     //class diagram settings
     draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
     //collaboration diagram settings
@@ -44,7 +44,7 @@ format 76
     //activity diagram settings
     package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
     show_infonote default drawing_language default show_stereotype_properties default
-    class 159705 "EffecteurRame"
+    class 168409 "BufferManager"
       visibility public 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -55,72 +55,51 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 147545 // <generalisation>
-	relation 146009 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 147545 // <generalisation>
-	  b parent class_ref 159833 // Model
-      end
-
-      classrelation 147673 // position (<unidirectional association>)
-	relation 146137 --->
-	  a role_name "position" private
+      classrelation 156505 // buf1 (<unidirectional association>)
+	relation 154969 --->
+	  a role_name "buf1" private
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 147673 // position (<unidirectional association>)
-	  b parent class_ref 158937 // Position
+	    classrelation_ref 156505 // buf1 (<unidirectional association>)
+	  b parent class_ref 168537 // MessageBuffer
       end
 
-      classrelation 147801 // listPosition (<unidirectional association>)
-	relation 146265 --->
-	  stereotype "ArrayList"
-	  a role_name "listPosition" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+      classrelation 156633 // buf2 (<unidirectional association>)
+	relation 155097 --->
+	  a role_name "buf2" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 147801 // listPosition (<unidirectional association>)
-	  b parent class_ref 158937 // Position
+	    classrelation_ref 156633 // buf2 (<unidirectional association>)
+	  b parent class_ref 168537 // MessageBuffer
       end
 
-      classrelation 147929 // listLignes (<unidirectional association>)
-	relation 146393 --->
-	  stereotype "ArrayList"
-	  a role_name "listLignes" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+      classrelation 156761 // buf3 (<unidirectional association>)
+	relation 155225 --->
+	  a role_name "buf3" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 147929 // listLignes (<unidirectional association>)
-	  b parent class_ref 159449 // Ligne
+	    classrelation_ref 156761 // buf3 (<unidirectional association>)
+	  b parent class_ref 168537 // MessageBuffer
       end
 
-      classrelation 148057 // listStations (<unidirectional association>)
-	relation 146521 --->
-	  stereotype "ArrayList"
-	  a role_name "listStations" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+      classrelation 156889 // tab1 (<unidirectional association>)
+	relation 155353 --->
+	  stereotype "TreeMap"
+	  a role_name "tab1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<String,${type}> ${name}${value};
 "
-	    classrelation_ref 148057 // listStations (<unidirectional association>)
-	  b parent class_ref 159577 // Station
+	    classrelation_ref 156889 // tab1 (<unidirectional association>)
+	  b parent class_ref 168665 // CriticiteValue
       end
 
-      attribute 144601 "retour"
-	private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      operation 165465 "EffecteurRame"
+      operation 178009 "BufferManager"
 	public explicit_return_type ""
-	nparams 4
-	  param inout name "listLignes" explicit_type "ArrayList<Ligne>"
-	  param inout name "listLigneRetour" explicit_type "ArrayList<Ligne>"
-	  param inout name "ListStationA" explicit_type "ArrayList<Station>"
-	  param inout name "ListStationR" explicit_type "ArrayList<Station>"
+	nparams 3
+	  param inout name "buf1" type class_ref 168537 // MessageBuffer
+	  param inout name "buf2" type class_ref 168537 // MessageBuffer
+	  param inout name "buf3" type class_ref 168537 // MessageBuffer
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${throws}${staticnl}{
   ${body}}
 "
 	
@@ -128,7 +107,19 @@ ${members}}
 	
       end
 
-      operation 165593 "execute"
+      operation 178137 "BufferManager"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 178265 "initialize"
 	public explicit_return_type "void"
 	nparams 0
 	
@@ -140,25 +131,11 @@ ${members}}
 	
       end
 
-      operation 165721 "calculPositionLigne"
-	private explicit_return_type "void"
-	nparams 2
-	  param inout name "ligne" type class_ref 159449 // Ligne
-	  param in name "retour" explicit_type "int"
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-
-      operation 165849 "getPosition"
-	public return_type class_ref 158937 // Position
+      operation 178393 "getTab1"
+	public return_type class_ref 168665 // CriticiteValue
 	nparams 0
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}TreeMap<String, ${type}> ${name}${(}${)}${throws}${staticnl}{
   ${body}}
 "
 	
@@ -166,10 +143,10 @@ ${members}}
 	
       end
 
-      operation 165977 "addStations"
+      operation 178521 "add"
 	public explicit_return_type "void"
 	nparams 1
-	  param inout name "list" explicit_type "ArrayList<Station>"
+	  param inout name "m" explicit_type "ParsedMessage"
 	
 	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
@@ -178,9 +155,34 @@ ${members}}
 	
 	
       end
+
+      operation 178649 "validattype"
+	private explicit_return_type "Boolean"
+	nparams 1
+	  param inout name "m" explicit_type "ParsedMessage"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 178777 "afficher"
+	public explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
     end
 
-    class 160089 "Rame"
+    class 168537 "MessageBuffer"
       visibility public 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -191,7 +193,15 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      attribute 144729 "nom"
+      classrelation 157017 // <realization>
+	relation 155481 -_-|>
+	  a public
+	    java "${type}<ParsedMessage>"
+	    classrelation_ref 157017 // <realization>
+	  b parent class_ref 168793 // LinkedList
+      end
+
+      attribute 153433 "name"
 	private explicit_type "String"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
@@ -201,41 +211,12 @@ ${members}}
 	idl_decl ""
       end
 
-      classrelation 148185 // eff (<unidirectional association>)
-	relation 146649 --->
-	  a role_name "eff" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 148185 // eff (<unidirectional association>)
-	  b parent class_ref 159705 // EffecteurRame
-      end
-
-      classrelation 148313 // position (<unidirectional association>)
-	relation 146777 --->
-	  a role_name "position" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 148313 // position (<unidirectional association>)
-	  b parent class_ref 158937 // Position
-      end
-
-      attribute 144857 "etat"
-	private explicit_type "boolean"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      operation 166105 "Rame"
+      operation 179673 "MessageBuffer"
 	public explicit_return_type ""
-	nparams 2
-	  param in name "nom" explicit_type "String"
-	  param inout name "eff" type class_ref 159705 // EffecteurRame
+	nparams 1
+	  param in name "name" explicit_type "String"
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
 "
 	
@@ -243,7 +224,60 @@ ${members}}
 	
       end
 
-      operation 166233 "getNom"
+      operation 179801 "addBefore"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "obj" explicit_type "ParsedMessage"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 179929 "addAfter"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "obj" explicit_type "ParsedMessage"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 180057 "addMessage"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "obj" explicit_type "ParsedMessage"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 180185 "addAt"
+	public explicit_return_type "void"
+	nparams 2
+	  param inout name "obj" explicit_type "ParsedMessage"
+	  param in name "index" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 180313 "getName"
 	public explicit_return_type "String"
 	nparams 0
 	
@@ -255,22 +289,10 @@ ${members}}
 	
       end
 
-      operation 166361 "getEffecteur"
-	public return_type class_ref 159705 // EffecteurRame
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-
-      operation 166489 "setNom"
+      operation 180441 "setName"
 	public explicit_return_type "void"
 	nparams 1
-	  param in name "nom" explicit_type "String"
+	  param in name "name" explicit_type "String"
 	
 	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
@@ -280,8 +302,8 @@ ${members}}
 	
       end
 
-      operation 166617 "getPosition"
-	public return_type class_ref 158937 // Position
+      operation 180569 "removeBefore"
+	public explicit_return_type "void"
 	nparams 0
 	
 	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
@@ -292,8 +314,8 @@ ${members}}
 	
       end
 
-      operation 166745 "isEtat"
-	public explicit_return_type "boolean"
+      operation 180697 "removeAfter"
+	public explicit_return_type "void"
 	nparams 0
 	
 	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
@@ -304,10 +326,10 @@ ${members}}
 	
       end
 
-      operation 166873 "setEtat"
+      operation 180825 "removeMessage"
 	public explicit_return_type "void"
 	nparams 1
-	  param inout name "etat" explicit_type "boolean"
+	  param inout name "obj" explicit_type "ParsedMessage"
 	
 	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
@@ -317,11 +339,12 @@ ${members}}
 	
       end
 
-      operation 167001 "getEtat"
-	public explicit_return_type "boolean"
-	nparams 0
+      operation 180953 "removeAt"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "index" explicit_type "int"
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
 "
 	
@@ -330,7 +353,7 @@ ${members}}
       end
     end
 
-    class 160217 "ThreadEffecteur"
+    class 168665 "CriticiteValue"
       visibility public 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -341,29 +364,33 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 148441 // <generalisation>
-	relation 146905 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 148441 // <generalisation>
-	  b parent class_ref 160345 // Thread
-      end
-
-      classrelation 148569 // effRame (<unidirectional association>)
-	relation 147033 --->
-	  a role_name "effRame" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+      attribute 153177 "value"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
-	    classrelation_ref 148569 // effRame (<unidirectional association>)
-	  b parent class_ref 159705 // EffecteurRame
+	php_decl ""
+	python_decl ""
+	idl_decl ""
       end
 
-      operation 167129 "ThreadEffecteur"
+      attribute 153305 "equartype"
+	private explicit_type "Double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 178905 "CriticiteValue"
 	public explicit_return_type ""
-	nparams 1
-	  param inout name "eff" type class_ref 159705 // EffecteurRame
+	nparams 2
+	  param in name "value" explicit_type "String"
+	  param inout name "equartype" explicit_type "Double"
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
   ${body}}
 "
 	
@@ -371,8 +398,20 @@ ${members}}
 	
       end
 
-      operation 167257 "run"
-	public explicit_return_type "void"
+      operation 179033 "CriticiteValue"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 179161 "getValue"
+	public explicit_return_type "String"
 	nparams 0
 	
 	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
@@ -382,49 +421,85 @@ ${members}}
 	
 	
       end
+
+      operation 179289 "setValue"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "value" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 179417 "getEquartype"
+	public explicit_return_type "Double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 179545 "setEquartype"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "equartype" explicit_type "Double"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
     end
   end
 
-  deploymentview 135769 "gestionRame"
+  deploymentview 142681 "criticite"
     //deployment diagram settings
     package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
     draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-    artifact 130777 "EffecteurRame"
+    artifact 138713 "BufferManager"
       stereotype "source"
       java_src "${comment}
 ${package}
 ${imports}
-import java.util.ArrayList;
-import org.esiag.isidis.gestionLigne.Ligne;
-import org.esiag.isidis.gestionStation.Station;
-import org.esiag.isidis.outils.Model;
-import org.esiag.isidis.outils.Position;
+import java.util.TreeMap;
+import parser.edu.projet.ParsedMessage;
 ${definition}"
       associated_classes
-	class_ref 159705 // EffecteurRame
+	class_ref 168409 // BufferManager
       end
     end
 
-    artifact 130905 "Rame"
+    artifact 138841 "CriticiteValue"
       stereotype "source"
       java_src "${comment}
 ${package}
 ${imports}
-import org.esiag.isidis.outils.Position;
 ${definition}"
       associated_classes
-	class_ref 160089 // Rame
+	class_ref 168665 // CriticiteValue
       end
     end
 
-    artifact 131033 "ThreadEffecteur"
+    artifact 138969 "MessageBuffer"
       stereotype "source"
       java_src "${comment}
 ${package}
 ${imports}
+import java.util.LinkedList;
+import parser.edu.projet.ParsedMessage;
 ${definition}"
       associated_classes
-	class_ref 160217 // ThreadEffecteur
+	class_ref 168537 // MessageBuffer
       end
     end
   end

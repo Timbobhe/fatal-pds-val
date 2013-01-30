@@ -1,5 +1,5 @@
 format 76
-"com" // Composant_Embarque::src::main::java::com
+"src" // fatal-rtdg-analyser::src
   revision 1
   modified_by 89 "Nidal"
   // class settings
@@ -26,7 +26,6 @@ format 76
   package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
   show_infonote default drawing_language default show_stereotype_properties default
   
-  java_dir "d:/etudes/Workspace_PDS_2013/Integration_1.0/Composant_Embarque/src/main/java/com/"
-  java_package "com"
-  package_ref 149593 // esiag
+  java_dir "C:/Users/Nidal/Desktop/PDS/trunk/Appli/Code/fatal-rtdg-analyser/src/"
+  package_ref 159705 // main
 end
