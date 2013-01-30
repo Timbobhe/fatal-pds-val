@@ -1,6 +1,6 @@
 format 76
 "Composant_Embarque" // Composant_Embarque
-  revision 1
+  revision 2
   modified_by 89 "Nidal"
   // class settings
   //class diagram settings
@@ -27,5 +27,4 @@ format 76
   show_infonote default drawing_language default show_stereotype_properties default
   
   java_dir "d:/etudes/Workspace_PDS_2013/Integration_1.0/Composant_Embarque/"
-  package_ref 149081 // src
 end
