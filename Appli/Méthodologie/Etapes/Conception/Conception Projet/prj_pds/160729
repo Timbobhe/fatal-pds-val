@@ -1,5 +1,5 @@
 format 76
-"Composant_Embarque" // Composant_Embarque::src::main::java::org::esiag::isidis::fi::projet::generator::Composant_Embarque
+"unknown" // unknown
   revision 1
   modified_by 89 "Nidal"
   // class settings
@@ -26,9 +26,8 @@ format 76
   package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
   show_infonote default drawing_language default show_stereotype_properties default
   
-  java_dir "d:/etudes/Workspace_PDS_2013/Integration_1.0/Composant_Embarque/src/main/java/org/esiag/isidis/fi/projet/generator/Composant_Embarque/"
-  java_package "org.esiag.isidis.fi.projet.generator.Composant_Embarque"
-  classview 142681 "Composant_Embarque"
+  java_dir "<unknown>"
+  classview 150233 "unknown"
     //class diagram settings
     draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
     //collaboration diagram settings
@@ -44,8 +43,8 @@ format 76
     //activity diagram settings
     package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
     show_infonote default drawing_language default show_stereotype_properties default
-    class 159065 "App"
-      visibility public 
+    class 168793 "LinkedList"
+      visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
 ${members}}
@@ -55,24 +54,10 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      comment "Hello world!
-"
-      operation 162137 "main"
-	class_operation public explicit_return_type "void"
-	nparams 1
-	  param inout name "args" explicit_type "String"
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0}[] ${p0}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
     end
 
-    class 161369 "AppTest"
-      visibility public 
+    class 168921 "Vector"
+      visibility package 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
 ${members}}
@@ -82,86 +67,19 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      comment "Unit test for simple App."
-      classrelation 149977 // <generalisation>
-	relation 148441 ---|>
-	  a public
-	    java "${type}"
-	    classrelation_ref 149977 // <generalisation>
-	  b parent class_ref 161497 // TestCase
-      end
-
-      operation 170841 "AppTest"
-	public explicit_return_type ""
-	nparams 1
-	  param in name "testName" explicit_type "String"
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-	comment "Create the test case
-
-@param testName name of the test case"
-      end
-
-      operation 170969 "suite"
-	class_operation public explicit_return_type "Test"
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-	comment "@return the suite of tests being tested"
-      end
-
-      operation 171097 "testApp"
-	public explicit_return_type "void"
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-	comment "Rigourous Test :-)"
-      end
-    end
-  end
-
-  deploymentview 135385 "Composant_Embarque"
-    //deployment diagram settings
-    package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
-    draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-    artifact 130137 "App"
-      stereotype "source"
-      java_src "${comment}
-${package}
-${imports}
-${definition}"
-      associated_classes
-	class_ref 159065 // App
-      end
     end
 
-    artifact 131929 "AppTest"
-      stereotype "source"
-      java_src "${comment}
-${package}
-${imports}
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-${definition}"
-      associated_classes
-	class_ref 161369 // AppTest
-      end
+    class 169433 "TestCase"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
     end
   end
 end

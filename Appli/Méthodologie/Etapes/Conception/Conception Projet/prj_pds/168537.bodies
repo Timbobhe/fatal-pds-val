@@ -1,0 +1,33 @@
+class MessageBuffer
+!!!179673.java!!!	MessageBuffer(in name : String)
+		this.name=name;
+!!!179801.java!!!	addBefore(inout obj : ParsedMessage) : void
+		if(!this.contains(obj))
+		this.addFirst(obj);
+		
+!!!179929.java!!!	addAfter(inout obj : ParsedMessage) : void
+		if(!contains(obj))
+			addLast(obj);		
+!!!180057.java!!!	addMessage(inout obj : ParsedMessage) : void
+		if(!contains(obj))
+			this.add(obj);
+		
+!!!180185.java!!!	addAt(inout obj : ParsedMessage, in index : int) : void
+			if(!contains(obj))
+				this.add(index,obj);
+!!!180313.java!!!	getName() : String
+		return name;
+!!!180441.java!!!	setName(in name : String) : void
+		this.name = name;
+!!!180569.java!!!	removeBefore() : void
+		 if(!this.isEmpty())
+			 removeFirst();
+!!!180697.java!!!	removeAfter() : void
+		 if(!this.isEmpty())
+			 removeLast();
+!!!180825.java!!!	removeMessage(inout obj : ParsedMessage) : void
+		 if(!this.isEmpty())
+			 remove(obj);
+!!!180953.java!!!	removeAt(in index : int) : void
+		 if(!this.isEmpty())
+			 remove(index);

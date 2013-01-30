@@ -1,0 +1,15 @@
+class BinaryMessage
+!!!181081.java!!!	BinaryMessage()
+		
+		
+!!!181209.java!!!	add(inout byteArray : byte) : void
+		for(byte b : byteArray)
+			    add(b);
+			
+!!!181337.java!!!	toByteArray() : byte
+		byte tab [] = new byte[this.size()];
+		for(int i=0 ; i< tab.length ; i++){
+			tab[i] = this.get(i) ;
+		}	
+	
+		return tab;

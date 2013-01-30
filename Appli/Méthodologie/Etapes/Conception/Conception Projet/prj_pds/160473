@@ -1,5 +1,5 @@
 format 76
-"gestionLigne" // Composant_Embarque::src::main::java::org::esiag::isidis::gestionLigne
+"message" // fatal-rtdg-analyser::src::main::java::org::fatal::rtdg::message
   revision 1
   modified_by 89 "Nidal"
   // class settings
@@ -26,9 +26,9 @@ format 76
   package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
   show_infonote default drawing_language default show_stereotype_properties default
   
-  java_dir "d:/etudes/Workspace_PDS_2013/Integration_1.0/Composant_Embarque/src/main/java/org/esiag/isidis/gestionLigne/"
-  java_package "org.esiag.isidis.gestionLigne"
-  classview 142809 "gestionLigne"
+  java_dir "C:/Users/Nidal/Desktop/PDS/trunk/Appli/Code/fatal-rtdg-analyser/src/main/java/org/fatal/rtdg/message/"
+  java_package "org.fatal.rtdg.message"
+  classview 149977 "message"
     //class diagram settings
     draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
     //collaboration diagram settings
@@ -44,7 +44,7 @@ format 76
     //activity diagram settings
     package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
     show_infonote default drawing_language default show_stereotype_properties default
-    class 159193 "EffecteurLigne"
+    class 168281 "BinaryMessage"
       visibility public 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -55,303 +55,56 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      comment "@author Jadoui sabri "
-      classrelation 146777 // <realization>
-	relation 145241 -_-|>
+      classrelation 157145 // <realization>
+	relation 155609 -_-|>
 	  a public
-	    java "${type}"
-	    classrelation_ref 146777 // <realization>
-	  b parent class_ref 159321 // IEffecteur
+	    java "${type}<Byte>"
+	    classrelation_ref 157145 // <realization>
+	  b parent class_ref 168921 // Vector
       end
 
-      attribute 143193 "posx"
-	private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 143321 "posy"
-	private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 143449 "posxf"
-	private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 143577 "posyf"
-	private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      attribute 143705 "angle"
-	private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      classrelation 146905 // position (<unidirectional association>)
-	relation 145369 --->
-	  a role_name "position" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	    classrelation_ref 146905 // position (<unidirectional association>)
-	  b parent class_ref 158937 // Position
-      end
-
-      attribute 143833 "distance"
-	private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      classrelation 147033 // listLignes (<unidirectional association>)
-	relation 145497 --->
-	  stereotype "ArrayList"
-	  a role_name "listLignes" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	    classrelation_ref 147033 // listLignes (<unidirectional association>)
-	  b parent class_ref 159449 // Ligne
-      end
-
-      classrelation 147161 // listStations (<unidirectional association>)
-	relation 145625 --->
-	  stereotype "ArrayList"
-	  a role_name "listStations" private
-	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
-"
-	    classrelation_ref 147161 // listStations (<unidirectional association>)
-	  b parent class_ref 159577 // Station
-      end
-
-      attribute 143961 "nombreStation"
-	private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-      end
-
-      operation 162393 "EffecteurLigne"
+      operation 181081 "BinaryMessage"
 	public explicit_return_type ""
-	nparams 3
-	  param in name "x" explicit_type "int"
-	  param in name "y" explicit_type "int"
-	  param in name "nombreStation" explicit_type "int"
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-
-      operation 162521 "calcul"
-	public explicit_return_type "void"
 	nparams 0
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
   ${body}}
 "
 	
 	
 	
+	comment " Cr�e une trame vide*"
       end
 
-      operation 162649 "getListStations"
-	public return_type class_ref 159577 // Station
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}ArrayList<${type}> ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-
-      operation 162777 "setListStations"
+      operation 181209 "add"
 	public explicit_return_type "void"
 	nparams 1
-	  param inout name "listStations" explicit_type "ArrayList<Station>"
+	  param inout name "byteArray" explicit_type "byte"
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0}[] ${p0}${)}${throws}${staticnl}{
   ${body}}
 "
 	
 	
 	
+	comment " Ajoute de bytes � partire dun tableau de byte *"
       end
 
-      operation 162905 "getNombreStation"
-	public explicit_return_type "int"
+      operation 181337 "toByteArray"
+	public explicit_return_type "byte"
 	nparams 0
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type}[] ${name}${(}${)}${throws}${staticnl}{
   ${body}}
 "
 	
 	
 	
-      end
-
-      operation 163033 "setNombreStation"
-	public explicit_return_type "void"
-	nparams 1
-	  param in name "nombreStation" explicit_type "int"
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-
-      operation 163161 "getPosx"
-	public explicit_return_type "double"
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-
-      operation 163289 "getPosy"
-	public explicit_return_type "double"
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-
-      operation 163417 "getPosxf"
-	public explicit_return_type "double"
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-
-      operation 163545 "getPosyf"
-	public explicit_return_type "double"
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-
-      operation 163673 "getAngle"
-	public explicit_return_type "double"
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-
-      operation 163801 "getPosition"
-	public return_type class_ref 158937 // Position
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-
-      operation 163929 "getLignes"
-	public return_type class_ref 159449 // Ligne
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}ArrayList<${type}> ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
+	comment " Retourne un tableau de byte, la trame convertie en tableau de byte *"
       end
     end
 
-    class 159321 "IEffecteur"
-      visibility public stereotype "interface"
-      cpp_decl ""
-      java_decl "${comment}${@}${visibility}interface ${name}${extends} {
-${members}}
-"
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      comment "@author Jadoui sabri
-interface Interprete"
-      operation 162265 "calcul"
-	public explicit_return_type "void"
-	nparams 0
-	
-	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-      end
-    end
-
-    class 159449 "Ligne"
+    class 169049 "ParsedMessage"
       visibility public 
       cpp_decl ""
       java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
@@ -362,9 +115,77 @@ ${members}}
       idl_decl ""
       explicit_switch_type ""
       
-      comment "@author Jadoui sabri
-donne deux point pour dessiner une ligne"
-      attribute 144089 "oldx"
+      attribute 153561 "SOURCE_VALUE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 153689 "ID_SOURCE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 153817 "SENSOR_TYPE_VALUE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 153945 "SENSOR_NUM_VALUE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 154073 "CRIT_VALUE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 154201 "DATA_TYPE_VALUE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 154329 "DATA_INDICATION"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 154457 "DATA_VALUE"
 	private explicit_type "int"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
@@ -372,65 +193,58 @@ donne deux point pour dessiner une ligne"
 	php_decl ""
 	python_decl ""
 	idl_decl ""
-	comment " Abscisse du debut de la ligne "
       end
 
-      attribute 144217 "oldy"
-	private explicit_type "int"
+      attribute 154585 "TYPE"
+	private explicit_type "String"
 	cpp_decl ""
 	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	php_decl ""
 	python_decl ""
 	idl_decl ""
-	comment " Ordonnee du debut de la ligne "
       end
 
-      attribute 144345 "x"
-	private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	comment " Abscisse de la fin de la ligne "
-      end
-
-      attribute 144473 "y"
-	private explicit_type "int"
-	cpp_decl ""
-	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
-"
-	php_decl ""
-	python_decl ""
-	idl_decl ""
-	comment " Ordonnee de la fin de la ligne "
-      end
-
-      operation 164057 "Ligne"
+      operation 181465 "ParsedMessage"
 	public explicit_return_type ""
-	nparams 4
-	  param in name "oldx" explicit_type "int"
-	  param in name "oldy" explicit_type "int"
-	  param in name "x" explicit_type "int"
-	  param in name "y" explicit_type "int"
+	nparams 7
+	  param in name "sOURCE_VALUE" explicit_type "String"
+	  param in name "iD_SOURCE" explicit_type "String"
+	  param in name "sENSOR_TYPE_VALUE" explicit_type "String"
+	  param in name "sENSOR_NUM_VALUE" explicit_type "String"
+	  param in name "cRIT_VALUE" explicit_type "String"
+	  param in name "dATA_TYPE_VALUE" explicit_type "String"
+	  param in name "dATA_INDICATION" explicit_type "String"
 	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}${)}${throws}${staticnl}{
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}, ${t4} ${p4}, ${t5} ${p5}, ${t6} ${p6}${)}${throws}${staticnl}{
   ${body}}
 "
 	
 	
 	
-	comment "Creates a new instance of Ligne 
-@param oldx l'abscisse du debut de la ligne
-@param oldy l'ordonnee du debut de la ligne
-@param x l'abscisse de la fin de la ligne
-@param y l'ordonnee de la fin de la ligne"
       end
 
-      operation 164185 "getOldx"
-	public explicit_return_type "int"
+      operation 181593 "ParsedMessage"
+	public explicit_return_type ""
+	nparams 7
+	  param in name "sOURCE_VALUE" explicit_type "String"
+	  param in name "iD_SOURCE" explicit_type "String"
+	  param in name "sENSOR_TYPE_VALUE" explicit_type "String"
+	  param in name "sENSOR_NUM_VALUE" explicit_type "String"
+	  param in name "cRIT_VALUE" explicit_type "String"
+	  param in name "dATA_TYPE_VALUE" explicit_type "String"
+	  param in name "dATA_VALUE" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}, ${t4} ${p4}, ${t5} ${p5}, ${t6} ${p6}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 181721 "getDATA_TYPE_VALUE"
+	public explicit_return_type "String"
 	nparams 0
 	
 	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
@@ -439,56 +253,12 @@ donne deux point pour dessiner une ligne"
 	
 	
 	
-	comment "Accede a l'abscisse du debut de la ligne
-@return l'abscisse du debut de la ligne"
       end
 
-      operation 164313 "getOldy"
-	public explicit_return_type "int"
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-	comment "Accede a l'ordonnee du debut de la ligne
-@return l'ordonnee du debut de la ligne"
-      end
-
-      operation 164441 "getX"
-	public explicit_return_type "int"
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-	comment "Accede a l'abscisse de la fin de la ligne
-@return l'abscisse de la fin de la ligne"
-      end
-
-      operation 164569 "getY"
-	public explicit_return_type "int"
-	nparams 0
-	
-	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
-  ${body}}
-"
-	
-	
-	
-	comment "Accede a l'ordonnee de la fin de la ligne
-@return l'ordonnee de la fin de la ligne"
-      end
-
-      operation 164697 "setX"
+      operation 181849 "setDATA_TYPE_VALUE"
 	public explicit_return_type "void"
 	nparams 1
-	  param in name "x" explicit_type "int"
+	  param in name "dATA_TYPE_VALUE" explicit_type "String"
 	
 	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
@@ -498,10 +268,22 @@ donne deux point pour dessiner une ligne"
 	
       end
 
-      operation 164825 "setY"
+      operation 181977 "getSOURCE_VALUE"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 182105 "setSOURCE_VALUE"
 	public explicit_return_type "void"
 	nparams 1
-	  param in name "y" explicit_type "int"
+	  param in name "sOURCE_VALUE" explicit_type "String"
 	
 	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
@@ -511,10 +293,22 @@ donne deux point pour dessiner une ligne"
 	
       end
 
-      operation 164953 "setOldX"
+      operation 182233 "getSENSOR_TYPE_VALUE"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 182361 "setSENSOR_TYPE_VALUE"
 	public explicit_return_type "void"
 	nparams 1
-	  param in name "x" explicit_type "int"
+	  param in name "sENSOR_TYPE_VALUE" explicit_type "String"
 	
 	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
@@ -524,13 +318,405 @@ donne deux point pour dessiner une ligne"
 	
       end
 
-      operation 165081 "setOldY"
+      operation 182489 "getSENSOR_NUM_VALUE"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 182617 "setSENSOR_NUM_VALUE"
 	public explicit_return_type "void"
 	nparams 1
-	  param in name "y" explicit_type "int"
+	  param in name "sENSOR_NUM_VALUE" explicit_type "String"
 	
 	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
   ${body}}
+"
+	
+	
+	
+      end
+
+      operation 182745 "getCRIT_VALUE"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 182873 "setCRIT_VALUE"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "cRIT_VALUE" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 183001 "getDATA_INDICATION"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 183129 "setDATA_INDICATION"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "dATA_INDICATION" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 183257 "getDATA_VALUE"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 183385 "setDATA_VALUE"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "dATA_VALUE" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 183513 "getTYPE"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 183641 "setTYPE"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "tYPE" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 183769 "getID_SOURCE"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 183897 "setID_SOURCE"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "iD_SOURCE" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 184025 "toString"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 157401 // <dependency>
+	relation 155865 -_->
+	  a default
+	    classrelation_ref 157401 // <dependency>
+	  b parent class_ref 169177 // SplitedMessage
+      end
+
+      classrelation 157529 // <dependency>
+	relation 155993 -_->
+	  a default
+	    classrelation_ref 157529 // <dependency>
+	  b parent class_ref 168281 // BinaryMessage
+      end
+    end
+
+    class 169177 "SplitedMessage"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 154713 "TYPE_MESSAGE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 154841 "ID_SOURCE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 154969 "ID_MESSAGE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 155097 "CRIT_MESSAGE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 155225 "VALUE_MESSAGE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 155353 "DATA_MESSAGE"
+	private explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 184153 "SplitedMessage"
+	public explicit_return_type ""
+	nparams 6
+	  param in name "tYPE_MESSAGE" explicit_type "String"
+	  param in name "ID_SOURCE" explicit_type "String"
+	  param in name "iD_MESSAGE" explicit_type "String"
+	  param in name "cRIT_MESSAGE" explicit_type "String"
+	  param in name "vALUE_MESSAGE" explicit_type "String"
+	  param in name "dATA_MESSAGE" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}, ${t3} ${p3}, ${t4} ${p4}, ${t5} ${p5}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 184281 "getTYPE_MESSAGE"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 184409 "setTYPE_MESSAGE"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "tYPE_MESSAGE" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 184537 "getID_MESSAGE"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 184665 "setID_MESSAGE"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "iD_MESSAGE" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 184793 "getCRIT_MESSAGE"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 184921 "setCRIT_MESSAGE"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "cRIT_MESSAGE" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 185049 "getVALUE_MESSAGE"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 185177 "setVALUE_MESSAGE"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "vALUE_MESSAGE" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 185305 "getDATA_MESSAGE"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 185433 "setDATA_MESSAGE"
+	public explicit_return_type "void"
+	nparams 1
+	  param in name "dATA_MESSAGE" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 185561 "toString"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
 "
 	
 	
@@ -539,43 +725,41 @@ donne deux point pour dessiner une ligne"
     end
   end
 
-  deploymentview 135513 "gestionLigne"
+  deploymentview 142809 "message"
     //deployment diagram settings
     package_name_in_tab default show_context default write_horizontally default auto_label_position default draw_all_relations default shadow default
     draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-    artifact 130265 "IEffecteur"
+    artifact 139097 "BinaryMessage"
       stereotype "source"
       java_src "${comment}
 ${package}
 ${imports}
+import java.util.Vector;
 ${definition}"
       associated_classes
-	class_ref 159321 // IEffecteur
+	class_ref 168281 // BinaryMessage
       end
     end
 
-    artifact 130393 "EffecteurLigne"
+    artifact 139225 "ParsedMessage"
       stereotype "source"
       java_src "${comment}
 ${package}
 ${imports}
-import java.util.ArrayList;
-import org.esiag.isidis.gestionStation.Station;
-import org.esiag.isidis.outils.Position;
 ${definition}"
       associated_classes
-	class_ref 159193 // EffecteurLigne
+	class_ref 169049 // ParsedMessage
       end
     end
 
-    artifact 130521 "Ligne"
+    artifact 139353 "SplitedMessage"
       stereotype "source"
       java_src "${comment}
 ${package}
 ${imports}
 ${definition}"
       associated_classes
-	class_ref 159449 // Ligne
+	class_ref 169177 // SplitedMessage
       end
     end
   end

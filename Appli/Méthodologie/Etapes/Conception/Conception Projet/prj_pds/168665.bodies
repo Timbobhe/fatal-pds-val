@@ -1,0 +1,16 @@
+class CriticiteValue
+!!!178905.java!!!	CriticiteValue(in value : String, inout equartype : Double)
+		super();
+		this.value = value;
+		this.equartype = equartype;
+!!!179033.java!!!	CriticiteValue()
+		super();
+	
+!!!179161.java!!!	getValue() : String
+		return value;
+!!!179289.java!!!	setValue(in value : String) : void
+		this.value = value;
+!!!179417.java!!!	getEquartype() : Double
+		return equartype;
+!!!179545.java!!!	setEquartype(inout equartype : Double) : void
+		this.equartype = equartype;
