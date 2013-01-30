@@ -1,122 +1,129 @@
 format 76
 
-componentcanvas 128012 component_ref 163545 // RTDG Priorisator
+componentcanvas 128396 component_ref 163161 // Fatal-RTDG-Server.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 660 159 3010 143 47
+  xyzwh 185 159 2005 143 47
 end
-componentcanvas 128140 component_ref 163545 // RTDG Priorisator
+componentcanvas 128524 component_ref 163289 // Fatal-RTDG-Parser.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 230.5 170.5 3010 143 47
+  xyzwh 192 94 2005 143 47
 end
 deploymentnodecanvas 128601 deploymentnode_ref 128217 // RTDG
   name "RTDG 1"
-  xyzwh 21 65 2000 391 421
+  xyzwh 21 62 2000 383 295
 end
-componentcanvas 129241 component_ref 129369 // RTDG-replication
+componentcanvas 128652 component_ref 163417 // Fatal-RTDG-Analyzer.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 32 419 2016 181 51
+  xyzwh 184 221 2005 149 47
 end
-componentcanvas 129497 component_ref 136153 // RTDG-loadBalancing
+componentcanvas 128780 component_ref 163545 // Fatal-RTDG-Priorisator.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 223 289 2021 143 51
+  xyzwh 29 153 2010 159 47
 end
-componentcanvas 129881 component_ref 129497 // RTDG-server-config.xml
+componentcanvas 128908 component_ref 128012 // Fatal-embr-Project.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 30 223 2026 203 61
+  xyzwh 43 424 2006 143 47
 end
-componentcanvas 130265 component_ref 128729 // JDK 1.7
+componentcanvas 129164 component_ref 134796 // Fatal-RTDG-Project.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 294 103 2031 105 53
+  xyzwh 34 272 2005 143 47
 end
-componentcanvas 130777 component_ref 128985 // RTDG-client.jar
+componentcanvas 129292 component_ref 134924 // Fatal-emb-Simulator.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 35 351 2015 177 51
+  xyzwh 190 479 2010 143 47
+end
+componentcanvas 129420 component_ref 135052 // Fatal-embr-Processor.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 188 422 2006 149 51
+end
+componentcanvas 129548 component_ref 142681 // Javalotion
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 38 93 2005 143 47
+end
+componentcanvas 129804 component_ref 136153 // RTDG-loadBalancing.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 30 206 2005 149 47
+end
+componentcanvas 129932 component_ref 129369 // RTDG-replication.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 192 277 2010 143 47
+end
+componentcanvas 130060 component_ref 128217 // my-sql.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 650 486 2005 143 49
+end
+componentcanvas 130188 component_ref 128345 // MySQL 5.5
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 503 442 2015 135 47
+end
+componentcanvas 130956 component_ref 142809 // Fatal-RTDG-admin.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 648 440 2005 143 47
 end
 deploymentnodecanvas 131033 deploymentnode_ref 128345 // RTDRS
   xyzwh 437 -2 2000 121 53
 end
 deploymentnodecanvas 131161 deploymentnode_ref 128601 // equipement embarqué
-  xyzwh 319 591 2000 155 57
+  xyzwh 34 389 2000 315 165
 end
-componentcanvas 131801 component_ref 128345 // MySQL 5.5
+componentcanvas 131340 component_ref 134668 // Fatal-embr-Frontal.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 36 290 2006 167 53
-end
-componentcanvas 131929 component_ref 128217 // my-sql.jar
-  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 246 227 3005 143 51
-end
-componentcanvas 132057 component_ref 142681 // Javalotion
-  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 238 352 2005 145 51
+  xyzwh 43 480 2005 143 47
 end
 deploymentnodecanvas 132313 deploymentnode_ref 135129 // Admin
-  xyzwh 320 499 2000 173 85
+  xyzwh 460 410 2000 361 129
 end
-componentcanvas 132441 component_ref 142809 // RTDG-admin.jar
+componentcanvas 132492 component_ref 163289 // Fatal-RTDG-Parser.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 334 527 2005 143 51
+  xyzwh 603 96 2005 143 47
+end
+componentcanvas 132620 component_ref 163417 // Fatal-RTDG-Analyzer.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 599 208 2005 149 47
+end
+componentcanvas 132748 component_ref 136153 // RTDG-loadBalancing.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 443 206 2005 149 47
 end
 deploymentnodecanvas 132825 deploymentnode_ref 128217 // RTDG
   name "RTDG 2"
-  xyzwh 436 68 2000 397 405
+  xyzwh 432 66 2000 369 289
 end
-componentcanvas 136537 component_ref 149337 // RTDG-server.jar
+componentcanvas 132876 component_ref 163161 // Fatal-RTDG-Server.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 149 103 2032 143 51
+  xyzwh 600 153 2005 143 47
 end
-componentcanvas 136793 component_ref 129497 // RTDG-server-config.xml
+componentcanvas 133004 component_ref 163545 // Fatal-RTDG-Priorisator.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 447 215.5 2026 203 61
+  xyzwh 443 151 2010 159 47
 end
-componentcanvas 136921 component_ref 149337 // RTDG-server.jar
+componentcanvas 133132 component_ref 134796 // Fatal-RTDG-Project.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 566 95.5 2032 143 51
+  xyzwh 444 264 2005 143 47
 end
-componentcanvas 137049 component_ref 128985 // RTDG-client.jar
+componentcanvas 133260 component_ref 142681 // Javalotion
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 452 343.5 2015 177 51
+  xyzwh 444 96 2005 143 47
 end
-componentcanvas 137177 component_ref 142681 // Javalotion
+componentcanvas 133388 component_ref 129369 // RTDG-replication.jar
   draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 655 344.5 2005 145 51
+  xyzwh 600 267 2010 143 47
 end
-componentcanvas 137433 component_ref 136153 // RTDG-loadBalancing
-  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 640 281.5 2021 143 51
-end
-componentcanvas 137817 component_ref 128345 // MySQL 5.5
-  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 453 282.5 2006 167 53
-end
-componentcanvas 138073 component_ref 128729 // JDK 1.7
-  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 711 95.5 2031 105 53
-end
-componentcanvas 138201 component_ref 129369 // RTDG-replication
-  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 449 411.5 2016 181 51
-end
-componentcanvas 138329 component_ref 128217 // my-sql.jar
-  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
-  xyzwh 663 219.5 3005 143 51
-end
-line 131289 ---- decenter_begin 360 decenter_end 754
-  from ref 128601 z 2001 label "ActiveMQ" xyz 181 23 2001 to point 159 35
+line 131289 ---- decenter_begin 368 decenter_end 754
+  from ref 128601 z 2001 label "ActiveMQ" xyz 181 21.5 2001 to point 159 35
   line 134873 z 2001 to ref 131033
-line 132185 ---- decenter_begin 400
-  from ref 128601 z 2001 label "WS" xyz 186 598 2001 to point 175 616
-  line 136153 z 2001 to ref 131161
-line 132569 ---- decenter_begin 236 decenter_end 611
-  from ref 132313 z 2001 to point 257 517
-  line 132697 z 2001 to ref 128601
-line 135513 ---- decenter_begin 773 decenter_end 307
-  from ref 131033 z 2001 label "ActiveMQ" xyz 554 21 2001 to point 554 41
-  line 135641 z 2001 to ref 132825
-line 135897 ---- decenter_begin 229 decenter_end 256
-  from ref 132825 z 2001 to point 522 518
-  line 136025 z 2001 to ref 132313
-line 136281 ---- decenter_end 365
-  from ref 131161 z 2001 label "WS" xyz 554 599 2001 to point 576 616
-  line 136409 z 2001 to ref 132825
+line 132185 ---- decenter_begin 595 decenter_end 681
+  from ref 128601 z 2001 to ref 131161
+line 132569 ---- decenter_begin 689 decenter_end 971
+  from ref 132313 z 2001 to point 390 496
+  line 131852 z 2001 to ref 128601
+line 135513 ---- decenter_begin 773 decenter_end 795
+  from ref 131033 z 2001 label "ActiveMQ" xyz 741 19 2001 to point 554 33
+  line 135641 z 2001 to point 723 33
+  line 128268 z 2001 to ref 132825
+line 135897 ---- decenter_begin 296 decenter_end 226
+  from ref 132825 z 2001 to ref 132313
+line 136281 ---- decenter_begin 217 decenter_end 24
+  from ref 131161 z 2001 to point 438 422
+  line 131084 z 2001 to ref 132825
 end

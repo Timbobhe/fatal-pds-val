@@ -26,7 +26,7 @@ diagrams
     756 465 100 4 57 0
   classdiagram_ref 156044 // class metier affecter message critique
     950 582 100 4 0 0
-  active  componentdiagram_ref 161497 // diag de composants
+  componentdiagram_ref 161497 // diag de composants
     916 582 100 4 0 0
   classdiagram_ref 142092 // Orchestrer les messages
     756 465 100 4 0 0
@@ -78,9 +78,11 @@ diagrams
     728 465 100 4 0 0
   deploymentdiagram_ref 141145 // déploiement
     728 465 100 4 0 0
+  active  deploymentdiagram_ref 176396 // deploiement R1
+    912 582 100 4 0 0
 end
 show_stereotypes
-selected componentdiagram_ref 161497 // diag de composants
+selected deploymentdiagram_ref 176396 // deploiement R1
 open
   componentview_ref 128089 // composants
   deploymentview_ref 128089 // Deploiement
