@@ -3,7 +3,7 @@
   <parent>
     <groupId>fr.esiag.isidis.fatal</groupId>
     <artifactId>fatal-embr-project</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
   </parent>
   <artifactId>fatal-embr-frontal</artifactId>
 </project>
