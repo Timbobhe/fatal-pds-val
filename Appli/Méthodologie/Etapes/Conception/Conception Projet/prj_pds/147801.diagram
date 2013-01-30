@@ -30,10 +30,10 @@ durationcanvas 131929 classinstance_ref 130521 // :BinaryMessage
   xyzwh 332 118 2010 11 39
 end
 durationcanvas 132313 classinstance_ref 130265 // :ServeurThread
-  xyzwh 105 179 2010 11 40
+  xyzwh 105 180 2010 11 44
 end
 durationcanvas 132441 classinstance_ref 130393 // :MessageAnalyser
-  xyzwh 219 179 2010 11 25
+  xyzwh 219 181 2010 11 37
 end
 durationcanvas 132697 classinstance_ref 130265 // :ServeurThread
   xyzwh 105 230 2010 11 98
@@ -52,6 +52,9 @@ durationcanvas 133721 classinstance_ref 130905 // :BufferManager
   overlappingdurationcanvas 134233
     xyzwh 555 375 2020 11 25
   end
+end
+durationcanvas 134489 classinstance_ref 130649 // :SplitedMessage
+  xyzwh 646 188 2010 11 29
 end
 msg 131289 asynchronous
   from durationcanvas_ref 131033
@@ -86,9 +89,9 @@ msg 132185 return
 msg 132569 asynchronous
   from durationcanvas_ref 132313
   to durationcanvas_ref 132441
-  yz 179 2015 msg operation_ref 129241 // "analyseMessage(in binMessage : BinaryMessage) : string"
+  yz 182 2015 msg operation_ref 129241 // "analyseMessage(in binMessage : BinaryMessage) : string"
   show_full_operations_definition default drawing_language default show_context_mode default
-  label_xy 122 165
+  label_xy 122 168
 msg 132953 asynchronous
   from durationcanvas_ref 132697
   to durationcanvas_ref 132825
@@ -125,4 +128,22 @@ msg 134361 asynchronous
   yz 375 2025 explicitmsg "afficher()"
   show_full_operations_definition default drawing_language default show_context_mode default
   label_xy 312 361
+msg 134617 asynchronous
+  from durationcanvas_ref 132441
+  to durationcanvas_ref 134489
+  yz 188 2015 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 427 174
+msg 135257 return
+  from durationcanvas_ref 134489
+  to durationcanvas_ref 132441
+  yz 206 3005 explicitmsg "sm"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 418 198
+msg 135385 return
+  from durationcanvas_ref 132441
+  to durationcanvas_ref 132313
+  yz 211 2015 explicitmsg "sm"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 160 197
 end

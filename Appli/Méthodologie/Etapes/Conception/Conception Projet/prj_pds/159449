@@ -1,6 +1,6 @@
 format 76
 "fatal-rtdg-analyser" // fatal-rtdg-analyser
-  revision 1
+  revision 2
   modified_by 89 "Nidal"
   // class settings
   //class diagram settings
@@ -27,5 +27,4 @@ format 76
   show_infonote default drawing_language default show_stereotype_properties default
   
   java_dir "C:/Users/Nidal/Desktop/PDS/trunk/Appli/Code/fatal-rtdg-analyser/"
-  package_ref 159577 // src
 end
