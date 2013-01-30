@@ -1,0 +1,70 @@
+format 76
+
+componentcanvas 140300 component_ref 134924 // Fatal-emb-Simulator.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 312.5 44 2005 171 47
+end
+componentcanvas 140428 component_ref 163289 // Fatal-RTDG-Parser.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 629.5 235 2000 143 51
+end
+componentcanvas 140812 component_ref 134668 // Fatal-embr-Frontal.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 255.5 229 2005 143 47
+end
+componentcanvas 140940 component_ref 135052 // Fatal-embr-Processor.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 39.5 209 2000 179 47
+end
+componentcanvas 141068 component_ref 128012 // Fatal-embr-Project.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 75.5 39 2005 145 47
+end
+componentcanvas 141196 component_ref 163417 // Fatal-RTDG-Analyzer.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 439.5 258 2000 149 51
+end
+componentcanvas 141580 component_ref 134796 // Fatal-RTDG-Project.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 470.5 159 2000 143 47
+end
+componentcanvas 141708 component_ref 163161 // Fatal-RTDG-Server.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 317.5 100 2000 143 51
+end
+simplerelationcanvas 142220 simplerelation_ref 149260
+  decenter_begin 629
+  decenter_end 412
+  from ref 141196 z 2001 to ref 141580
+end
+simplerelationcanvas 142476 simplerelation_ref 148876
+  decenter_begin 342
+  decenter_end 564
+  from ref 140812 z 2006 to point 301.5 181
+  line 142604 z 2006 to point 156.5 181
+  line 142732 z 2006 to ref 141068
+end
+simplerelationcanvas 142860 simplerelation_ref 149132
+  decenter_begin 361
+  decenter_end 467
+  from ref 140300 z 2006 to ref 141068
+end
+simplerelationcanvas 143116 simplerelation_ref 149516
+  decenter_begin 418
+  decenter_end 638
+  from ref 140428 z 2001 to point 686.5 186
+  line 143244 z 2001 to ref 141580
+end
+simplerelationcanvas 143372 simplerelation_ref 149644
+  from ref 141708 z 2001 to point 538.5 122
+  line 143500 z 2001 to ref 141580
+end
+simplerelationcanvas 143628 simplerelation_ref 149004
+  decenter_begin 508
+  decenter_end 379
+  from ref 140940 z 2006 to ref 141068
+end
+line 144524 -_-_ decenter_begin 808 decenter_end 189
+  from ref 141068 z 2006 to point 190.5 165
+  line 144652 z 2006 to ref 141580
+end

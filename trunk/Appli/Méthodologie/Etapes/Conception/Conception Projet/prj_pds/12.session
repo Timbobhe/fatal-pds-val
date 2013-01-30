@@ -1,92 +1,9 @@
 window_sizes 1280 738 358 916 533 82
-diagrams
-  usecasediagram_ref 128089 // VAL
-    974 582 100 4 0 0
-  sequencediagram_ref 128012 // collecter les informations terrains
-    974 582 100 4 0 0
-  sequencediagram_ref 134540 // Prioriser messages
-    775 465 100 4 0 0
-  sequencediagram_ref 134668 // Effectuer les interventions automatiques
-    775 465 100 4 0 0
-  classdiagram_ref 141708 // collecter les informations terrain
-    894 520 100 4 0 0
-  classdiagram_ref 141836 // prioriser message
-    974 582 100 4 410 0
-  sequencediagram_ref 149004 // scenario nominal 1 : Interpréter un message reçu depuis un composant embarqué
-    974 582 100 4 0 0
-  sequencediagram_ref 149132 // Scénario nominal : affecter un message non critique dans un buffer
-    775 465 100 4 0 0
-  sequencediagram_ref 149260 // Scénario alternatif : affecter un message critique dans un buffer par ordre de priorité
-    950 582 100 4 0 0
-  classdiagram_ref 141964 // Effectuer les interventions automatiques
-    743 452 100 4 0 0
-  classdiagram_ref 155788 // diagramme de classe metier Interpréter un message
-    785 446 100 4 0 0
-  classdiagram_ref 155916 // class metier affecter message non Critique
-    756 465 100 4 57 0
-  classdiagram_ref 156044 // class metier affecter message critique
-    950 582 100 4 0 0
-  componentdiagram_ref 161497 // diag de composants
-    916 582 100 4 0 0
-  classdiagram_ref 142092 // Orchestrer les messages
-    756 465 100 4 0 0
-  classdiagram_ref 142220 // Transmettre les messages au terrain
-    756 465 100 4 0 0
-  classdiagram_ref 142348 // Expand message
-    756 465 100 4 0 0
-  classdiagram_ref 142476 // Configurer le démarage des services
-    756 465 100 4 0 0
-  sequencediagram_ref 168153 // séquences systeme rame
-    756 465 100 4 0 0
-  classdiagram_ref 168025 // classes métier
-    756 465 100 4 0 0
-  classdiagram_ref 168281 // classes détaillé
-    756 465 100 4 0 0
-  sequencediagram_ref 168409 // séquences détaillé(rame)
-    756 465 100 4 0 0
-  sequencediagram_ref 181465 // séquence détaillé (random)
-    756 465 100 4 0 0
-  classdiagram_ref 147673 // Classes de la conception détaillée
-    756 465 100 4 0 0
-  sequencediagram_ref 147801 // Séquences de la conception détaillée
-    756 465 100 4 0 0
-  sequencediagram_ref 148185 // séquences de la conception détaillée
-    756 465 100 4 0 0
-  classdiagram_ref 148313 // classes de la conception détaillée
-    756 465 100 4 0 0
-  sequencediagram_ref 148441 // séquence de la conception détaillée
-    756 465 100 4 0 0
-  sequencediagram_ref 162572 // diagramme sequence systeme
-    756 465 100 4 0 0
-  classdiagram_ref 162700 // diagramme de classe metier
-    756 465 100 4 0 0
-  sequencediagram_ref 162828 // diagramme de suequence system
-    756 465 100 4 0 0
-  classdiagram_ref 162956 // diagramme de classe metier
-    756 465 100 4 0 0
-  sequencediagram_ref 163084 // diagramme de suequence systeme
-    756 465 100 4 0 0
-  classdiagram_ref 163212 // diagramme de classe metier
-    927 582 100 4 0 0
-  classdiagram_ref 163340 // diagramme de classe metier
-    916 582 100 4 86 0
-  componentdiagram_ref 134617 // composants
-    728 465 100 4 0 0
-  sequencediagram_ref 147929 // Séquences de conception détaillée
-    728 465 100 4 0 0
-  componentdiagram_ref 169868 // diag composant R1
-    728 465 100 4 0 0
-  deploymentdiagram_ref 141145 // déploiement
-    728 465 100 4 0 0
-  active  deploymentdiagram_ref 176396 // deploiement R1
-    912 582 100 4 0 0
-end
 show_stereotypes
-selected deploymentdiagram_ref 176396 // deploiement R1
+selected 
+package_ref 128089 // Déploiement
 open
-  componentview_ref 128089 // composants
-  deploymentview_ref 128089 // Deploiement
   
-  package_ref 152793 // unknown
+package_ref 152793 // unknown
 end
 end
