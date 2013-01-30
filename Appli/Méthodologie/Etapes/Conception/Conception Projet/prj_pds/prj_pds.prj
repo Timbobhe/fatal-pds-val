@@ -1,6 +1,6 @@
 format 76
 "prj_pds"
-  revision 26
+  revision 27
   modified_by 12 "Hamza"
 
 
@@ -1161,7 +1161,7 @@ ${members}}
       end
     end
 
-    component 129369 "RTDG-replication"
+    component 129369 "RTDG-replication.jar"
       simplerelation 141657
 	-_->
 	  on component_ref 129497 // RTDG-server-config.xml
@@ -1185,17 +1185,17 @@ ${members}}
 
       simplerelation 142169
 	-_->
-	  on component_ref 129369 // RTDG-replication
+	  on component_ref 129369 // RTDG-replication.jar
       end
 
       simplerelation 148697
 	-_->
-	  on component_ref 136153 // RTDG-loadBalancing
+	  on component_ref 136153 // RTDG-loadBalancing.jar
       end
 
       simplerelation 155353
 	-_->
-	  on component_ref 136153 // RTDG-loadBalancing
+	  on component_ref 136153 // RTDG-loadBalancing.jar
       end
 
       simplerelation 169817
@@ -1204,13 +1204,13 @@ ${members}}
       end
     end
 
-    component 136153 "RTDG-loadBalancing"
+    component 136153 "RTDG-loadBalancing.jar"
     end
 
     component 142681 "Javalotion"
     end
 
-    component 142809 "RTDG-admin.jar"
+    component 142809 "Fatal-RTDG-admin.jar"
       simplerelation 163289
 	-_->
 	  on component_ref 129625 // RTDG
@@ -1248,7 +1248,12 @@ ${members}}
     component 156377 "Orchestrateur"
       simplerelation 191705
 	-_->
-	  on component_ref 163545 // RTDG Priorisator
+	  on component_ref 163545 // Fatal-RTDG-Priorisator.jar
+      end
+
+      simplerelation 147852
+	-_->
+	  on component_ref 163417 // Fatal-RTDG-Analyzer.jar
       end
     end
 
@@ -1261,25 +1266,35 @@ ${members}}
     component 162905 "Message Generator"
       simplerelation 134540
 	---|>
-	  on component_ref 128012 // Composant Embarqué
+	  on component_ref 128012 // Fatal-embr-Project.jar
       end
     end
 
     component 163033 "Message Generator Client"
       simplerelation 134668
 	---|>
-	  on component_ref 128012 // Composant Embarqué
+	  on component_ref 128012 // Fatal-embr-Project.jar
       end
     end
 
-    component 163161 "RTDG Server"
+    component 163161 "Fatal-RTDG-Server.jar"
       simplerelation 191449
 	-_->
 	  on component_ref 163033 // Message Generator Client
       end
+
+      simplerelation 147980
+	-_->
+	  on component_ref 128012 // Fatal-embr-Project.jar
+      end
+
+      simplerelation 149644
+	-_->
+	  on component_ref 134796 // Fatal-RTDG-Project.jar
+      end
     end
 
-    component 163289 "RTDG Parser"
+    component 163289 "Fatal-RTDG-Parser.jar"
       simplerelation 192473
 	---|>
 	  on component_ref 129625 // RTDG
@@ -1287,23 +1302,48 @@ ${members}}
 
       simplerelation 134796
 	-_->
-	  on component_ref 163161 // RTDG Server
+	  on component_ref 163161 // Fatal-RTDG-Server.jar
+      end
+
+      simplerelation 148108
+	-_->
+	  on component_ref 128012 // Fatal-embr-Project.jar
+      end
+
+      simplerelation 149388
+	-_->
+	  on component_ref 134796 // Fatal-RTDG-Project.jar
+      end
+
+      simplerelation 149516
+	-_->
+	  on component_ref 134796 // Fatal-RTDG-Project.jar
       end
     end
 
-    component 163417 "RTDG Criticity"
+    component 163417 "Fatal-RTDG-Analyzer.jar"
       simplerelation 191577
 	-_->
-	  on component_ref 163289 // RTDG Parser
+	  on component_ref 163289 // Fatal-RTDG-Parser.jar
       end
 
       simplerelation 192345
 	---|>
 	  on component_ref 129625 // RTDG
       end
+
+      simplerelation 148236
+	-_->
+	  on component_ref 128012 // Fatal-embr-Project.jar
+      end
+
+      simplerelation 149260
+	-_->
+	  on component_ref 134796 // Fatal-RTDG-Project.jar
+      end
     end
 
-    component 163545 "RTDG Priorisator"
+    component 163545 "Fatal-RTDG-Priorisator.jar"
       simplerelation 192217
 	---|>
 	  on component_ref 129625 // RTDG
@@ -1311,11 +1351,11 @@ ${members}}
 
       simplerelation 141324
 	-_->
-	  on component_ref 163417 // RTDG Criticity
+	  on component_ref 163417 // Fatal-RTDG-Analyzer.jar
       end
     end
 
-    component 128012 "Composant Embarqué"
+    component 128012 "Fatal-embr-Project.jar"
       simplerelation 128012
 	---|>
 	  on component_ref 129625 // RTDG
@@ -1326,6 +1366,58 @@ ${members}}
       package_name_in_tab default show_context default auto_label_position default draw_all_relations no shadow default
       draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
       size A4
+    end
+
+    component 134540 "Fatal-embarqué-Project"
+    end
+
+    component 134668 "Fatal-embr-Frontal.jar"
+      simplerelation 148364
+	-_->
+	  on component_ref 128012 // Fatal-embr-Project.jar
+      end
+
+      simplerelation 148620
+	-_->
+	  on component_ref 134796 // Fatal-RTDG-Project.jar
+      end
+
+      simplerelation 148876
+	-_->
+	  on component_ref 128012 // Fatal-embr-Project.jar
+      end
+
+      simplerelation 149772
+	-_->
+	  on component_ref 128012 // Fatal-embr-Project.jar
+      end
+    end
+
+    component 134796 "Fatal-RTDG-Project.jar"
+    end
+
+    component 134924 "Fatal-emb-Simulator.jar"
+      simplerelation 148492
+	-_->
+	  on component_ref 134796 // Fatal-RTDG-Project.jar
+      end
+
+      simplerelation 149132
+	-_->
+	  on component_ref 128012 // Fatal-embr-Project.jar
+      end
+    end
+
+    component 135052 "Fatal-embr-Processor.jar"
+      simplerelation 148748
+	-_->
+	  on component_ref 134796 // Fatal-RTDG-Project.jar
+      end
+
+      simplerelation 149004
+	-_->
+	  on component_ref 128012 // Fatal-embr-Project.jar
+      end
     end
   end
 
