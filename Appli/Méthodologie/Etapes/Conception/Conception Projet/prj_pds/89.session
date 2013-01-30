@@ -1,17 +1,9 @@
 window_sizes 1600 838 353 1241 600 82
-diagrams
-  sequencediagram_ref 148441 // séquence de la conception détaillée
-    988 545 100 4 0 0
-  classdiagram_ref 154969 // Classes de la conception détaillée
-    988 545 100 4 0 0
-  classdiagram_ref 148313 // classes de la conception détaillée
-    988 545 100 4 0 0
-  active  sequencediagram_ref 148185 // séquences de la conception détaillée
-    1237 682 100 4 0 0
-end
 show_stereotypes
 selected sequencediagram_ref 148185 // séquences de la conception détaillée
 open
+  
+package_ref 135257 // Interpréter message recu
   classview_ref 128345 // Conception détaillée
   classview_ref 128473 // Conception détaillée
 end
