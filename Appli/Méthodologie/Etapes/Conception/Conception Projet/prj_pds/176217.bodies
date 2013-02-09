@@ -1,0 +1,81 @@
+class ParsedMessage
+!!!193113.java!!!	ParsedMessage(in sOURCE_VALUE : String, in iD_SOURCE : String, in sENSOR_TYPE_VALUE : String, in sENSOR_NUM_VALUE : String, in cRIT_VALUE : String, in dATA_TYPE_VALUE : String, in dATA_INDICATION : String)
+		super();
+		SOURCE_VALUE = sOURCE_VALUE;
+		ID_SOURCE=iD_SOURCE;
+		SENSOR_TYPE_VALUE = sENSOR_TYPE_VALUE;
+		SENSOR_NUM_VALUE = sENSOR_NUM_VALUE;
+		CRIT_VALUE = cRIT_VALUE;
+		DATA_TYPE_VALUE=dATA_TYPE_VALUE;
+		DATA_INDICATION = dATA_INDICATION;
+!!!193241.java!!!	ParsedMessage(in sOURCE_VALUE : String, in iD_SOURCE : String, in sENSOR_TYPE_VALUE : String, in sENSOR_NUM_VALUE : String, in cRIT_VALUE : String, in dATA_TYPE_VALUE : String, in dATA_VALUE : int)
+		super();
+		SOURCE_VALUE = sOURCE_VALUE;
+		ID_SOURCE=iD_SOURCE;
+		SENSOR_TYPE_VALUE = sENSOR_TYPE_VALUE;
+		SENSOR_NUM_VALUE = sENSOR_NUM_VALUE;
+		CRIT_VALUE = cRIT_VALUE;
+		DATA_TYPE_VALUE=dATA_TYPE_VALUE;
+		DATA_VALUE = dATA_VALUE;
+!!!193369.java!!!	getDATA_TYPE_VALUE() : String
+		return DATA_TYPE_VALUE;
+!!!193497.java!!!	setDATA_TYPE_VALUE(in dATA_TYPE_VALUE : String) : void
+		DATA_TYPE_VALUE = dATA_TYPE_VALUE;
+!!!193625.java!!!	getSOURCE_VALUE() : String
+		return SOURCE_VALUE;
+!!!193753.java!!!	setSOURCE_VALUE(in sOURCE_VALUE : String) : void
+		SOURCE_VALUE = sOURCE_VALUE;
+!!!193881.java!!!	getSENSOR_TYPE_VALUE() : String
+		return SENSOR_TYPE_VALUE;
+!!!194009.java!!!	setSENSOR_TYPE_VALUE(in sENSOR_TYPE_VALUE : String) : void
+		SENSOR_TYPE_VALUE = sENSOR_TYPE_VALUE;
+!!!194137.java!!!	getSENSOR_NUM_VALUE() : String
+		return SENSOR_NUM_VALUE;
+!!!194265.java!!!	setSENSOR_NUM_VALUE(in sENSOR_NUM_VALUE : String) : void
+		SENSOR_NUM_VALUE = sENSOR_NUM_VALUE;
+!!!194393.java!!!	getCRIT_VALUE() : String
+		return CRIT_VALUE;
+!!!194521.java!!!	setCRIT_VALUE(in cRIT_VALUE : String) : void
+		CRIT_VALUE = cRIT_VALUE;
+!!!194649.java!!!	getDATA_INDICATION() : String
+		return DATA_INDICATION;
+!!!194777.java!!!	setDATA_INDICATION(in dATA_INDICATION : String) : void
+		DATA_INDICATION = dATA_INDICATION;
+!!!194905.java!!!	getDATA_VALUE() : int
+		return DATA_VALUE;
+!!!195033.java!!!	setDATA_VALUE(in dATA_VALUE : int) : void
+		DATA_VALUE = dATA_VALUE;
+!!!195161.java!!!	getTYPE() : String
+		return TYPE;
+!!!195289.java!!!	setTYPE(in tYPE : String) : void
+		TYPE = tYPE;
+!!!195417.java!!!	getID_SOURCE() : String
+		return ID_SOURCE;
+!!!195545.java!!!	setID_SOURCE(in iD_SOURCE : String) : void
+		ID_SOURCE = iD_SOURCE;
+!!!195673.java!!!	toString() : String
+		String indication="";
+		if(DATA_INDICATION==null)
+			indication="Pas d'indication pour ce message";
+		
+		if(DATA_VALUE!=0)
+		return
+						"source message : ["+SOURCE_VALUE+"]\n" +
+						"id_source : ["+ID_SOURCE+"]\n"+
+						"type sensor : [" +SENSOR_TYPE_VALUE+"]\n"+
+						"numero sensor : [" +SENSOR_NUM_VALUE+"]\n"+
+						"criticit� value : [" +CRIT_VALUE+"]\n"+
+						"type data : ["+DATA_TYPE_VALUE+"]\n" +
+						"indication: [" +indication+"]\n"+
+						"value data:["+DATA_VALUE+"]\n";
+		else
+			return
+							"source message : ["+SOURCE_VALUE+"]\n" +
+							"id_source : ["+ID_SOURCE+"]\n"+
+							"type sensor : [" +SENSOR_TYPE_VALUE+"]\n"+
+							"numero sensor : [" +SENSOR_NUM_VALUE+"]\n"+
+							"criticit� value : [" +CRIT_VALUE+"]\n"+
+							"data : ["+DATA_INDICATION+"]\n" +
+							"indication: [" +DATA_TYPE_VALUE+"]\n";
+		
+		
