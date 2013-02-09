@@ -1,0 +1,38 @@
+class SplitedMessage
+!!!195801.java!!!	getID_SOURCE() : String
+		return ID_SOURCE;
+!!!195929.java!!!	setID_SOURCE(in iD_SOURCE : String) : void
+		ID_SOURCE = iD_SOURCE;
+!!!196057.java!!!	SplitedMessage(in tYPE_MESSAGE : String, in ID_SOURCE : String, in iD_MESSAGE : String, in cRIT_MESSAGE : String, in vALUE_MESSAGE : String, in dATA_MESSAGE : String)
+		super();
+		TYPE_MESSAGE = tYPE_MESSAGE;
+		this.ID_SOURCE=ID_SOURCE;
+		ID_MESSAGE = iD_MESSAGE;
+		CRIT_MESSAGE = cRIT_MESSAGE;
+		VALUE_MESSAGE = vALUE_MESSAGE;
+		DATA_MESSAGE = dATA_MESSAGE;
+!!!196185.java!!!	getTYPE_MESSAGE() : String
+		return TYPE_MESSAGE;
+!!!196313.java!!!	setTYPE_MESSAGE(in tYPE_MESSAGE : String) : void
+		TYPE_MESSAGE = tYPE_MESSAGE;
+!!!196441.java!!!	getID_MESSAGE() : String
+		return ID_MESSAGE;
+!!!196569.java!!!	setID_MESSAGE(in iD_MESSAGE : String) : void
+		ID_MESSAGE = iD_MESSAGE;
+!!!196697.java!!!	getCRIT_MESSAGE() : String
+		return CRIT_MESSAGE;
+!!!196825.java!!!	setCRIT_MESSAGE(in cRIT_MESSAGE : String) : void
+		CRIT_MESSAGE = cRIT_MESSAGE;
+!!!196953.java!!!	getVALUE_MESSAGE() : String
+		return VALUE_MESSAGE;
+!!!197081.java!!!	setVALUE_MESSAGE(in vALUE_MESSAGE : String) : void
+		VALUE_MESSAGE = vALUE_MESSAGE;
+!!!197209.java!!!	getDATA_MESSAGE() : String
+		return DATA_MESSAGE;
+!!!197337.java!!!	setDATA_MESSAGE(in dATA_MESSAGE : String) : void
+		DATA_MESSAGE = dATA_MESSAGE;
+!!!197465.java!!!	toString() : String
+		return "SplitedMessage [TYPE_MESSAGE=" + TYPE_MESSAGE + ", ID_SOURCE="
+				+ ID_SOURCE + ", ID_MESSAGE=" + ID_MESSAGE + ", CRIT_MESSAGE="
+				+ CRIT_MESSAGE + ", VALUE_MESSAGE=" + VALUE_MESSAGE
+				+ ", DATA_MESSAGE=" + DATA_MESSAGE + "]";

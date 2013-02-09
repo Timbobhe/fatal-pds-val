@@ -1,0 +1,7 @@
+class AppTest
+!!!197593.java!!!	AppTest(in testName : String)
+        super( testName );
+!!!197721.java!!!	suite() : Test
+        return new TestSuite( AppTest.class );
+!!!197849.java!!!	testApp() : void
+        assertTrue( true );

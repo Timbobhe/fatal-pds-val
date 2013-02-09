@@ -1,0 +1,100 @@
+class MessageParser
+!!!192601.java!!!	MessageParser()
+		initialize();
+!!!192729.java!!!	initialize() : void
+		/**
+		 * initialis� temporairement pour tester
+		 */
+		TYPE_SENSOR=new HashMap<String,String>();
+		TYPE_SENSOR.put("00","Train");
+		TYPE_SENSOR.put("01","Tunnel");
+		TYPE_SENSOR.put("10","Rail");
+		TYPE_SENSOR.put("11","Station");
+		
+		ID_SENSOR_TYPE=new HashMap<String,String>();
+		ID_SENSOR_TYPE.put("0000","CapteurTemperature");
+		ID_SENSOR_TYPE.put("0001","CapteurInfraRougePorte");
+		ID_SENSOR_TYPE.put("0010","CapteurPoids");
+		ID_SENSOR_TYPE.put("0011","CapteurQuai");
+		ID_SENSOR_TYPE.put("0100","CapteurOxygene");
+		ID_SENSOR_TYPE.put("0101","CapteurCO2");
+		ID_SENSOR_TYPE.put("0110","Capteurdeposition");
+
+		
+		
+		DATA_MESSAGE=new HashMap<String,String>();
+		DATA_MESSAGE.put("0000000001", "porte ouverte");
+		
+!!!192857.java!!!	parse(inout sm : SplitedMessage) : ParsedMessage
+		
+		/**
+		 * on r�cup�re la source de message		
+		 */
+		 String source = TYPE_SENSOR.get(transformToBinary(sm.getTYPE_MESSAGE()));
+		 String id_Source =sm.getID_SOURCE();
+		
+		/**
+		 * on Slpite l'id de capteur : ID= type+num�ro
+		 * type: sur 4 bits
+		 * num�ro : sur 6 bits
+		 */
+		 String ID_TYPE = transformToBinary(sm.getID_MESSAGE()).substring(0,4);
+		 String ID_NUM =transformToBinary(sm.getID_MESSAGE()).substring(4,10);
+		
+		/**
+		 * On r�cup�re le type de capteur � partir de r�f�rentiel
+		 */
+		 String sensorType = ID_SENSOR_TYPE.get(ID_TYPE);
+		/**
+		 * On r�cup�re la criticit� 
+		 * indication:
+		 * 00:intellegent
+		 * 01:non intellegent
+		 */
+		 String crit ;
+		 
+		 if(transformToBinary(sm.getCRIT_MESSAGE()).equals("01"))
+			crit="intellegent";
+		 else 
+			crit="nonIntellegent";
+			
+		/**
+		 * On r�cup�re la donn�e de message	
+		 * cas : donn�es = indication et data:false ou true
+		 */
+		 String value;
+		 String indication;
+		 if(transformToBinary(sm.getVALUE_MESSAGE()).equals("00")){
+			value=transformToBinary(sm.getDATA_MESSAGE()).substring(5, 10);
+				if(value.equals("000001"))
+					value="true";
+				else
+					value="false";
+				indication =DATA_MESSAGE.get(transformToBinary(sm.getDATA_MESSAGE()));
+				
+			return  new ParsedMessage(source,id_Source,sensorType,ID_NUM,crit,indication,value);
+		}
+		
+		/**
+		 * donn�e=valeur num�rique
+		 */
+		else if(transformToBinary(sm.getVALUE_MESSAGE()).equals("10")){
+			indication="position";
+			String x = (transformToBinary(sm.getDATA_MESSAGE())).substring(0, 5);
+			String y=	(transformToBinary(sm.getDATA_MESSAGE())).substring(5, 10);
+			String pos = "(X: "+x+", Y: "+y + ")";
+			return new ParsedMessage(source,id_Source,sensorType,ID_NUM,crit,indication,pos);
+		}
+		else if(transformToBinary(sm.getVALUE_MESSAGE()).equals("01")){
+			indication="numérique";
+			int val = Integer.parseInt(transformToBinary(sm.getDATA_MESSAGE()),2);
+			return new ParsedMessage(source,id_Source,sensorType,ID_NUM,crit,indication,val);
+		}
+		System.out.println("null parsed message");
+		return null;
+									
+		
+!!!192985.java!!!	transformToBinary(in value : String) : String
+		String tmp = value.replace("48", "0");
+		String binary= tmp.replace("49", "1");
+		return binary;
