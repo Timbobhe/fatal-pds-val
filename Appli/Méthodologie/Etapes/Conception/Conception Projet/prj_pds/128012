@@ -1,6 +1,6 @@
 format 76
 "diagramme Metier" // diagramme Metier
-  revision 12
+  revision 13
   modified_by 12 "Hamza"
   // class settings
   //class diagram settings
@@ -189,7 +189,7 @@ format 76
       size A4
     end
 
-    class 134540 "RTDGClient"
+    class 134540 "Serveur"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -310,6 +310,57 @@ format 76
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 158220 // <association>
+      end
+
+      classrelation 168204 // <association>
+	relation 162956 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 168204 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 168332 // <association>
+      end
+
+      operation 128524 "RunServer"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 171660 // <association>
+	relation_ref 164620 // <association>
+      end
+
+      classrelation 171916 // <aggregation>
+	relation_ref 164748 // <aggregation>
+      end
+
+      classrelation 172556 // <aggregation>
+	relation 165132 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 172556 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 172684 // <aggregation>
+      end
+
+      classrelation 172812 // <dependency>
+	relation 165260 -_->
+	  a default
+	    classrelation_ref 172812 // <dependency>
+	  b parent class_ref 162444 // MessageParser
       end
     end
 
@@ -617,7 +668,7 @@ format 76
       
     end
 
-    classinstance 154636 "Parser"
+    classinstance 154636 "MessageParser"
       type class_ref 163084 // parser
       attributes
         end
@@ -674,7 +725,7 @@ format 76
       size A4
     end
 
-    class 162444 "Parser"
+    class 162444 "MessageParser"
       visibility package 
       cpp_decl ""
       java_decl ""
@@ -750,6 +801,132 @@ format 76
 "
 	    classrelation_ref 154892 // <aggregation>
       end
+
+      classrelation 168460 // <aggregation>
+	relation 163084 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 168460 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 168588 // <aggregation>
+      end
+
+      attribute 131980 "TYPE_SENSOR"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132108 "ID_SENSOR_TYPE"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 132236 "DA_MESSAGE"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 128268 "Parse"
+	public return_type class_ref 170892 // ParsedMessage
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 168716 // <association>
+	relation 163212 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 168716 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 168844 // <association>
+      end
+
+      classrelation 168972 // <aggregation>
+	relation 163340 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 168972 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 169100 // <aggregation>
+      end
+
+      classrelation 169356 // <aggregation>
+	relation_ref 163468 // <aggregation>
+      end
+
+      classrelation 169612 // <aggregation>
+	relation_ref 163596 // <aggregation>
+      end
+
+      classrelation 170508 // <association>
+	relation 164108 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 170508 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 170636 // <association>
+      end
+
+      classrelation 170892 // <aggregation>
+	relation_ref 164236 // <aggregation>
+      end
+
+      classrelation 171404 // <association>
+	relation_ref 164492 // <association>
+      end
+
+      classrelation 172044 // <aggregation>
+	relation 164876 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 172044 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 172172 // <aggregation>
+      end
+
+      classrelation 172428 // <aggregation>
+	relation_ref 165004 // <aggregation>
+      end
+
+      classrelation 172684 // <aggregation>
+	relation_ref 165132 // <aggregation>
+      end
     end
 
     class 162572 "ServicePriorisation"
@@ -763,13 +940,6 @@ format 76
       
       classrelation 146060 // <association>
 	relation_ref 144012 // <association>
-      end
-
-      classrelation 146700 // <realization>
-	relation 144396 -_-|>
-	  a public
-	    classrelation_ref 146700 // <realization>
-	  b parent class_ref 164108 // ReferentielCriticite
       end
 
       classrelation 146828 // <realization>
@@ -997,13 +1167,6 @@ ${members}};
       idl_decl ""
       explicit_switch_type ""
       
-      classrelation 146956 // <realization>
-	relation 144652 -_-|>
-	  a public
-	    classrelation_ref 146956 // <realization>
-	  b parent class_ref 164108 // ReferentielCriticite
-      end
-
       classrelation 147084 // <realization>
 	relation 144780 -_-|>
 	  a public
@@ -1016,13 +1179,6 @@ ${members}};
 	  a public
 	    classrelation_ref 147468 // <realization>
 	  b parent class_ref 164364 // ReferentielPriorisation
-      end
-
-      classrelation 155660 // <dependency>
-	relation 152460 -_->
-	  a default
-	    classrelation_ref 155660 // <dependency>
-	  b parent class_ref 164108 // ReferentielCriticite
       end
 
       classrelation 155788 // <realization>
@@ -1040,12 +1196,6 @@ ${members}};
 	  b parent class_ref 171532 // GestionnaireBuffer
       end
 
-      classrelation 156940 // <dependency>
-	relation 153612 -_->
-	  a default
-	    classrelation_ref 156940 // <dependency>
-	  b parent class_ref 164108 // ReferentielCriticite
-      end
     end
 
     classinstance 168076 "ServiceCriticiteMessage "
@@ -1138,23 +1288,6 @@ ${members}};
     classdiagram 155916 "class metier affecter message non Critique"
       draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
       size A4
-    end
-
-    class 164108 "ReferentielCriticite"
-      visibility package 
-      cpp_decl ""
-      java_decl ""
-      php_decl ""
-      python_2_2 python_decl ""
-      idl_decl ""
-      explicit_switch_type ""
-      
-      classrelation 156172 // <dependency>
-	relation 152972 -_->
-	  a default
-	    classrelation_ref 156172 // <dependency>
-	  b parent class_ref 171020 // RefInitializer
-      end
     end
 
     class 164236 "Buffer"

@@ -5,8 +5,8 @@ classinstance 128012 class_ref 128345 // Composant_Embarque
 classinstancecanvas 128140 classinstance_ref 154508 // RTDG-Client
   xyz 190 9 2005 life_line_z 2000
 end
-classinstancecanvas 128268 classinstance_ref 154636 // Parser
-  xyz 343 9 2000 life_line_z 2000
+classinstancecanvas 128268 classinstance_ref 154636 // MessageParser
+  xyz 322 9 2000 life_line_z 2000
 end
 classinstancecanvas 128396 classinstance_ref 167948 // Referentiel
   xyz 470 11 2000 life_line_z 2000
@@ -23,7 +23,7 @@ end
 durationcanvas 129036 classinstance_ref 128140 // RTDG-Client:client
   xyzwh 234 94 2010 11 83
 end
-durationcanvas 129164 classinstance_ref 128268 // Parser:parser
+durationcanvas 129164 classinstance_ref 128268 // MessageParser:parser
   xyzwh 374 95 2010 11 105
   overlappingdurationcanvas 129420
     xyzwh 380 141 2020 11 25
@@ -32,7 +32,7 @@ end
 durationcanvas 129676 classinstance_ref 128396 // Referentiel:ref
   xyzwh 503 184 2010 11 46
 end
-durationcanvas 130188 classinstance_ref 128268 // Parser:parser
+durationcanvas 130188 classinstance_ref 128268 // MessageParser:parser
   xyzwh 374 219 2010 11 67
   overlappingdurationcanvas 130444
     xyzwh 380 231 2020 11 25
