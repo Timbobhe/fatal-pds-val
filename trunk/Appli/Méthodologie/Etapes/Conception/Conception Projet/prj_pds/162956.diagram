@@ -10,25 +10,15 @@ classcanvas 135436 class_ref 180364 // ReferentielCriticité
 end
 classcanvas 135564 class_ref 170892 // ParsedMessage
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 518 271 2000
+  xyz 517 272 2000
 end
 classcanvas 135692 class_ref 141529 // SplitedMessage
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
-  xyz 521 71 2000
+  xyz 444 45 2000
 end
 classcanvas 137356 class_ref 180492 // MessageAnalyse
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
   xyz 245 117 2000
-end
-relationcanvas 136076 relation_ref 166668 // <aggregation>
-  from ref 135564 z 2001 to ref 135692
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
-relationcanvas 138380 relation_ref 167820 // <aggregation>
-  from ref 135564 z 2001 to ref 137356
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 138508 relation_ref 167948 // <association>
   from ref 137356 z 2001 to ref 135436
@@ -37,6 +27,16 @@ relationcanvas 138508 relation_ref 167948 // <association>
 end
 relationcanvas 138636 relation_ref 168076 // <association>
   from ref 137356 z 2001 to ref 134924
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 138892 relation_ref 176140 // <association>
+  from ref 137356 z 2001 to ref 135564
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 139148 relation_ref 176396 // <association>
+  from ref 137356 z 2001 to ref 135692
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end

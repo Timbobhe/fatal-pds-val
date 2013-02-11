@@ -17,7 +17,7 @@ classcanvas 133516 class_ref 180236 // prossesor
   xyzwh 17 89 2000 83 53
 end
 relationcanvas 131724 relation_ref 161548 // <association>
-  decenter_end 709
+  decenter_end 708
   from ref 129420 z 2018 to ref 130572
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b

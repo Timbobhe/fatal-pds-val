@@ -1,11 +1,11 @@
-window_sizes 1280 732 358 916 574 90
+window_sizes 1280 738 358 916 574 90
 diagrams
   classdiagram_ref 162700 // diagramme de classe metier
     728 465 100 4 23 0
   classdiagram_ref 182924 // Diagramme(collecter info terrain)
     728 465 100 4 53 0
   active  classdiagram_ref 183052 // Diagramme(Prioriser message)
-    728 465 100 4 2 0
+    916 572 100 4 0 0
   sequencediagram_ref 163084 // diagramme de suequence systeme
     728 465 100 4 0 0
   sequencediagram_ref 148441 // séquence de la conception détaillée
@@ -22,15 +22,19 @@ diagrams
     728 459 100 4 0 0
   classdiagram_ref 162956 // diagramme de classe metier
     728 459 100 4 0 0
+  sequencediagram_ref 189580 // diagramme de syec sys
+    728 459 100 4 0 0
+  classdiagram_ref 163212 // diagramme de classe metier
+    728 459 100 4 0 0
+  sequencediagram_ref 189708 // diag sequence sys
+    728 459 100 4 0 0
 end
 show_stereotypes
 selected classdiagram_ref 183052 // Diagramme(Prioriser message)
 open
+  classview_ref 141580 // diagramme classe participante
   
-package_ref 128012 // diagramme Metier
-  
-package_ref 134540 // diagramme de classe participant
-  classview_ref 134924 // Conception Preliminaire
+  package_ref 135769 // Affecter les messages critiques
   classview_ref 141708 // diagramme de classe participant
 end
 end

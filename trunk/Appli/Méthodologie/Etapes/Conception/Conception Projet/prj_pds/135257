@@ -1,6 +1,6 @@
 format 76
 "Interpréter message recu" // Uses Cases::Collecter les infos terrain::Interpréter message recu
-  revision 7
+  revision 8
   modified_by 12 "Hamza"
   // class settings
   //class diagram settings
@@ -300,6 +300,26 @@ format 76
 
       classrelation 175500 // <aggregation>
 	relation_ref 166668 // <aggregation>
+      end
+
+      classrelation 187788 // <association>
+	relation 176268 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 187788 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 187916 // <association>
+      end
+
+      classrelation 188172 // <association>
+	relation_ref 176396 // <association>
+      end
+
+      classrelation 188940 // <association>
+	relation_ref 176780 // <association>
       end
     end
 
@@ -833,6 +853,26 @@ ${members}}
 "
 	    classrelation_ref 180364 // <aggregation>
       end
+
+      classrelation 187660 // <association>
+	relation_ref 176140 // <association>
+      end
+
+      classrelation 187916 // <association>
+	relation_ref 176268 // <association>
+      end
+
+      classrelation 188428 // <association>
+	relation_ref 176524 // <association>
+      end
+
+      classrelation 188684 // <association>
+	relation_ref 176652 // <association>
+      end
+
+      classrelation 189196 // <association>
+	relation_ref 176908 // <association>
+      end
     end
 
     class 178700 "Transformer"
@@ -1309,6 +1349,19 @@ ${members}}
       classrelation 168844 // <association>
 	relation_ref 163212 // <association>
       end
+    end
+
+    sequencediagram 189708 "diag sequence sys"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    classinstance 181644 "Systeme"
+      type class_ref 187148 // Systeme
+      attributes
+        end
+      relations
+        end
     end
   end
 end
