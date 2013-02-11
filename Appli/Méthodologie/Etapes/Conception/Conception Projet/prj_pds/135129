@@ -1,6 +1,6 @@
 format 76
 "Création du protocole de communication" // Uses Cases::Collecter les infos terrain::Création du protocole de communication
-  revision 3
+  revision 4
   modified_by 12 "Hamza"
   // class settings
   //class diagram settings
@@ -187,6 +187,30 @@ ${members}}
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 179852 // <association>
+      end
+
+      classrelation 188300 // <association>
+	relation 176524 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 188300 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 188428 // <association>
+      end
+
+      classrelation 188812 // <association>
+	relation 176780 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 188812 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 188940 // <association>
       end
     end
 

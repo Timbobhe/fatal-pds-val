@@ -1,6 +1,6 @@
 format 76
 "Affecter les messages non critiques" // Uses Cases::Prioriser messages::Affecter les messages non critiques
-  revision 5
+  revision 6
   modified_by 12 "Hamza"
   // class settings
   //class diagram settings
@@ -189,6 +189,15 @@ ${members}}
 	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
 "
 	    classrelation_ref 170892 // <aggregation>
+      end
+
+      classrelation 187404 // <unidirectional association>
+	relation 176012 --->
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 187404 // <unidirectional association>
+	  b parent class_ref 170892 // ParsedMessage
       end
     end
 
@@ -596,6 +605,30 @@ ${members}}
 "
 	    classrelation_ref 178828 // <association>
       end
+
+      classrelation 187532 // <association>
+	relation 176140 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 187532 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 187660 // <association>
+      end
+
+      classrelation 188044 // <association>
+	relation 176396 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 188044 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 188172 // <association>
+      end
     end
 
     class 180620 "MessagesAnalyser"
@@ -664,6 +697,39 @@ ${members}}
       classrelation 180620 // <association>
 	relation_ref 169228 // <association>
       end
+
+      classrelation 188556 // <association>
+	relation 176652 ----
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 188556 // <association>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 188684 // <association>
+      end
+    end
+
+    class 187148 "Systeme"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+    end
+
+    classinstance 181516 "Systeme"
+      type class_ref 187148 // Systeme
+      attributes
+        end
+      relations
+        end
     end
   end
 end

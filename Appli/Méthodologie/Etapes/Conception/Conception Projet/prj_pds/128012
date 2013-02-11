@@ -1,6 +1,6 @@
 format 76
 "diagramme Metier" // diagramme Metier
-  revision 13
+  revision 14
   modified_by 12 "Hamza"
   // class settings
   //class diagram settings
@@ -927,6 +927,24 @@ format 76
       classrelation 172684 // <aggregation>
 	relation_ref 165132 // <aggregation>
       end
+
+      classrelation 187148 // <unidirectional association>
+	relation 175756 --->
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 187148 // <unidirectional association>
+	  b parent class_ref 141529 // SplitedMessage
+      end
+
+      classrelation 187276 // <unidirectional association>
+	relation 175884 --->
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 187276 // <unidirectional association>
+	  b parent class_ref 170892 // ParsedMessage
+      end
     end
 
     class 162572 "ServicePriorisation"
@@ -1195,7 +1213,6 @@ ${members}};
 	    classrelation_ref 156684 // <dependency>
 	  b parent class_ref 171532 // GestionnaireBuffer
       end
-
     end
 
     classinstance 168076 "ServiceCriticiteMessage "
