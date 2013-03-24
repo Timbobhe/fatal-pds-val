@@ -1,7 +1,9 @@
 package org.rtdg.prioriser;
 
+import java.io.Serializable;
 
-public class CriticiteValue {
+
+public class CriticiteValue implements Serializable{
 
 	private String value;
 	private Double equartype;

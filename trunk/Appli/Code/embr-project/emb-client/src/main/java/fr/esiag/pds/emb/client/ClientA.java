@@ -22,7 +22,7 @@ public static final int port=30001;
 	public static void main(String[] args) {
 	try {
 		
-		Socket socket=new Socket("localhost", port);
+		Socket socket=new Socket("127.0.0.1", port);
 		ObjectOutputStream oos=new ObjectOutputStream(socket.getOutputStream());
 		ObjectInputStream ois=new ObjectInputStream(socket.getInputStream());
 		oos.writeObject("COMPOSANT EMBARQUE ");

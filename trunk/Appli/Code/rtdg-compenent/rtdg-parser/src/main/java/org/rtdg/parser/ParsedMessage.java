@@ -1,7 +1,9 @@
 package org.rtdg.parser;
 
+import java.io.Serializable;
 
-public class ParsedMessage  {
+
+public class ParsedMessage implements Serializable {
 	
 	private String SOURCE_VALUE;
 	private String ID_SOURCE;

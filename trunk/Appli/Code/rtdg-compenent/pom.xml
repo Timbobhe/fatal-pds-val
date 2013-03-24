@@ -10,5 +10,7 @@
     <module>rtdg-analyser</module>
     <module>rtdg-parser</module>
     <module>rtdg-prioriser</module>
+    <module>rtdg-replication</module>
+    <module>rtdg-expander</module>
   </modules>
 </project>
