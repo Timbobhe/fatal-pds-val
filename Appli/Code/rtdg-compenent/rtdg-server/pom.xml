@@ -35,5 +35,10 @@
     	<artifactId>rtdg-analyser</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     </dependency>
+     <dependency>
+    	<groupId>fr.esiag.pds.rtdg.server</groupId>
+    	<artifactId>rtdg-replication</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 </project>

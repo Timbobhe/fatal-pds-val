@@ -11,6 +11,7 @@ public class MessageBuffer  extends LinkedList<ParsedMessage>{
 	
 	private String name;
 	
+
 	public MessageBuffer(String name){
 		this.name=name;
 	}
