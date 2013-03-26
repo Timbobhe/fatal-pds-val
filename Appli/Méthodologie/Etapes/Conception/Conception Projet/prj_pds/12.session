@@ -4,7 +4,7 @@ diagrams
     728 465 100 4 23 0
   classdiagram_ref 182924 // Diagramme(collecter info terrain)
     728 465 100 4 53 0
-  active  classdiagram_ref 183052 // Diagramme(Prioriser message)
+  classdiagram_ref 183052 // Diagramme(Prioriser message)
     916 572 100 4 0 0
   sequencediagram_ref 163084 // diagramme de suequence systeme
     728 465 100 4 0 0
@@ -28,13 +28,26 @@ diagrams
     728 459 100 4 0 0
   sequencediagram_ref 189708 // diag sequence sys
     728 459 100 4 0 0
+  sequencediagram_ref 196236 // diagramme sequence systeme 
+    916 574 100 4 0 0
+  active  sequencediagram_ref 196492 // diagramme sequence systeme
+    916 574 100 4 0 0
+  sequencediagram_ref 196364 // diagamme de classe metier
+    728 459 100 4 0 0
+  sequencediagram_ref 147929 // Séquences de conception détaillée
+    916 574 100 4 0 0
+  classdiagram_ref 168281 // classes détaillé
+    728 459 100 4 0 0
+  sequencediagram_ref 181465 // séquence détaillé (random)
+    728 459 100 4 0 0
+  sequencediagram_ref 168409 // séquences détaillé(rame)
+    728 459 100 4 0 0
 end
 show_stereotypes
-selected classdiagram_ref 183052 // Diagramme(Prioriser message)
+selected 
+package_ref 141196 // Orchestrer message
 open
-  classview_ref 141580 // diagramme classe participante
   
-  package_ref 135769 // Affecter les messages critiques
-  classview_ref 141708 // diagramme de classe participant
+package_ref 141196 // Orchestrer message
 end
 end
