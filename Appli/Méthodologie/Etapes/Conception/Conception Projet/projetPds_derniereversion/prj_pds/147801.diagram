@@ -1,0 +1,149 @@
+format 76
+
+classinstance 130137 class_ref 142553 // Serveur
+  name ""   xyz 2 4 2000 life_line_z 2000
+classinstance 130265 class_ref 142681 // ServeurThread
+  name ""   xyz 67 4 2000 life_line_z 2000
+classinstance 130393 class_ref 142425 // MessageAnalyser
+  name ""   xyz 173 4 2005 life_line_z 2000
+classinstance 130521 class_ref 142169 // BinaryMessage
+  name ""   xyz 293 5 2010 life_line_z 2000
+classinstance 130649 class_ref 141529 // SplitedMessage
+  name ""   xyz 606 7 2015 life_line_z 2000
+classinstance 130777 class_ref 141401 // MessageParser
+  name ""   xyz 400 6 2000 life_line_z 2000
+classinstance 130905 class_ref 142937 // BufferManager
+  name ""   xyz 511 7 2005 life_line_z 2000
+durationcanvas 131033 classinstance_ref 130137 // :Serveur
+  xyzwh 23 60 2010 11 40
+end
+durationcanvas 131161 classinstance_ref 130265 // :ServeurThread
+  xyzwh 105 61 2010 11 46
+end
+durationcanvas 131417 classinstance_ref 130393 // :MessageAnalyser
+  xyzwh 219 73 2010 11 34
+end
+durationcanvas 131801 classinstance_ref 130265 // :ServeurThread
+  xyzwh 105 118 2010 11 40
+end
+durationcanvas 131929 classinstance_ref 130521 // :BinaryMessage
+  xyzwh 332 118 2010 11 39
+end
+durationcanvas 132313 classinstance_ref 130265 // :ServeurThread
+  xyzwh 105 180 2010 11 44
+end
+durationcanvas 132441 classinstance_ref 130393 // :MessageAnalyser
+  xyzwh 219 181 2010 11 37
+end
+durationcanvas 132697 classinstance_ref 130265 // :ServeurThread
+  xyzwh 105 230 2010 11 98
+end
+durationcanvas 132825 classinstance_ref 130777 // :MessageParser
+  xyzwh 440 230 2010 11 35
+end
+durationcanvas 133209 classinstance_ref 130777 // :MessageParser
+  xyzwh 440 267 2010 11 61
+end
+durationcanvas 133593 classinstance_ref 130265 // :ServeurThread
+  xyzwh 105 347 2010 11 40
+end
+durationcanvas 133721 classinstance_ref 130905 // :BufferManager
+  xyzwh 549 347 2010 11 59
+  overlappingdurationcanvas 134233
+    xyzwh 555 375 2020 11 25
+  end
+end
+durationcanvas 134489 classinstance_ref 130649 // :SplitedMessage
+  xyzwh 646 188 2010 11 29
+end
+msg 131289 asynchronous
+  from durationcanvas_ref 131033
+  to durationcanvas_ref 131161
+  yz 61 2015 explicitmsg "start()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 58 47
+msg 131545 asynchronous
+  from durationcanvas_ref 131161
+  to durationcanvas_ref 131417
+  yz 74 2015 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 156 60
+msg 131673 return
+  from durationcanvas_ref 131417
+  to durationcanvas_ref 131161
+  yz 96 2020 explicitmsg "ma"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 160 85
+msg 132057 asynchronous
+  from durationcanvas_ref 131801
+  to durationcanvas_ref 131929
+  yz 119 2015 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 169 110
+msg 132185 return
+  from durationcanvas_ref 131929
+  to durationcanvas_ref 131801
+  yz 146 2020 explicitmsg "binMessage"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 195 132
+msg 132569 asynchronous
+  from durationcanvas_ref 132313
+  to durationcanvas_ref 132441
+  yz 182 2015 msg operation_ref 129241 // "analyseMessage(in binMessage : BinaryMessage) : string"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 122 168
+msg 132953 asynchronous
+  from durationcanvas_ref 132697
+  to durationcanvas_ref 132825
+  yz 230 2015 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 267 216
+msg 133081 return
+  from durationcanvas_ref 132825
+  to durationcanvas_ref 132697
+  yz 254 2020 explicitmsg "mp"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 272 244
+msg 133337 asynchronous
+  from durationcanvas_ref 132697
+  to durationcanvas_ref 133209
+  yz 286 3005 msg operation_ref 128089 // "parse(in sm : splitedMessage) : ParsedMessage"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 260 272
+msg 133465 return
+  from durationcanvas_ref 133209
+  to durationcanvas_ref 132697
+  yz 317 3010 explicitmsg "pm"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 271 303
+msg 133849 asynchronous
+  from durationcanvas_ref 133593
+  to durationcanvas_ref 133721
+  yz 347 2015 msg operation_ref 129625 // "add(in pm : ParsedMessage)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 319 333
+msg 134361 asynchronous
+  from durationcanvas_ref 133593
+  to durationcanvas_ref 134233
+  yz 375 2025 explicitmsg "afficher()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 312 361
+msg 134617 asynchronous
+  from durationcanvas_ref 132441
+  to durationcanvas_ref 134489
+  yz 188 2015 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 427 174
+msg 135257 return
+  from durationcanvas_ref 134489
+  to durationcanvas_ref 132441
+  yz 206 3005 explicitmsg "sm"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 418 198
+msg 135385 return
+  from durationcanvas_ref 132441
+  to durationcanvas_ref 132313
+  yz 211 2015 explicitmsg "sm"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 160 197
+end

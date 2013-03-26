@@ -1,0 +1,51 @@
+format 76
+
+classinstancecanvas 128012 classinstance_ref 154508 // RTDG-Client
+  xyz 125 1 2000 life_line_z 2000
+end
+classinstancecanvas 130444 classinstance_ref 181516 // Systeme
+  xyz 387 6 2000 life_line_z 2000
+end
+durationcanvas 130572 classinstance_ref 128012 // RTDG-Client:client
+  xyzwh 169 50 2010 11 246
+end
+durationcanvas 130700 classinstance_ref 130444 // Systeme:Systeme
+  xyzwh 429 75 2010 11 222
+  overlappingdurationcanvas 130956
+    xyzwh 435 115 2020 11 53
+  end
+  overlappingdurationcanvas 131340
+    xyzwh 435 200 2020 11 25
+  end
+  overlappingdurationcanvas 131596
+    xyzwh 435 247 2020 11 25
+  end
+end
+msg 130828 synchronous
+  from durationcanvas_ref 130572
+  to durationcanvas_ref 130700
+  yz 83 3005 explicitmsg "send(msgInt)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  args "send"
+  label_xy 293 67
+reflexivemsg 131084 synchronous
+  to durationcanvas_ref 130956
+  yz 115 2025 explicitmsg "consult(msgInt,ref)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 482 113
+selfreflexivemsg 131212
+  to durationcanvas_ref 130956
+  yz 160 2025 explicitmsg "message"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 468 158
+reflexivemsg 131468 synchronous
+  to durationcanvas_ref 131340
+  yz 200 2025 explicitmsg "CriticiteTest()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 473 200
+reflexivemsg 131724 synchronous
+  to durationcanvas_ref 131596
+  yz 247 3005 explicitmsg "Stocker()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 462 241
+end

@@ -1,0 +1,83 @@
+format 76
+
+classinstance 128140 class_ref 200844 // Consumer
+  name ""   xyz 272 40 2000 life_line_z 2000
+classinstance 128268 class_ref 134873 // RTDRS
+  name ""   xyz 43 4 2005 life_line_z 2000
+classinstance 128396 class_ref 201228 // RTDRSReceiver
+  name ""   xyz 138 17 2000 life_line_z 2000
+classinstance 129292 class_ref 201356 // RTDRSMessage
+  name ""   xyz 374 10 2000 life_line_z 2000
+classinstance 129804 class_ref 201484 // BufferRTDRSMessage
+  name ""   xyz 456 47 2005 life_line_z 2000
+classinstance 129932 class_ref 201612 // BufferMessageRTDRSManager
+  name ""   xyz 560 11 2000 life_line_z 2000
+durationcanvas 128524 classinstance_ref 128268 // :RTDRS
+  xyzwh 60 90 2010 11 34
+end
+durationcanvas 128652 classinstance_ref 128396 // :RTDRSReceiver
+  xyzwh 180 83 2010 11 25
+end
+durationcanvas 128908 classinstance_ref 128396 // :RTDRSReceiver
+  xyzwh 180 138 2010 11 52
+end
+durationcanvas 129036 classinstance_ref 128140 // :Consumer
+  xyzwh 297 138 2010 11 50
+  overlappingdurationcanvas 130828
+    xyzwh 303 157 2020 11 25
+  end
+end
+durationcanvas 129420 classinstance_ref 128140 // :Consumer
+  xyzwh 297 243 2010 11 40
+end
+durationcanvas 129548 classinstance_ref 129292 // :RTDRSMessage
+  xyzwh 416 234 2010 11 25
+end
+durationcanvas 130060 classinstance_ref 129292 // :RTDRSMessage
+  xyzwh 416 273 2010 11 28
+end
+durationcanvas 130188 classinstance_ref 129804 // :BufferRTDRSMessage
+  xyzwh 512 274 2010 11 34
+end
+durationcanvas 130444 classinstance_ref 129804 // :BufferRTDRSMessage
+  xyzwh 512 317 2010 11 48
+end
+durationcanvas 130572 classinstance_ref 129932 // :BufferMessageRTDRSManager
+  xyzwh 637 326 2010 11 30
+end
+msg 128780 asynchronous
+  from durationcanvas_ref 128524
+  to durationcanvas_ref 128652
+  yz 91 2015 explicitmsg "getMessage(\"QueueRTDRS\")"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 29 76
+msg 129164 asynchronous
+  from durationcanvas_ref 128908
+  to durationcanvas_ref 129036
+  yz 138 2015 explicitmsg "getMessageRecu(MessageInfoRecu)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 193 117
+msg 129676 asynchronous
+  from durationcanvas_ref 129420
+  to durationcanvas_ref 129548
+  yz 243 2015 explicitmsg "getMessageRecu(MessaegInfoRecu)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 279 226
+msg 130316 asynchronous
+  from durationcanvas_ref 130060
+  to durationcanvas_ref 130188
+  yz 274 2015 explicitmsg "AddMessageRecu(MessageRecu)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 333 301
+msg 130700 asynchronous
+  from durationcanvas_ref 130444
+  to durationcanvas_ref 130572
+  yz 329 2015 explicitmsg "getMessageRecu()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 535 314
+reflexivemsg 130956 asynchronous
+  to durationcanvas_ref 130828
+  yz 158 2025 explicitmsg "UnMarshalingMessage()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 314 146
+end

@@ -1,0 +1,71 @@
+format 76
+
+classinstancecanvas 128012 classinstance_ref 181516 // Systeme
+  xyz 442.5 10 2000 life_line_z 2000
+end
+classinstancecanvas 128140 classinstance_ref 154508 // RTDG-Client
+  xyz 183.5 6 2000 life_line_z 2000
+end
+durationcanvas 128268 classinstance_ref 128140 // RTDG-Client:client
+  xyzwh 227 115 2010 11 388
+end
+durationcanvas 128396 classinstance_ref 128012 // Systeme:Systeme
+  xyzwh 484 111 2010 11 367
+  overlappingdurationcanvas 128524
+    xyzwh 490 195 2020 11 62
+  end
+  overlappingdurationcanvas 128652
+    xyzwh 490 290 2020 11 35
+  end
+  overlappingdurationcanvas 129548
+    xyzwh 490 349 2020 11 35
+  end
+  overlappingdurationcanvas 130316
+    xyzwh 490 405 2020 11 43
+  end
+end
+durationcanvas 130828 classinstance_ref 128012 // Systeme:Systeme
+  xyzwh 484 488 2010 11 38
+end
+selfreflexivemsg 129036
+  to durationcanvas_ref 128524
+  yz 249 2025 explicitmsg "message"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 523.5 247
+msg 129164 synchronous
+  from durationcanvas_ref 128268
+  to durationcanvas_ref 128396
+  yz 137 3005 explicitmsg "send(msgInt)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  args "send"
+  label_xy 351.5 121
+reflexivemsg 129292 synchronous
+  to durationcanvas_ref 128524
+  yz 195 2025 explicitmsg "consult(msgInt,refC)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 537.5 193
+reflexivemsg 129420 synchronous
+  to durationcanvas_ref 128652
+  yz 290 2025 explicitmsg "CriticiteTest()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 528.5 290
+reflexivemsg 129676 synchronous
+  to durationcanvas_ref 129548
+  yz 349 2025 explicitmsg "consult(msgC,refP)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 516 329
+selfreflexivemsg 129932
+  to durationcanvas_ref 128396
+  yz 470 2015 explicitmsg "messagePriorisé"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 504 451
+reflexivemsg 130444 synchronous
+  to durationcanvas_ref 130316
+  yz 405 3005 unspecifiedmsg
+  show_full_operations_definition default drawing_language default show_context_mode default
+reflexivemsg 130956 synchronous
+  to durationcanvas_ref 130828
+  yz 488 2015 explicitmsg "Stocker"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 520 485
+end

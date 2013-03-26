@@ -1,0 +1,37 @@
+format 76
+
+classinstancecanvas 128012 classinstance_ref 128140 // RTDRS
+  xyz 44 4 2005 life_line_z 2000
+end
+classinstancecanvas 128268 classinstance_ref 128012 // RTDG
+  xyz 349 11 2000 life_line_z 2000
+end
+durationcanvas 128396 classinstance_ref 128012 // RTDRS:RTDRS
+  xyzwh 80 127 2010 11 172
+end
+durationcanvas 128524 classinstance_ref 128268 // RTDG:RTDG
+  xyzwh 382 127 2010 11 172
+  overlappingdurationcanvas 128908
+    xyzwh 388 170 2020 11 30
+  end
+  overlappingdurationcanvas 129292
+    xyzwh 388 235 2020 11 28
+  end
+end
+msg 128652 asynchronous
+  from durationcanvas_ref 128396
+  to durationcanvas_ref 128524
+  yz 135 2015 explicitmsg "envoieMsg"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 210 122
+reflexivemsg 129036 asynchronous
+  to durationcanvas_ref 128908
+  yz 170 2025 explicitmsg "UnmarshlerMessage(msg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 416 112
+reflexivemsg 129420 asynchronous
+  to durationcanvas_ref 129292
+  yz 239 2025 explicitmsg "TraiterMessage(msg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 422 252
+end

@@ -1,0 +1,18 @@
+class CapteurIntelligent
+!!!150233.java!!!	CapteurIntelligent()
+		// TODO Auto-generated constructor stub
+!!!150361.java!!!	CapteurIntelligent(in idCapateurIntelligent : String, in value : String)
+		super();
+		this.idCapateurIntelligent = idCapateurIntelligent;
+		this.value = value;
+!!!150489.java!!!	getIdCapateurIntelligent() : String
+		return idCapateurIntelligent;
+!!!150617.java!!!	setIdCapateurIntelligent(in idCapateurIntelligent : String) : void
+		this.idCapateurIntelligent = idCapateurIntelligent;
+!!!150745.java!!!	getValue() : String
+		return value;
+!!!150873.java!!!	setValue(in value : String) : void
+		this.value = value;
+!!!151001.java!!!	toString() : String
+		return "CapteurIntelligent [idCapateurIntelligent="
+				+ idCapateurIntelligent + ", value=" + value + "]";

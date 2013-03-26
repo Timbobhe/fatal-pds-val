@@ -1,0 +1,17 @@
+class Value
+!!!153945.java!!!	Value()
+		// TODO Auto-generated constructor stub
+!!!154073.java!!!	Value(in min : int, in max : int)
+		super();
+		this.min = min;
+		this.max = max;
+!!!154201.java!!!	getMin() : int
+		return min;
+!!!154329.java!!!	setMin(in min : int) : void
+		this.min = min;
+!!!154457.java!!!	getMax() : int
+		return max;
+!!!154585.java!!!	setMax(in max : int) : void
+		this.max = max;
+!!!154713.java!!!	toString() : String
+		return "Value [min=" + min + ", max=" + max + "]";
