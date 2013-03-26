@@ -1,0 +1,93 @@
+format 76
+
+classinstance 128012 class_ref 128345 // Composant_Embarque
+  name ""   xyz 55 4 2000 life_line_z 2000
+classinstancecanvas 128140 classinstance_ref 154508 // RTDG-Client
+  xyz 190 9 2005 life_line_z 2000
+end
+classinstancecanvas 128268 classinstance_ref 154636 // MessageParser
+  xyz 322 9 2000 life_line_z 2000
+end
+classinstancecanvas 128396 classinstance_ref 167948 // Referentiel
+  xyz 470 11 2000 life_line_z 2000
+end
+classinstancecanvas 128524 classinstance_ref 134668 // ServicePriorisation
+  xyz 590 12 2005 life_line_z 2000
+end
+durationcanvas 128652 classinstance_ref 128012 // :Composant_Embarque
+  xyzwh 106 102 2010 11 40
+end
+durationcanvas 128780 classinstance_ref 128140 // RTDG-Client:client
+  xyzwh 234 103 2010 11 43
+end
+durationcanvas 129036 classinstance_ref 128140 // RTDG-Client:client
+  xyzwh 234 94 2010 11 83
+end
+durationcanvas 129164 classinstance_ref 128268 // MessageParser:parser
+  xyzwh 375 95 2010 11 105
+  overlappingdurationcanvas 129420
+    xyzwh 381 141 2020 11 25
+  end
+end
+durationcanvas 129676 classinstance_ref 128396 // Referentiel:ref
+  xyzwh 503 184 2010 11 46
+end
+durationcanvas 130188 classinstance_ref 128268 // MessageParser:parser
+  xyzwh 375 219 2010 11 67
+  overlappingdurationcanvas 130444
+    xyzwh 381 231 2020 11 25
+  end
+end
+durationcanvas 130700 classinstance_ref 128140 // RTDG-Client:client
+  xyzwh 234 275 2010 11 38
+end
+durationcanvas 130956 classinstance_ref 128524 // ServicePriorisation:priorisation
+  xyzwh 660 297 2010 11 25
+end
+msg 128908 synchronous
+  from durationcanvas_ref 128652
+  to durationcanvas_ref 128780
+  yz 106 2015 explicitmsg "send(msg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 156 93
+msg 129292 synchronous
+  from durationcanvas_ref 129036
+  to durationcanvas_ref 129164
+  yz 132 2015 explicitmsg "send(msg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 285 119
+reflexivemsg 129548 synchronous
+  to durationcanvas_ref 129420
+  yz 141 2025 explicitmsg "read(msg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 377 128
+msg 129804 synchronous
+  from durationcanvas_ref 129164
+  to durationcanvas_ref 129676
+  yz 184 2015 explicitmsg "consult(msg,referentiel)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 390 171
+msg 130316 return
+  from durationcanvas_ref 129676
+  to durationcanvas_ref 130188
+  yz 219 2015 explicitmsg "message"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 423 206
+reflexivemsg 130572 synchronous
+  to durationcanvas_ref 130444
+  yz 231 2025 explicitmsg "interpreter(msg,message)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 390 249
+msg 130828 return
+  from durationcanvas_ref 130188
+  to durationcanvas_ref 130700
+  yz 275 2015 explicitmsg "message interpreté"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 264 262
+msg 131084 synchronous
+  from durationcanvas_ref 130700
+  to durationcanvas_ref 130956
+  yz 297 2015 explicitmsg "send(msgInt)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 422 284
+end

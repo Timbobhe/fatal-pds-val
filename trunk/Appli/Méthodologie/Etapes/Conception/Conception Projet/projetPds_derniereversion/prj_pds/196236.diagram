@@ -1,0 +1,41 @@
+format 76
+
+classinstancecanvas 128140 classinstance_ref 188172 // Priorisation service
+  xyz 5 4 2000 life_line_z 2000
+end
+classinstancecanvas 128268 classinstance_ref 188300 // RTDRSOrchester
+  xyz 275 9 2000 life_line_z 2000
+end
+classinstancecanvas 128396 classinstance_ref 128140 // RTDRS
+  xyz 581 11 2005 life_line_z 2000
+end
+durationcanvas 128524 classinstance_ref 128140 // Priorisation service:priorisation
+  xyzwh 76 146 2010 11 40
+end
+durationcanvas 128652 classinstance_ref 128268 // RTDRSOrchester:Orchestrateur
+  xyzwh 351 147 2010 11 116
+  overlappingdurationcanvas 128908
+    xyzwh 357 160 2020 11 25
+  end
+end
+durationcanvas 129164 classinstance_ref 128396 // RTDRS:RTDRS
+  xyzwh 617 224 2010 11 26
+end
+msg 128780 asynchronous
+  from durationcanvas_ref 128524
+  to durationcanvas_ref 128652
+  yz 147 2015 explicitmsg "priorisedMessage(msg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 161 134
+reflexivemsg 129036 asynchronous
+  to durationcanvas_ref 128908
+  yz 161 2025 explicitmsg "MarshlerMesg(obj)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 375 135
+msg 129292 asynchronous
+  from durationcanvas_ref 128652
+  to durationcanvas_ref 129164
+  yz 224 2015 explicitmsg "ProducerSender(msg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 451 211
+end

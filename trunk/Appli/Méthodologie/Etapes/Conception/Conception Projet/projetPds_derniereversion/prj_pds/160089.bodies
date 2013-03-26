@@ -1,0 +1,20 @@
+class Rame
+!!!166105.java!!!	Rame(in nom : String, inout eff : EffecteurRame)
+		position= new Position(-400,100);
+		this.nom =nom;
+		this.eff=eff;
+		etat=false;
+!!!166233.java!!!	getNom() : String
+		return this.nom;
+!!!166361.java!!!	getEffecteur() : EffecteurRame
+		return this.eff;
+!!!166489.java!!!	setNom(in nom : String) : void
+		this.nom=nom;
+!!!166617.java!!!	getPosition() : Position
+		return eff.getPosition();
+!!!166745.java!!!	isEtat() : boolean
+		return etat;
+!!!166873.java!!!	setEtat(inout etat : boolean) : void
+		this.etat = etat;
+!!!167001.java!!!	getEtat() : boolean
+		return etat;

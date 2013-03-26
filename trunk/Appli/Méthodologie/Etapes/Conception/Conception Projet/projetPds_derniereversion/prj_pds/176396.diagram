@@ -1,0 +1,48 @@
+format 76
+
+componentcanvas 128012 component_ref 163289 // Fatal-RTDG-Parser.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 198.5 74.5 2005 143 47
+end
+componentcanvas 128396 component_ref 128012 // Fatal-embr-Project.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 480.5 128.5 2006 143 47
+end
+componentcanvas 128652 component_ref 134924 // Fatal-emb-Simulator.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 627.5 183.5 2010 143 47
+end
+deploymentnodecanvas 128908 deploymentnode_ref 128601 // equipement embarqué
+  xyzwh 470.5 92.5 2000 315 165
+end
+componentcanvas 129164 component_ref 163417 // Fatal-RTDG-Analyzer.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 40.5 130.5 2005 149 47
+end
+componentcanvas 129676 component_ref 135052 // Fatal-embr-Processor.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 625.5 126.5 2006 149 51
+end
+deploymentnodecanvas 130060 deploymentnode_ref 128217 // RTDG
+  name "RTDG 1"
+  xyzwh 29.5 33.5 2000 361 217
+end
+componentcanvas 130316 component_ref 163161 // Fatal-RTDG-Server.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 196.5 128.5 2005 143 47
+end
+componentcanvas 130444 component_ref 134668 // Fatal-embr-Frontal.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 480.5 184.5 2005 143 47
+end
+componentcanvas 130572 component_ref 163545 // Fatal-RTDG-Priorisator.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 37.5 73.5 2010 159 47
+end
+componentcanvas 130828 component_ref 134796 // Fatal-RTDG-Project.jar
+  draw_component_as_icon default show_component_req_prov default show_component_rea default show_stereotype_properties default
+  xyzwh 41.5 188.5 2005 143 47
+end
+line 132876 ---- decenter_begin 595 decenter_end 680
+  from ref 130060 z 2001 to ref 128908
+end

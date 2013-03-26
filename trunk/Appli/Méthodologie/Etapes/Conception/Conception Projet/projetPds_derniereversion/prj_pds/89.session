@@ -1,0 +1,9 @@
+window_sizes 1600 838 353 1241 600 82
+show_stereotypes
+selected sequencediagram_ref 147801 // Séquences de la conception détaillée
+open
+  classview_ref 128089 // Conception détaillée
+  
+package_ref 134873 // Prioriser messages
+end
+end

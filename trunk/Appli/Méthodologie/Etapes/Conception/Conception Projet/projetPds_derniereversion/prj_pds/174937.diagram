@@ -1,0 +1,61 @@
+format 76
+
+classinstance 128089 class_ref 150233 // MessageRandom
+  name ""   xyz 54 4 2000 life_line_z 2000
+classinstance 128217 class_ref 150361 // DataSource
+  name ""   xyz 206 4 2000 life_line_z 2000
+classinstance 128345 class_ref 149977 // Transform
+  name ""   xyz 355 4 2000 life_line_z 2000
+classinstance 128473 class_ref 150105 // RTDG_Server
+  name ""   xyz 451 4 2000 life_line_z 2000
+durationcanvas 128601 classinstance_ref 128089 // :MessageRandom
+  xyzwh 97 77 2010 11 220
+  overlappingdurationcanvas 129113
+    xyzwh 103 135 2020 11 25
+  end
+end
+durationcanvas 128729 classinstance_ref 128217 // :DataSource
+  xyzwh 236 71 2010 11 42
+end
+durationcanvas 130009 classinstance_ref 128473 // :RTDG_Server
+  xyzwh 486 277 2010 11 25
+end
+durationcanvas 130265 classinstance_ref 128345 // :Transform
+  xyzwh 382 219 2010 11 38
+end
+msg 128857 asynchronous
+  from durationcanvas_ref 128601
+  to durationcanvas_ref 128729
+  yz 77 2015 explicitmsg "demandeDonnees()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 125 63
+msg 128985 return
+  from durationcanvas_ref 128729
+  to durationcanvas_ref 128601
+  yz 102 2020 explicitmsg "data"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 162 88
+reflexivemsg 129241 asynchronous
+  to durationcanvas_ref 129113
+  yz 136 2025 explicitmsg "Random"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 116 122
+msg 130137 asynchronous
+  from durationcanvas_ref 128601
+  to durationcanvas_ref 130009
+  yz 277 2025 explicitmsg "send(message)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 281 263
+msg 130393 asynchronous
+  from durationcanvas_ref 128601
+  to durationcanvas_ref 130265
+  yz 219 2015 explicitmsg "TransformToBinary()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 194 205
+msg 130521 return
+  from durationcanvas_ref 130265
+  to durationcanvas_ref 128601
+  yz 246 2020 explicitmsg "message"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 223 232
+end

@@ -1,0 +1,105 @@
+format 76
+
+fragment 128089 "if(m.getDATA_VALUE()>=z && m.getDATA_VALUE()<=y)"
+  xyzwh 185 454.5 2020 447 101
+end
+fragment 128217 "if(!(s.getValue().equals(m.getDATA_INDICATION()))"
+  xyzwh 194 340.5 2020 437 108
+end
+fragment 128345 "if(critic_value!=\"Intel\""
+  xyzwh 193 173.5 2020 449 129
+end
+classinstancecanvas 128473 classinstance_ref 129241 // Buff1
+  xyz 423 62 2005 life_line_z 2000
+end
+classinstancecanvas 128601 classinstance_ref 128089 // cl
+  xyz 86 56.5 2000 life_line_z 2000
+end
+classinstancecanvas 128729 classinstance_ref 128985 // BufMan
+  xyz 159 56.5 2005 life_line_z 2000
+end
+classinstancecanvas 128857 classinstance_ref 129369 // Buff1
+  xyz 552 62 2000 life_line_z 2000
+end
+durationcanvas 128985 classinstance_ref 128857 // Buff1:criticalBuffer
+  xyzwh 598 416 2010 11 25
+end
+durationcanvas 129113 classinstance_ref 128473 // Buff1:criticalBuffer
+  xyzwh 469 492 2010 11 25
+end
+durationcanvas 129241 classinstance_ref 128601 // cl:client
+  xyzwh 105 119 2010 11 46
+end
+durationcanvas 129369 classinstance_ref 128729 // BufMan:BufferManager
+  xyzwh 216 152 2010 11 144
+end
+durationcanvas 129497 classinstance_ref 128473 // Buff1:criticalBuffer
+  xyzwh 469 385 2010 11 25
+end
+durationcanvas 129625 classinstance_ref 128729 // BufMan:BufferManager
+  xyzwh 216 492 2010 11 41
+end
+durationcanvas 129753 classinstance_ref 128857 // Buff1:criticalBuffer
+  xyzwh 598 522 2010 11 25
+end
+durationcanvas 129881 classinstance_ref 128729 // BufMan:BufferManager
+  xyzwh 216 119 2010 11 25
+end
+durationcanvas 130009 classinstance_ref 128473 // Buff1:criticalBuffer
+  xyzwh 469 214 2010 11 26
+end
+durationcanvas 130137 classinstance_ref 128857 // Buff1:criticalBuffer
+  xyzwh 598 246 2010 11 26
+end
+durationcanvas 130265 classinstance_ref 128729 // BufMan:BufferManager
+  xyzwh 216 385 2010 11 42
+end
+msg 130393 asynchronous
+  from durationcanvas_ref 129241
+  to durationcanvas_ref 129369
+  yz 152 2015 explicitmsg "add(parsMess)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 129 138
+msg 130521 asynchronous
+  from durationcanvas_ref 130265
+  to durationcanvas_ref 129497
+  yz 385 2015 explicitmsg "add(m)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 331 371
+msg 130649 synchronous
+  from durationcanvas_ref 129241
+  to durationcanvas_ref 129881
+  yz 119 2015 explicitmsg "setTab1(t)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 141 105
+msg 130777 asynchronous
+  from durationcanvas_ref 129625
+  to durationcanvas_ref 129113
+  yz 492 2015 explicitmsg "add(m)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 331 478
+msg 130905 asynchronous
+  from durationcanvas_ref 130265
+  to durationcanvas_ref 128985
+  yz 416 2015 explicitmsg "add(m)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 395 402
+msg 131033 synchronous
+  from durationcanvas_ref 129369
+  to durationcanvas_ref 130009
+  yz 214 2015 explicitmsg "add(m)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 331 200
+msg 131161 asynchronous
+  from durationcanvas_ref 129369
+  to durationcanvas_ref 130137
+  yz 246 2015 explicitmsg "add(m)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 395 232
+msg 131289 asynchronous
+  from durationcanvas_ref 129625
+  to durationcanvas_ref 129753
+  yz 522 2015 explicitmsg "add(m)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 395 508
+end

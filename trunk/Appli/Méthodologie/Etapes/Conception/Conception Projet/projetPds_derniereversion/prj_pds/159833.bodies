@@ -1,0 +1,8 @@
+class Model
+!!!165209.java!!!	changed() : void
+		for(Iupdate abonne:list)
+		{
+			abonne.update();
+		}
+!!!165337.java!!!	addAbonne(inout abonne : Iupdate) : void
+		list.add(abonne);

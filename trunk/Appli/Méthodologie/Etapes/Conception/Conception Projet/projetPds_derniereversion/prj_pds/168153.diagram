@@ -1,0 +1,50 @@
+format 76
+
+classinstance 128089 class_ref 149721 // Rame
+  name ""   xyz 17 4 2000 life_line_z 2000
+classinstance 128217 class_ref 149849 // Simulator
+  name ""   xyz 106 4 2000 life_line_z 2000
+classinstance 128345 class_ref 149977 // Transform
+  name ""   xyz 221 5 2005 life_line_z 2000
+classinstance 128473 class_ref 150105 // RTDG_Server
+  name ""   xyz 341 4 2000 life_line_z 2000
+durationcanvas 128601 classinstance_ref 128089 // :Rame
+  xyzwh 36 66 2010 11 40
+end
+durationcanvas 128729 classinstance_ref 128217 // :Simulator
+  xyzwh 130 70 2010 11 145
+end
+durationcanvas 128985 classinstance_ref 128345 // :Transform
+  xyzwh 248 83 2010 11 151
+  overlappingdurationcanvas 130137
+    xyzwh 254 99 2020 11 80
+  end
+end
+durationcanvas 129881 classinstance_ref 128473 // :RTDG_Server
+  xyzwh 376 173 2010 11 42
+end
+msg 128857 asynchronous
+  from durationcanvas_ref 128601
+  to durationcanvas_ref 128729
+  yz 70 2015 explicitmsg "send()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 72 56
+msg 130009 asynchronous
+  from durationcanvas_ref 128729
+  to durationcanvas_ref 129881
+  yz 204 2030 explicitmsg "send(message)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 266 193
+msg 130265 asynchronous
+  from durationcanvas_ref 128729
+  to durationcanvas_ref 130137
+  yz 104 3005 explicitmsg "randomToBinary()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 154 90
+msg 130393 return
+  from durationcanvas_ref 130137
+  to durationcanvas_ref 128729
+  yz 168 3010 explicitmsg "message"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 190 154
+end

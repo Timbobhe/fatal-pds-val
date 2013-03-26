@@ -1,0 +1,17 @@
+window_sizes 1280 738 365 909 574 90
+diagrams
+  active  sequencediagram_ref 203532 // diagramme de sequence détaillé
+    909 574 100 4 0 0
+end
+show_stereotypes
+selected sequencediagram_ref 203788 // diagramme de sequence détaillé
+open
+  classview_ref 134924 // Conception Preliminaire
+  
+package_ref 135769 // Affecter les messages critiques
+  classview_ref 148236 // Conception préliminaire
+  classview_ref 148364 // Conception détaillée
+  classview_ref 148492 // Conception préliminaire
+  classview_ref 148620 // Conception détaillée
+end
+end

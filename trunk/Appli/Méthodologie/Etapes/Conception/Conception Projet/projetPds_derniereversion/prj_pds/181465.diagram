@@ -1,0 +1,131 @@
+format 76
+
+classinstance 128217 class_ref 158809 // Client
+  name ""   xyz 27 7 2000 life_line_z 2000
+classinstance 130777 class_ref 157145 // RandomSource
+  name ""   xyz 154 4 2000 life_line_z 2000
+classinstance 132441 class_ref 158553 // Random
+  name ""   xyz 311 4 2000 life_line_z 2000
+classinstance 133849 class_ref 158425 // Transformer
+  name ""   xyz 407 4 2000 life_line_z 2000
+durationcanvas 130905 classinstance_ref 128217 // :Client
+  xyzwh 46 62 2010 11 40
+end
+durationcanvas 131033 classinstance_ref 130777 // :RandomSource
+  xyzwh 193 62 2010 11 35
+end
+durationcanvas 131417 classinstance_ref 128217 // :Client
+  xyzwh 46 123 2010 11 53
+end
+durationcanvas 131545 classinstance_ref 130777 // :RandomSource
+  xyzwh 193 123 2010 11 53
+end
+durationcanvas 131929 classinstance_ref 128217 // :Client
+  xyzwh 46 196 2010 11 101
+end
+durationcanvas 132057 classinstance_ref 130777 // :RandomSource
+  xyzwh 193 196 2010 11 100
+end
+durationcanvas 132569 classinstance_ref 132441 // :Random
+  xyzwh 333 209 2010 11 34
+end
+durationcanvas 132953 classinstance_ref 132441 // :Random
+  xyzwh 333 249 2010 11 40
+end
+durationcanvas 133337 classinstance_ref 128217 // :Client
+  xyzwh 46 317 2010 11 40
+end
+durationcanvas 133465 classinstance_ref 130777 // :RandomSource
+  xyzwh 193 317 2010 11 34
+end
+durationcanvas 133977 classinstance_ref 128217 // :Client
+  xyzwh 46 365 2010 11 40
+end
+durationcanvas 134105 classinstance_ref 133849 // :Transformer
+  xyzwh 437 365 2010 11 29
+end
+msg 131161 asynchronous
+  from durationcanvas_ref 130905
+  to durationcanvas_ref 131033
+  yz 62 2015 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 102 48
+msg 131289 return
+  from durationcanvas_ref 131033
+  to durationcanvas_ref 130905
+  yz 86 2015 explicitmsg "randomSource"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 78 72
+msg 131673 asynchronous
+  from durationcanvas_ref 131417
+  to durationcanvas_ref 131545
+  yz 141 2015 explicitmsg "getKeys().length()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 74 130
+msg 131801 return
+  from durationcanvas_ref 131545
+  to durationcanvas_ref 131417
+  yz 165 2020 explicitmsg "length"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 111 151
+msg 132185 asynchronous
+  from durationcanvas_ref 131929
+  to durationcanvas_ref 132057
+  yz 196 2015 msg operation_ref 148057 // "randomizeValueOfData(in lenght : int) : int"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 65 182
+msg 132313 return
+  from durationcanvas_ref 132057
+  to durationcanvas_ref 131929
+  yz 285 2020 explicitmsg "value"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 112 271
+msg 132697 asynchronous
+  from durationcanvas_ref 132057
+  to durationcanvas_ref 132569
+  yz 209 2025 explicitmsg "new"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 257 195
+msg 132825 return
+  from durationcanvas_ref 132569
+  to durationcanvas_ref 132057
+  yz 231 2015 explicitmsg "random"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 250 220
+msg 133081 asynchronous
+  from durationcanvas_ref 132057
+  to durationcanvas_ref 132953
+  yz 257 2025 explicitmsg "nextInt()"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 248 243
+msg 133209 return
+  from durationcanvas_ref 132953
+  to durationcanvas_ref 132057
+  yz 277 3005 explicitmsg "index"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 255 263
+msg 133593 asynchronous
+  from durationcanvas_ref 133337
+  to durationcanvas_ref 133465
+  yz 317 2015 msg operation_ref 148185 // "generateStream(in index : int) : String"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 83 303
+msg 133721 return
+  from durationcanvas_ref 133465
+  to durationcanvas_ref 133337
+  yz 340 2020 explicitmsg "stream"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 110 329
+msg 134233 asynchronous
+  from durationcanvas_ref 133977
+  to durationcanvas_ref 134105
+  yz 365 2025 msg operation_ref 159321 // "transformToBinary(in s : String) : byte"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 215 354
+msg 134361 return
+  from durationcanvas_ref 134105
+  to durationcanvas_ref 133977
+  yz 383 2030 explicitmsg "trame"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 235 374
+end

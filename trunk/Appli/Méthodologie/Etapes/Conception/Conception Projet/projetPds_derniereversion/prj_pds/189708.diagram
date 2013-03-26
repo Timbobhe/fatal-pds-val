@@ -1,0 +1,54 @@
+format 76
+
+classinstance 128140 class_ref 128345 // Composant_Embarque
+  name ""   xyz 104.5 14 2000 life_line_z 2000
+classinstancecanvas 130956 classinstance_ref 181644 // Systeme
+  xyz 437 15 2000 life_line_z 2000
+end
+durationcanvas 131084 classinstance_ref 128140 // :Composant_Embarque
+  xyzwh 155 91 2010 11 129
+end
+durationcanvas 131212 classinstance_ref 130956 // Systeme:Systeme
+  xyzwh 479 118 2010 11 300
+  overlappingdurationcanvas 131468
+    xyzwh 485 194 2020 11 48
+  end
+  overlappingdurationcanvas 132364
+    xyzwh 485 313 2020 11 69
+  end
+end
+durationcanvas 133004 classinstance_ref 130956 // Systeme:Systeme
+  xyzwh 479 438 2010 11 40
+end
+msg 131340 synchronous
+  from durationcanvas_ref 131084
+  to durationcanvas_ref 131212
+  yz 121 2015 explicitmsg "send(msg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 319 97
+reflexivemsg 131596 synchronous
+  to durationcanvas_ref 131468
+  yz 194 2025 explicitmsg "read(msg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 509 180
+reflexivemsg 132492 synchronous
+  to durationcanvas_ref 132364
+  yz 313 2025 explicitmsg "consult(msg,ref)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 501 284
+selfreflexivemsg 132876
+  to durationcanvas_ref 131212
+  yz 410 2015 explicitmsg "message"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 521 398
+reflexivemsg 133132 synchronous
+  to durationcanvas_ref 133004
+  yz 438 2015 explicitmsg "interpreter(msg)"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 513 426
+selfreflexivemsg 133516
+  to durationcanvas_ref 133004
+  yz 470 2015 explicitmsg "messageInterpreter"
+  show_full_operations_definition default drawing_language default show_context_mode default
+  label_xy 494 457
+end
