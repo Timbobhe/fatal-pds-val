@@ -1,4 +1,4 @@
-window_sizes 1280 738 358 916 574 90
+window_sizes 1280 738 365 909 574 90
 diagrams
   classdiagram_ref 162700 // diagramme de classe metier
     728 465 100 4 23 0
@@ -21,7 +21,7 @@ diagrams
   sequencediagram_ref 162828 // diagramme de suequence system
     728 459 100 4 0 0
   classdiagram_ref 162956 // diagramme de classe metier
-    728 459 100 4 0 0
+    728 459 100 4 16 0
   sequencediagram_ref 189580 // diagramme de syec sys
     728 459 100 4 0 0
   classdiagram_ref 163212 // diagramme de classe metier
@@ -32,22 +32,26 @@ diagrams
     916 574 100 4 0 0
   active  sequencediagram_ref 196492 // diagramme sequence systeme
     916 574 100 4 0 0
-  sequencediagram_ref 196364 // diagamme de classe metier
-    728 459 100 4 0 0
-  sequencediagram_ref 147929 // Séquences de conception détaillée
-    916 574 100 4 0 0
-  classdiagram_ref 168281 // classes détaillé
-    728 459 100 4 0 0
-  sequencediagram_ref 181465 // séquence détaillé (random)
-    728 459 100 4 0 0
-  sequencediagram_ref 168409 // séquences détaillé(rame)
-    728 459 100 4 0 0
+  sequencediagram_ref 203532 // diagramme de sequence détaillé
+    725 459 100 4 0 0
+  sequencediagram_ref 203788 // diagramme de sequence détaillé
+    909 574 100 4 0 0
+  classdiagram_ref 203148 // diagramme de classe metier
+    723 459 100 4 0 0
+  classdiagram_ref 203020 // diagrame de classe metier
+    723 459 100 4 0 0
+  classdiagram_ref 203404 // diagramme de classe détaillé
+    723 459 100 4 0 0
 end
 show_stereotypes
-selected 
-package_ref 141196 // Orchestrer message
+selected sequencediagram_ref 203788 // diagramme de sequence détaillé
 open
+  classview_ref 134924 // Conception Preliminaire
   
-package_ref 141196 // Orchestrer message
+package_ref 135769 // Affecter les messages critiques
+  classview_ref 148236 // Conception préliminaire
+  classview_ref 148364 // Conception détaillée
+  classview_ref 148492 // Conception préliminaire
+  classview_ref 148620 // Conception détaillée
 end
 end
