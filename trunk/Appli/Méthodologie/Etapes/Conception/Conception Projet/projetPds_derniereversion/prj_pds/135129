@@ -1,7 +1,7 @@
 format 76
 "Création du protocole de communication" // Uses Cases::Collecter les infos terrain::Création du protocole de communication
-  revision 4
-  modified_by 12 "Hamza"
+  revision 5
+  modified_by 89 "Nidal"
   // class settings
   //class diagram settings
   draw_all_relations default hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
@@ -542,6 +542,27 @@ ${members}}
 
       classrelation 129625 // <association>
 	relation_ref 129369 // <association>
+      end
+
+      classrelation 171097 // <dependency>
+	relation 169433 -_->
+	  a default
+	    classrelation_ref 171097 // <dependency>
+	  b parent class_ref 183129 // Traducteur
+      end
+
+      classrelation 171225 // <dependency>
+	relation 169561 -_->
+	  a default
+	    classrelation_ref 171225 // <dependency>
+	  b parent class_ref 183129 // Traducteur
+      end
+
+      classrelation 171737 // <dependency>
+	relation 169945 -_->
+	  a default
+	    classrelation_ref 171737 // <dependency>
+	  b parent class_ref 183257 // producerManager
       end
     end
   end

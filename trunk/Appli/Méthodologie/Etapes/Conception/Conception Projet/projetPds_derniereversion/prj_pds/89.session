@@ -1,14 +1,18 @@
 window_sizes 1600 838 325 453 600 82
 diagrams
-  active  sequencediagram_ref 147801 // Séquences de la conception détaillée
+  sequencediagram_ref 147801 // Séquences de la conception détaillée
     985 545 100 4 0 0
+  sequencediagram_ref 187993 // diagramme de séquences détaillé
+    892 545 100 4 0 0
+  active  classdiagram_ref 188121 // diagramme de classes détaillé
+    1011 545 100 4 0 0
+  sequencediagram_ref 188249 // diag sequence système
+    489 545 100 4 0 0
 end
 show_stereotypes
-selected classview_ref 163545 // Conception Détaillée
+selected classdiagram_ref 188121 // diagramme de classes détaillé
 open
-  
-  package_ref 141324 // Envoi du message au RTDRS
-  
-  package_ref 174809 // envoi du message au traducteur
+  classview_ref 163417 // Conception Préliminaire
+  classview_ref 163545 // Conception Détaillée
 end
 end
