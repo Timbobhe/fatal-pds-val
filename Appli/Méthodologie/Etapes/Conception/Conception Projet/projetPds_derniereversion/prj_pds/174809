@@ -1,6 +1,6 @@
 format 76
 "envoi du message au traducteur" // Uses Cases::Orchestrer message::envoi du message au traducteur
-  revision 1
+  revision 2
   modified_by 89 "Nidal"
   // class settings
   //class diagram settings
@@ -42,6 +42,18 @@ format 76
     //activity diagram settings
     package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
     show_infonote default drawing_language default show_stereotype_properties default
+    sequencediagram 188249 "diag sequence système"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    classinstance 136793 "RTDG-server"
+      type class_ref 142553 // Serveur
+      attributes
+        end
+      relations
+        end
+    end
   end
 
   classview 163545 "Conception Détaillée"
@@ -60,5 +72,285 @@ format 76
     //activity diagram settings
     package_name_in_tab default show_context default show_opaque_action_definition default auto_label_position default write_flow_label_horizontally default draw_all_relations default shadow default
     show_infonote default drawing_language default show_stereotype_properties default
+    sequencediagram 187993 "diagramme de séquences détaillé"
+      show_full_operations_definition default write_horizontally default class_drawing_mode default drawing_language default draw_all_relations default shadow default show_stereotype_properties default show_class_context_mode default show_msg_context_mode default
+      overlapping_bars size A4
+    end
+
+    classinstance 135897 ""
+      type class_ref 142553 // Serveur
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 136025 ""
+      type class_ref 142681 // ServeurThread
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 183129 "Traducteur"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 170585 "tab"
+	private type class_ref 183385 // ReferenceTab
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      operation 204377 "traduireFT"
+	public explicit_return_type "OrdreMessage"
+	nparams 1
+	  param in name "mf" type class_ref 200972 // MessageFormater
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 204505 "traduireTF"
+	public return_type class_ref 200972 // MessageFormater
+	nparams 1
+	  param in name "pm" type class_ref 170892 // ParsedMessage
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 204633 "evenement"
+	public explicit_return_type "string"
+	nparams 1
+	  param in name "capteurid" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 204761 "code_evenement"
+	public explicit_return_type "int"
+	nparams 1
+	  param in name "name_evenement" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 204889 "getPosition"
+	public explicit_return_type "string"
+	nparams 1
+	  param in name "idcapteur" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 205017 "getidcapteur_from_position"
+	public explicit_return_type "string"
+	nparams 1
+	  param in name "position" explicit_type "string"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 205145 "getname_evenement_from_code"
+	public explicit_return_type "string"
+	nparams 1
+	  param in name "code" explicit_type "int"
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 170841 // <aggregation>
+	relation 169305 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 170841 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 170969 // <aggregation>
+      end
+    end
+
+    classinstance 136153 "traducteur"
+      type class_ref 183129 // Traducteur
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 183257 "producerManager"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 171609 "producer"
+	private explicit_type "Producer"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 171737 "consumer"
+	private type class_ref 200844 // Consumer
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 171481 // <aggregation>
+	relation 169817 o---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 171481 // <aggregation>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 171609 // <aggregation>
+      end
+    end
+
+    classinstance 136281 "Manager"
+      type class_ref 183257 // producerManager
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 183385 "ReferenceTab"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      
+      attribute 170713 "name_evenment"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 170841 "id_evenement"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      attribute 170969 "id_capteur"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+      end
+
+      classrelation 170969 // <aggregation>
+	relation_ref 169305 // <aggregation>
+      end
+    end
+
+    classinstance 136409 "Tab"
+      type class_ref 183385 // ReferenceTab
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 136537 "mf"
+      type class_ref 200972 // MessageFormater
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 136665 "producer"
+      type class_ref 200588 // producer
+      attributes
+        end
+      relations
+        end
+    end
+
+    classdiagram 188121 "diagramme de classes détaillé"
+      draw_all_relations no hide_attributes default hide_operations default hide_getset_operations default show_members_full_definition default show_members_visibility default show_members_stereotype default show_members_context default show_members_multiplicity default show_members_initialization default show_attribute_modifiers default member_max_width 0 show_parameter_dir default show_parameter_name default package_name_in_tab default class_drawing_mode default drawing_language default show_context_mode default auto_label_position default show_relation_modifiers default show_relation_visibility default show_infonote default shadow default show_stereotype_properties default
+      size A4
+    end
   end
 end
