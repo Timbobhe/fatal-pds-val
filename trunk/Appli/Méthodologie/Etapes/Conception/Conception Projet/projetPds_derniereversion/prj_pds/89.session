@@ -1,9 +1,14 @@
-window_sizes 1600 838 353 1241 600 82
+window_sizes 1600 838 325 453 600 82
+diagrams
+  active  sequencediagram_ref 147801 // Séquences de la conception détaillée
+    985 545 100 4 0 0
+end
 show_stereotypes
-selected sequencediagram_ref 147801 // Séquences de la conception détaillée
+selected classview_ref 163545 // Conception Détaillée
 open
-  classview_ref 128089 // Conception détaillée
   
-package_ref 134873 // Prioriser messages
+  package_ref 141324 // Envoi du message au RTDRS
+  
+  package_ref 174809 // envoi du message au traducteur
 end
 end
