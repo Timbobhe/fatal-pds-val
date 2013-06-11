@@ -46,7 +46,9 @@ public class TableContent extends AbstractTableModel {
     }
  
     public Object getValueAt(int rowIndex,int columnIndex) {
-    	ParsedMessage pm =  objTable.getBuf3().get(rowIndex);
+    
+    	if (objTable.getBufCache().size()>1) {
+    	ParsedMessage pm =  objTable.getBufCache().get(rowIndex);
     		if(columnIndex==0)
     			return pm.getSOURCE_VALUE();
         	if(columnIndex==1)
@@ -67,7 +69,10 @@ public class TableContent extends AbstractTableModel {
             }
             else  
             	 return pm.getDATA_VALUE();
-            
+    	}
+         else {
+			return "";
+		}   
     }
     
     

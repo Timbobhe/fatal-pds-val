@@ -3,6 +3,7 @@ package com.esiag.isidis.pds;
 import java.util.HashMap;
 import java.util.Iterator;
 
+
 public class ReferenceTab {
 
 
@@ -103,6 +104,7 @@ public class ReferenceTab {
 	public ReferenceTab() {
 		super();
 		INCIDENTS=new HashMap<Integer,Ref>();
+		/*
 		INCIDENTS.put(0,new Ref("Voyageur malade",1, "0000"));
 		INCIDENTS.put(1,new Ref("Suicide", 2, "0001"));
 		INCIDENTS.put(2,new Ref("Colis suspec", 3, "0002"));
@@ -117,15 +119,33 @@ public class ReferenceTab {
 		INCIDENTS.put(11,new Ref("Fermeture Porte", 12, "0101"));
 		INCIDENTS.put(12,new Ref("Arreter Train", 13, "1100"));
 		INCIDENTS.put(13,new Ref("Demarer Train", 14, "0011"));
+		*/
+		INCIDENTS.put(0,new Ref("CapteurTemperature",1, "0000"));
+		INCIDENTS.put(1,new Ref("CapteurInfraRougePorte",2,"0001"));
+		INCIDENTS.put(2,new Ref("CapteurPoids",3, "0010"));
+		INCIDENTS.put(3,new Ref("CapteurQuai",4, "0011"));
+		INCIDENTS.put(4,new Ref("CapteurOxygene",5, "0100"));
+		INCIDENTS.put(5,new Ref("CapteurCO2", 6,"0101"));
+		INCIDENTS.put(6,new Ref("CapteurPositionTrain",7 ,"0110"));
 		
 		CAPTEURS=new HashMap<Integer, ReferenceTab.LocalisationCapteur>();
 
-		CAPTEURS.put(0,new LocalisationCapteur("0001000000", "train", "X:1000Y:0000", "Suicide"));
-		CAPTEURS.put(1,new LocalisationCapteur("0002000001", "tunnel", "X:1111Y:0000", "CapteurAlarme"));
-		CAPTEURS.put(2,new LocalisationCapteur("0001000001", "train", "X:1000Y:1111", "CapteurAlarme"));
-		
-		
-	 
+		CAPTEURS.put(0,new LocalisationCapteur("0000000000", "train", "X:1000Y:0000", "CapteurTemperature"));
+		CAPTEURS.put(1,new LocalisationCapteur("0100000000", "tunnel", "X:1111Y:0000", "CapteurOxygene"));
+		CAPTEURS.put(2,new LocalisationCapteur("0110000000", "train", "X:1000Y:1111", "CapteurPositionTrain"));
+		CAPTEURS.put(2,new LocalisationCapteur("0011000000", "station", "X:1000Y:1111", "CapteurQuai"));
+		CAPTEURS.put(1,new LocalisationCapteur("0001000000", "train", "X:1111Y:0000", "CapteurInfraRougePorte"));
+		CAPTEURS.put(2,new LocalisationCapteur("0101000000", "tunnel", "X:1000Y:1111", "CapteurCO2"));
+		CAPTEURS.put(2,new LocalisationCapteur("0010000000", "train", "X:1000Y:1111", "CapteurPoids"));
+		/*
+		CAPTEURS.put(0,new LocalisationCapteur("CapteurTemperature", "train", "X:10000Y:00000", "CapteurTemperature"));
+		CAPTEURS.put(1,new LocalisationCapteur("CapteurOxygene", "tunnel", "X:11111Y:00000", "CapteurOxygene"));
+		CAPTEURS.put(2,new LocalisationCapteur("CapteurPositionTrain", "train", "X:10000Y:11111", "CapteurPositionTrain"));
+		CAPTEURS.put(2,new LocalisationCapteur("CapteurQuai", "station", "X:10000Y:11111", "CapteurQuai"));
+		CAPTEURS.put(1,new LocalisationCapteur("CapteurInfraRougePorte", "train", "X:11111Y:00000", "CapteurInfraRougePorte"));
+		CAPTEURS.put(2,new LocalisationCapteur("CapteurCO2", "tunnel", "X:10000Y:11111", "CapteurCO2"));
+		CAPTEURS.put(2,new LocalisationCapteur("CapteurPoids", "train", "X:10000Y:11111", "CapteurPoids"));
+	 */
 		
 	}
 	public String getidcapteur_to_incident(String s)
@@ -162,7 +182,7 @@ public class ReferenceTab {
 	
 	public String getevenement_name_to_idcapteur(String s)
 	{
-		;
+		
 		for(int i = 0; i < INCIDENTS.size(); i++) {
 			
 			if (s.equals(INCIDENTS.get(i).getId_capteur())) {

@@ -21,9 +21,10 @@ public class Serveur {
 
 	public static void main(String[] args)throws IOException,ClassNotFoundException {
 
+		/*System.out.println(PingPDS.setnext());
 		System.out.println(PingPDS.setnext());
 		System.out.println(PingPDS.setnext());
-		System.out.println(PingPDS.setnext());
+		*/
 		
 		ReplicationServeur rs=new ReplicationServeur(); // demarer replication
 		rmt=rs.getClientReplicate();

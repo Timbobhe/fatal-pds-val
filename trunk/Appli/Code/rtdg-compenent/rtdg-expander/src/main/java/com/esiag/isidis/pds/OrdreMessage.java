@@ -75,5 +75,14 @@ public class OrdreMessage {
 				+ ", DATA_INDICATION=" + DATA_INDICATION + ", DATA_VALUE="
 				+ DATA_VALUE + "]";
 	}
+	@Override
+	public boolean equals(Object obj) {
+		
+		OrdreMessage obj1=(OrdreMessage)obj;
+		if (SOURCE_VALUE.equals(obj1.getSOURCE_VALUE()) && SENSOR_TYPE_VALUE.equals(obj1.getSENSOR_TYPE_VALUE()) && SENSOR_NUM_VALUE.equals(obj1.getSENSOR_NUM_VALUE()) && CRIT_VALUE.equals(obj1.getCRIT_VALUE()) && DATA_VALUE.equals(obj1.getDATA_VALUE())) {
+			return true;
+		}
+		return false;
+	}
 	
 }

@@ -22,9 +22,16 @@ import org.rtdg.replication.IReplicateRemote;
 import org.rtdg.replication.Replication;
 import org.rtdg.server.frontal.ViewInformation;
 
+import pds.com.esiag.isidis.fi.ProducerManager;
+
+import com.esiag.isidis.pds.MessageFormater;
+import com.esiag.isidis.pds.Traducteur;
+
 
 public class ServeurThread  extends Thread{
 
+	private Traducteur traducteur;
+	private ProducerManager manager;
 	private Socket socket=null;
 	private String ipmaster=PingPDS.ADRESSES[0];
 	public ObjectOutputStream oos; 
@@ -38,6 +45,13 @@ public class ServeurThread  extends Thread{
 		this.socket=socket;
 		 bm =BufferManager.getinstance();
 		 clientReplicate=rp;
+		 traducteur=new Traducteur();
+		 try {
+			 manager=new ProducerManager("QUEUE-RTDG");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		 
 		// server();
 		// client(ipmaster);
 	}
@@ -92,8 +106,14 @@ public class ServeurThread  extends Thread{
 		SplitedMessage sp=ma.analyseMessage(binMessage);
 
 		MessageParser mp = new MessageParser();
+	
 		org.rtdg.parser.ParsedMessage pm=mp.parse(sp);
 		bm.add(pm);
+		
+		MessageFormater mf=traducteur.traduireTF(pm);
+		System.out.println(mf+"***");
+		manager.SendMessage(mf);
+		//System.out.println(mf+"  =====>Message formater    ");
 		String ipLocale="";
 		try {
 			ipLocale = InetAddress.getLocalHost().getHostAddress().toString();
@@ -102,18 +122,22 @@ public class ServeurThread  extends Thread{
 			e.printStackTrace();
 		}
 	//	System.out.println("---------------------------------"+clientReplicate.getServerList().size());
-		System.out.println(PingPDS.next+"next");
-		if (ipmaster.equals(ipLocale) && PingPDS.isreplicate==true) {
-			System.out.println("------master c moi");
+		//System.out.println(PingPDS.next+"next");
+		
+		if(PingPDS.ping(ipmaster) == false){
+			clientReplicate.getIndexMaster();
+			ipmaster = clientReplicate.getServerList().elementAt(0);
+		}
+		if (ipmaster.equals(ipLocale)) {/* && PingPDS.isreplicate==true*/
+			System.out.println("------le master c'est moi");
 			clientReplicate.addMessage(pm,ipmaster);
 		}
-		if(PingPDS.isreplicate==true && ipmaster.equals(ipLocale)==false )
+		if(ipmaster.equals(ipLocale)==false )/*PingPDS.isreplicate==true &&*/ 
 		{
-		//notifie le master
-			System.out.println("master c pas moi");
-				clientReplicate.addMessage(pm,ipLocale);
+			//notifie le master
+			System.out.println("le master ce n'est pas moi");
+			clientReplicate.addMessage(pm,ipLocale);
 		}
-		
 		bm.update();
 		if(view==null){
 			 view = new ViewInformation(bm);
