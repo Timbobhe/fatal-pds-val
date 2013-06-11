@@ -2,17 +2,12 @@ window_sizes 1600 838 325 453 600 82
 diagrams
   sequencediagram_ref 147801 // Séquences de la conception détaillée
     985 545 100 4 0 0
-  sequencediagram_ref 187993 // diagramme de séquences détaillé
-    892 545 100 4 0 0
-  active  classdiagram_ref 188121 // diagramme de classes détaillé
-    1011 545 100 4 0 0
-  sequencediagram_ref 188249 // diag sequence système
-    489 545 100 4 0 0
+  active  componentdiagram_ref 134617 // composants
+    1269 682 100 4 0 0
 end
 show_stereotypes
-selected classdiagram_ref 188121 // diagramme de classes détaillé
+selected componentdiagram_ref 134617 // composants
 open
-  classview_ref 163417 // Conception Préliminaire
-  classview_ref 163545 // Conception Détaillée
+  componentview_ref 128089 // composants
 end
 end
