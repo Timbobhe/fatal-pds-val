@@ -2,9 +2,8 @@ package com.esiag.isidis.pds;
 
 import java.util.HashMap;
 
-import org.rtdg.parser.ParsedMessage;
-
 public class MessageFormater {
+	
 	
 	private String SOURCE="";
 	private int CODE_TYPE_EVENEMENT;
@@ -26,36 +25,6 @@ public class MessageFormater {
 				+ ", CRITICITE=" + CRITICITE + "]";
 	}
 
-	public String getPosition(ParsedMessage pm){
-		// si le parsedMessage recu est deja une info sur une position
-		if(pm.getDATA_TYPE_VALUE()== "position"){
-			int x = Integer.parseInt(pm.getDATA_INDICATION().substring(4, 9), 2);
-			int y = Integer.parseInt(pm.getDATA_INDICATION().substring(14, 19), 2);
-			
-			return x+":"+y;
-		}
-		else{
-			/*
-			//prendre la derniere position de ce capteur dans le buffer
-			BufferManager buf1 = new BufferManager();
-			MessageBuffer buf2 = new MessageBuffer("noncritique");
-			buf2 = buf1.getBuf2();
-			int j= buf2.size();
-			boolean found = false;
-			for (int i = j; i > 1; i--) {
-				if(buf2.get(i).getDATA_TYPE_VALUE()=="position" && buf2.get(i).getSOURCE_VALUE()==pm.getSOURCE_VALUE() && found ==false){
-					found = true;
-					int x = Integer.parseInt(pm.getDATA_INDICATION().substring(4, 9), 2);
-					int y = Integer.parseInt(pm.getDATA_INDICATION().substring(14, 19), 2);
-					
-					return x+":"+y;
-				}
-			}
-			*/
-		}
-			
-		return null;
-	}
 
 	public void initialize(){
 		INCIDENTS=new HashMap<String,Integer>();
@@ -86,16 +55,8 @@ public class MessageFormater {
 	}
 
 
-	public void formatMessage(ParsedMessage pm){
-		
-		this.SOURCE = pm.getSOURCE_VALUE();		
-		this.CODE_TYPE_EVENEMENT = INCIDENTS.get(pm.getSENSOR_TYPE_VALUE());
-		this.POSITION = getPosition(pm);
-		this.CRITICITE = 1;
-		
 
-		
-	}
+
 
 	public String getSOURCE() {
 		return SOURCE;
@@ -143,6 +104,16 @@ public class MessageFormater {
 
 	public void setPOSITIONS(HashMap<String, Integer> pOSITIONS) {
 		POSITIONS = pOSITIONS;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		
+		MessageFormater obj1=(MessageFormater)obj;
+		if (SOURCE.equals(obj1.getSOURCE()) && POSITION.equals(obj1.getPOSITION()) && CODE_TYPE_EVENEMENT==obj1.getCODE_TYPE_EVENEMENT() && CRITICITE==obj1.getCRITICITE( )) {
+			return true;
+		}
+		return false;
 	}
 	
 	

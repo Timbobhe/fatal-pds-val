@@ -70,7 +70,8 @@ public class MessageParser {
 		/**
 		 * On r�cup�re le type de capteur � partir de r�f�rentiel
 		 */
-		 String sensorType = ID_SENSOR_TYPE.get(ID_TYPE);
+		// String sensorType = ID_SENSOR_TYPE.get(ID_TYPE);
+		 String sensorType = ID_TYPE;
 		/**
 		 * On r�cup�re la criticit� 
 		 * indication:

@@ -12,5 +12,8 @@
     <module>rtdg-prioriser</module>
     <module>rtdg-replication</module>
     <module>rtdg-expander</module>
+    <module>rtdg-communicator</module>
   </modules>
+  
+
 </project>

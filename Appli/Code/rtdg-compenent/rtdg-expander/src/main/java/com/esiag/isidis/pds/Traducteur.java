@@ -10,6 +10,10 @@ public class Traducteur {
 		super();
 		tab=new ReferenceTab();
 	}
+	
+	public ReferenceTab getTab() {
+		return tab;
+	}
 	public OrdreMessage traduireFT(MessageFormater mf)
 	{
 		String source=mf.getSOURCE();
@@ -25,6 +29,7 @@ public class Traducteur {
 	}
 	public MessageFormater traduireTF(ParsedMessage pm)
 	{
+		System.out.println(pm+"_____>");
 		MessageFormater f=new MessageFormater();
 		f.setCRITICITE(criticite(pm.getCRIT_VALUE()));
 		f.setSOURCE(pm.getSOURCE_VALUE());
@@ -32,6 +37,11 @@ public class Traducteur {
 		String name= evenement(pm.getSENSOR_TYPE_VALUE());
 		System.out.println(name);
 		f.setCODE_TYPE_EVENEMENT(code_evenement(name));
+		System.out.println(pm.getSENSOR_TYPE_VALUE()+"type--------------------num"+pm.getSENSOR_NUM_VALUE());
+		if (pm.getSENSOR_TYPE_VALUE().equals("0110")) {
+			f.setPOSITION(pm.getDATA_INDICATION());
+		}
+		else
 		f.setPOSITION(getposition(pm.getSENSOR_TYPE_VALUE()+pm.getSENSOR_NUM_VALUE()));
 		return f;
 	}

@@ -12,9 +12,6 @@ import org.rtdg.parser.ParsedMessage;
 import org.rtdg.prioriser.BufferManager;
 
 
-
-
-
 public class Replication extends UnicastRemoteObject implements IReplicateRemote{
 	
 	private static Vector<String> ips=new Vector<String>();
@@ -60,12 +57,12 @@ public class Replication extends UnicastRemoteObject implements IReplicateRemote
 		removeIP(ip);
 		for(int i = 0; i < ips.size(); i++) {
 			if(System.getSecurityManager() == null){
-				System.out.println("security des");
+				System.out.println("security abonement "+ip);
 				System.setProperty("java.security.policy", "settings/java.policy");
 			}
 			IReplicateRemote gcr=null;
 			try{
-				System.out.println("cache des "+ips.get(i));
+				System.out.println("désabonnement du serveur : "+ips.get(i));
 				String r = "rmi://"+ips.get(i)+":1099/gca" ;
 				gcr= (IReplicateRemote) Naming.lookup(r);
 				gcr.removeIP(ip);
@@ -80,15 +77,8 @@ public class Replication extends UnicastRemoteObject implements IReplicateRemote
 		}
 		IReplicateRemote gcr=null;
 		try{
-			System.out.println("cache");
 			String r = "rmi://"+getServerList()+":1099/gca" ;
 			gcr= (IReplicateRemote) Naming.lookup(r);
-			/*
-			for(int i = 0; i < getCaches().size(); i++){
-				gcr.putInCache(getCaches().elementAt(i));
-			}
-			*/
-			
 		}
 		catch(Exception e){
 			
@@ -157,9 +147,37 @@ public class Replication extends UnicastRemoteObject implements IReplicateRemote
 
 	@Override
 	public int getIndexMaster() throws RemoteException{
+		boolean pingvalue = false;
+		for(int i = 0; i < ips.size(); i++){
+			pingvalue = ping(ips.elementAt(i));
+			if(pingvalue == false){
+				if(i==0){
+					ips.remove(0);
+					getIndexMaster();
+				}
+				
+			}
+			else{
+				ips.indexOf(ips.elementAt(i), 0);
+				return 0;
+			}
+		}
 		return 0;
 	}
 
+	public  boolean ping(String s)
+	{
+		try {
+			 InetAddress addresses = InetAddress.getByName(s);
+			  if (addresses.isReachable(4000))
+		         return true;
+			  else
+				 return false;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
 
 
 	@Override
@@ -172,7 +190,6 @@ public class Replication extends UnicastRemoteObject implements IReplicateRemote
 		try{
 			String r = "rmi://"+ipMaster+":1099/gca" ;
 			 gcr= (IReplicateRemote) Naming.lookup(r);
-			 System.out.println("HostAdresse : "+InetAddress.getLocalHost ().getHostAddress().toString());
 			 gcr.abonement(InetAddress.getLocalHost ().getHostAddress());
 			
 		}
@@ -203,9 +220,9 @@ public class Replication extends UnicastRemoteObject implements IReplicateRemote
 	@Override
 	public void addMessage(ParsedMessage e) throws RemoteException {
 		
-		System.out.println("***********************************************");
-		context.getBufferManager().add(e);	
-		System.out.println("le nombre de messsage " +context.getBufferManager().getBuf3().size());
+		System.out.println("invocation de la methode addMessage(ParsedMesssage e);");
+		context.getBufferManager().add(e);
+		//System.out.println("le nombre de messsage " +context.getBufferManager().getBuf3().size());
 	}
 	@Override
 	public void addMessage(ParsedMessage e,String ipsource) throws RemoteException {
@@ -252,6 +269,13 @@ public class Replication extends UnicastRemoteObject implements IReplicateRemote
 			}
 		}
 		
+	}
+	
+	private void permute(String ipMaster, String ip){
+		String tmp = ipMaster;
+		ipMaster = ip;
+		ip = tmp;
+		//ips.indexOf(ip, 0);
 	}
 
 }
