@@ -1,0 +1,12 @@
+<dataset>
+	<CRITICITEVALUE criticiteValueId="100" value="90"
+		equartype="10" sensorType="MyCapteurTemperature" />
+	<CRITICITEVALUE criticiteValueId="200" value="100"
+		equartype="20" sensorType="MyCapteurOxygene" />
+	<CRITICITEVALUE criticiteValueId="300" value="110"
+		equartype="30" sensorType="MyCapteurCO2" />
+	<CRITICITEVALUE criticiteValueId="400" value="120"
+		equartype="40" sensorType="MyCapteurPoids" />
+	<CRITICITEVALUE criticiteValueId="500" value="130"
+		equartype="50" sensorType="MyCapteurTemperature" />
+</dataset>

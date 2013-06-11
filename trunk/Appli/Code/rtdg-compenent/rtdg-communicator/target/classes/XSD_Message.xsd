@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Messages" xmlns:tns="http://www.example.org/Messages" elementFormDefault="qualified">
+	
+<!--
+code_type evenement : INTEGER
+source ; string
+position : int
+Criticité : integer 1 ou 5
+-->	
+	<element name="Message">
+		<complexType>
+			<sequence>
+				<element name="Message" type="tns:MessageFormater" maxOccurs="1"></element>
+			</sequence>
+		</complexType>
+	</element>
+	
+<!-- Message Structure -->
+
+	<!-- Complexes types Declaration -->
+<complexType name="MessageFormater">
+		
+	    <attribute name="Source" type="string" use="required"></attribute>
+		<attribute name="codeTypeEvenement" type="int" use="required"></attribute>
+		<attribute name="position" type="string" use="required"></attribute>
+		<attribute name="Criticite" type="int" use="required"></attribute>
+</complexType>
+</schema>
